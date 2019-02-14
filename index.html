@@ -87,7 +87,7 @@
         <div id="nav-bar">
           <p id="toggle"><span></span></p>
           <li class="spec">
-            <a href="#">Book Now</a>
+            <a href="#">Bookings Opening Soon</a>
           </li>
           <ul>
             <li>
@@ -97,7 +97,7 @@
               <a href="#even_info">Event Information</a>
             </li>
             <li>
-              <a href="#">Venue</a>
+              <a href="#venues">Venue</a>
             </li>
             <li>
               <a href="#">Agenda</a>
@@ -184,7 +184,7 @@
           </div>
         </div>
       </div>
-      <div class="section section-3">
+      <div class="section section-3" id="venues">
         <div class="container flex-it">
           <div class="left f1 flex-it">
             <h4 class="headin-ttl">
@@ -303,6 +303,10 @@
         $(document).on("click", "#toggle", function() {
           $(this).toggleClass("on");
           $("#nav-bar").toggleClass("active");
+        });
+        $(document).on("click", "#nav-bar ul li", function() {
+          $("#nav-bar").removeClass("active");
+          $("#toggle").removeClass("on");
         });
         $(".section.hdr").css({
           paddingTop: $(".section.hdr > .content").height()
