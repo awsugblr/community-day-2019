@@ -226,11 +226,7 @@
             padding: 0 25px;
             color: #fff;
             border-bottom: solid 1px rgba(0, 0, 0, 0.2);
-            height: 70px;
-            @include respondToBelow(xs) {
-              height: 50px;
-              font-size: 14px;
-            }
+            height: 100%;
           }
         }
         @include respondToBelow(xs) {
@@ -250,6 +246,7 @@
             justify-content: center;
             @include respondToBelow(xs) {
               height: 100%;
+              font-size: 18px;
             }
           }
         }
@@ -498,10 +495,14 @@
   z-index: 999999;
   left: 0;
   background: $black_bg;
-  display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.25s;
+
+  display: none;
+  @include respondToBelow(sm) {
+    display: flex;
+  }
   span {
     position: relative;
     display: block;
