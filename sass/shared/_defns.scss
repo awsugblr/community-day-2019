@@ -1,0 +1,56 @@
+$text_primary_color: #333333;
+$dark_base_color: #ff9900;
+$light_bc: #e6f9fb;
+$dark_base_color_2: #e28b08;
+$black_bg: #232f3f;
+$border_color: #dddddd;
+$button_color: $dark_base_color;
+$page_bg_color: #eeeeee;
+$link_color: #000000;
+$header_color: $dark_base_color;
+$muted_color: #999999;
+$faded_color: #bbbbbb;
+$rc_main: #d32f2f;
+$light-bg: #f7f7f7;
+//english font
+$font-primary: "Roboto", sans-serif;
+
+$wb-grad: -webkit-linear-gradient(135deg, $dark_base_color, $dark_base_color_2);
+$inset: inset 0 0 15px 0 rgba(0, 0, 0, 0.1);
+$shadow: 0 0 10px rgba(0, 0, 0, 0.2), 0 6px 10px -4px rgba(0, 0, 0, 0.2);
+$cubic: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+$wb-green: #4caf50;
+$wb-red: #f44336;
+$wb-blue: #2196f3;
+$wb-orange: #ff9834;
+
+$gutter_width: 25px;
+$gutter_width_more: 50px;
+$gutter_width_xs: 15px;
+
+// Extra small screen / phone
+$screen-xs-min: 400px;
+
+// Small screen / tablet
+$screen-sm-min: 768px;
+
+// Medium screen / desktop
+$screen-md-min: 992px;
+
+// Large screen / wide desktop
+$screen-lg-min: 1200px;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-sm-max: ($screen-md-min - 1);
+$screen-md-max: ($screen-lg-min - 1);
+
+$max-width: 1200px;
+
+$home-space: 40px;
+$pdp_space: 30px;
+$pdp_detail_gap: 20px;
+$pdp_detail_gap_mini: 12px;
+$form_space: 15px;
+$pdp_detail_gap_new: 10px;

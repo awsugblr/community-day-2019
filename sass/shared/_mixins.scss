@@ -1,0 +1,604 @@
+@mixin respondTo($media) {
+  @if $media== "xs" {
+    @media only screen and (max-width: $screen-xs-max) {
+      @content;
+    }
+  } @else if $media== "sm" {
+    @media only screen and (max-width: $screen-sm-max) and (min-width: $screen-sm-min) {
+      @content;
+    }
+  } @else if $media== "md" {
+    @media only screen and (max-width: $screen-md-max) and (min-width: $screen-md-min) {
+      @content;
+    }
+  } @else if $media== "lg" {
+    @media only screen and (min-width: $screen-lg-min) {
+      @content;
+    }
+  }
+}
+
+@mixin respondToAbove($media) {
+  @if $media== "xs" {
+    @media only screen and (min-width: $screen-xs-max) {
+      @content;
+    }
+  } @else if $media== "sm" {
+    @media only screen and (min-width: $screen-sm-min) {
+      @content;
+    }
+  } @else if $media== "md" {
+    @media only screen and (min-width: $screen-md-min) {
+      @content;
+    }
+  } @else if $media== "lg" {
+    @media only screen and (min-width: $screen-lg-min) {
+      @content;
+    }
+  }
+}
+
+@mixin respondToBelow($media) {
+  @if $media== "xs" {
+    @media only screen and (max-width: $screen-xs-min) {
+      @content;
+    }
+  } @else if $media== "sm" {
+    @media only screen and (max-width: $screen-sm-max) {
+      @content;
+    }
+  } @else if $media== "md" {
+    @media only screen and (max-width: $screen-md-max) {
+      @content;
+    }
+  } @else if $media== "lg" {
+    @media only screen {
+      @content;
+    }
+  }
+}
+
+@mixin respondToTablet {
+  @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+    @content;
+  }
+}
+
+@mixin respondToSmall-n-Medium {
+  @media (min-width: $screen-sm-min) and (max-width: $screen-md-max) {
+    @content;
+  }
+}
+@mixin respondToTm {
+  @media (min-width: $screen-md-min) and (max-width: $screen-lg-min) {
+    @content;
+  }
+}
+
+@mixin respondToMobile() {
+  @include respondTo(xs) {
+    @content;
+  }
+}
+
+@mixin respondToDesktop() {
+  @include respondToAbove(md) {
+    @content;
+  }
+}
+
+@mixin clearfix {
+  &:before {
+    content: "";
+    display: table;
+  }
+  &:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+}
+
+@mixin rounded_corners($radius: 5px) {
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+}
+
+@mixin input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 5px 15px !important;
+  border: solid 1px $border_color !important;
+  height: 45px;
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  border-radius: 0;
+  background-color: #fff;
+  box-sizing: border-box;
+  @include respondTo(xs) {
+    width: 100%;
+    max-width: 100%;
+  }
+  outline: none;
+  &:focus {
+    outline: none;
+    @include box-shadow(0 8px 17px 2px rgba(0, 0, 0, 0.14) !important);
+  }
+  &[disabled] {
+    pointer-events: none;
+    background: #eee !important;
+    box-shadow: none;
+    color: $muted_color !important;
+    cursor: default;
+  }
+  @include respondToBelow(xs) {
+    height: 40px;
+  }
+}
+
+// Provides a cross-browser method to implement `display: inline-block;`
+@mixin inline-block($alignment: middle) {
+  display: -moz-inline-stack;
+  display: inline-block;
+  @if $alignment and $alignment !=none {
+    vertical-align: $alignment;
+  }
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+
+@mixin background_gradient(
+  $min_color,
+  $max_color,
+  $color_stop1: 0%,
+  $color_stop2: 100%
+) {
+  background: $min_color;
+  background: -moz-linear-gradient(
+    top,
+    $min_color $color_stop1,
+    $max_color $color_stop2
+  );
+  background: -o-linear-gradient(
+    top,
+    $min_color $color_stop1,
+    $max_color $color_stop2
+  );
+  background: -webkit-linear-gradient(
+    top,
+    $min_color $color_stop1,
+    $max_color $color_stop2
+  );
+  background: -ms-linear-gradient(
+    top,
+    $min_color $color_stop1,
+    $max_color $color_stop2
+  );
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop($color_stop1/100%, $min_color),
+    color-stop($color_stop2/100%, $max_color)
+  );
+  background: linear-gradient(
+    to bottom,
+    $min_color $color_stop1,
+    $max_color $color_stop2
+  );
+  zoom: 1; // fix for ie7 issue
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=#{$min_color}, endColorStr=#{$max_color});
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr=#{$min_color}, endColorStr=#{$max_color});
+}
+@mixin box-shadow($value) {
+  -webkit-box-shadow: $value;
+  -moz-box-shadow: $value;
+  box-shadow: $value;
+}
+@mixin font-size($sizeValue) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+// -------------
+@mixin shadow-box {
+  border: 1px solid $border_color;
+}
+@mixin transition($value) {
+  transition: $value;
+  -moz-transition: $value;
+  -webkit-transition: $value;
+}
+@mixin flex {
+  float: none;
+  display: inline-block;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+@mixin flex-grow($value) {
+  -webkit-box-flex: $value;
+  -webkit-flex: $value;
+  -ms-flex: $value;
+  flex: $value;
+}
+@mixin flex-wrap {
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+@mixin flex-direction($value) {
+  -webkit-flex-direction: $value;
+  flex-direction: $value;
+}
+@mixin align-items($value) {
+  -ms-align-items: $value;
+  -moz-align-items: $value;
+  -webkit-align-items: $value;
+  align-items: $value;
+}
+@mixin align-self($value) {
+  -ms-align-items: $value;
+  -moz-align-items: $value;
+  -webkit-align-items: $value;
+  align-items: $value;
+}
+@mixin justify-content($value) {
+  -ms-justify-content: $value;
+  -moz-justify-content: $value;
+  -webkit-justify-content: $value;
+  justify-content: $value;
+}
+@mixin flex-basis($value) {
+  -webkit-box-flex: $value;
+  -webkit-flex: $value;
+  -ms-flex: $value;
+  flex: $value;
+}
+@mixin transform($value) {
+  -ms-transform: $value;
+  -webkit-transform: $value;
+  transform: $value;
+}
+@mixin fontAwesome($fsize, $ascii, $fcolor) {
+  font: normal normal normal $fsize/1 FontAwesome;
+  content: $ascii;
+  color: $fcolor;
+}
+@mixin input-placeholder-font($value1, $value2) {
+  input::-webkit-input-placeholder {
+    color: $border_color;
+    @include font-size(1.2);
+  }
+  input::-moz-placeholder {
+    color: $border_color;
+    @include font-size(1.2);
+  }
+  input:-moz-placeholder {
+    color: $border_color;
+    @include font-size(1.2);
+  }
+  input:-ms-input-placeholder {
+    color: $border_color;
+    @include font-size(1.2);
+  }
+}
+@mixin radio-button {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  z-index: 1;
+  height: 25px;
+  cursor: pointer;
+  & + label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 30px;
+    margin-top: 10px;
+    line-height: 20px;
+    height: 20px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    &:before {
+      font-weight: normal;
+      content: "";
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 1px;
+      background: -webkit-linear-gradient(135deg, #07c0d5, #7fe496);
+      border-radius: 50%;
+    }
+    &:after {
+      @include transform(scale(1));
+      @include transition(linear all 0.25s);
+      content: "";
+      position: absolute;
+      background: #fff;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+      border: solid 2px #ddd;
+    }
+  }
+  &:checked + label:after {
+    @include transform(scale(0.5));
+  }
+}
+@mixin check-button {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  z-index: -1;
+  height: 25px;
+  cursor: pointer;
+  &:checked + label:after {
+    content: "";
+    position: absolute;
+    width: 9px;
+    height: 4.5px;
+    left: 3px;
+    bottom: 7px;
+    border-color: $secondary_color;
+    border-style: solid;
+    border-width: 0 0 2px 2px;
+    transform: rotate(-47deg);
+    -ms-transform: rotate(-47deg);
+    -webkit-transform: rotate(-47deg);
+    pointer-events: none;
+  }
+  & + label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 20px;
+    line-height: 15px;
+    height: 15px;
+    &:before {
+      font-weight: normal;
+      content: "";
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      margin-right: 10px;
+      position: absolute;
+      left: 0;
+      bottom: 1px;
+      background-color: #fff;
+      border: 1px solid darken($border_color, 15%);
+    }
+  }
+}
+@mixin theme-shadow {
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(#000, 0.4);
+}
+@mixin blue-shadow {
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14),
+    0 7px 10px -5px rgba($dark_base_color, 0.4);
+}
+@mixin red-shadow {
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14),
+    0 7px 10px -5px rgba($wb-red, 0.4);
+}
+@mixin green-shadow {
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14),
+    0 7px 10px -5px rgba($wb-green, 0.4);
+}
+@mixin hindi {
+  html[lang="hi"] & {
+    @content;
+  }
+}
+@mixin rtl {
+  html[lang="ar"] & {
+    @content;
+  }
+}
+@mixin section_heading {
+  @include font-size(2);
+  text-transform: uppercase;
+  color: $header_color;
+  font-weight: bold;
+  line-height: 1;
+  margin: 0 0 $pdp_detail_gap;
+  font-family: $font-primary;
+}
+@mixin secondary_header {
+  margin: $home-space 0 $pdp_detail_gap;
+  line-height: 1;
+  font-weight: 300;
+  @include font-size(2.2);
+  color: $header_color;
+  font-family: $font-primary;
+  text-transform: capitalize;
+}
+@mixin close-icon {
+  font-size: 0 !important;
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  right: 20px;
+  top: 20px;
+  font-size: 0px;
+  cursor: pointer;
+  z-index: 9;
+  border: 0;
+  background: transparent;
+  &:before,
+  &:after {
+    content: "";
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+    position: absolute;
+    height: 2px;
+    background: white;
+    width: 50%;
+    transition: all 0.25s;
+    opacity: 0;
+  }
+  &:before {
+    transform: rotate(45deg);
+    opacity: 1;
+  }
+  &:after {
+    transform: rotate(-45deg);
+    opacity: 1;
+  }
+}
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @-moz-keyframes #{$name} {
+    @content;
+  }
+  @-o-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
+@mixin animation($values) {
+  -webkit-animation: ($values);
+  -moz-animation: ($values);
+  -ms-animation: ($values);
+  animation: ($values);
+}
+@mixin button_style {
+  border: 0;
+  line-height: 45px;
+  height: 45px;
+  padding: 0 15px;
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 600;
+  display: inline-block;
+  background-size: 110%;
+  @include transition(all 0.25s ease);
+  @include theme-shadow();
+  &:hover {
+    @include transform(translateY(-2px));
+    box-shadow: 0 8px 17px 2px rgba(#000, 0.14),
+      0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
+  }
+  &:active {
+    @include theme-shadow();
+    transform: translate(0);
+    transition: none;
+  }
+  i,
+  span {
+    &:not(.material-icons) {
+      display: block;
+    }
+  }
+  &.small {
+    line-height: normal;
+    height: auto;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 3px;
+    font-weight: normal;
+  }
+  &.large {
+    line-height: 45px;
+    height: 45px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 0 25px;
+  }
+  &.plain {
+    background: transparent;
+    color: $dark_base_color;
+    border: solid 1px $dark_base_color;
+    box-shadow: none;
+    &:hover {
+      @include theme-shadow;
+    }
+    &.white {
+      color: #fff;
+      background: transparent !important;
+      border: solid 2px #fff;
+    }
+  }
+  &.white {
+    background: #fff;
+    color: $dark_base_color;
+  }
+  &[disabled] {
+    pointer-events: none;
+    background: #eee !important;
+    box-shadow: none;
+    color: $muted_color !important;
+    cursor: default;
+  }
+  &.icon-grp {
+    @include flex;
+    @include align-items(center);
+    margin: auto;
+    span,
+    i {
+      font-size: 16px;
+      margin-right: 10px;
+    }
+    &.rt {
+      span,
+      i {
+        margin-right: auto;
+        margin-left: 10px;
+      }
+    }
+  }
+  @include respondToBelow(xs) {
+    height: 40px;
+    line-height: 40px;
+  }
+}
+
+@mixin custom_scroll {
+  &::-webkit-scrollbar {
+    width: 5px;
+    background: #eee;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+  }
+
+  &:hover::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+  }
+}
