@@ -555,7 +555,7 @@ body {
 %bell-icon {
 	color: white;
 	font-size: 28px;
-	animation: wobble 0.8s ease-in-out -2s infinite alternate;
+	animation: swing 0.8s ease-in-out 1s infinite alternate forwards;
 	cursor: pointer;
 }
 
