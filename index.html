@@ -24,11 +24,11 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
     <script
       type="text/javascript"
-      src="http://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
   </head>
   <body>
@@ -216,7 +216,7 @@
                     }
                   );
                   var markerIcon = {
-                    url: "http://image.flaticon.com/icons/svg/252/252025.svg",
+                    url: "https://image.flaticon.com/icons/svg/252/252025.svg",
                     scaledSize: new google.maps.Size(50, 50),
                     origin: new google.maps.Point(0, 0),
                     anchor: new google.maps.Point(32, 65),
@@ -244,8 +244,8 @@
             <div class="right_in">
               <div
                 class="ven-1 ven active"
-                data-lat="12.953274"
-                data-lng="77.6904996"
+                data-lat="12.9502273"
+                data-lng="77.6967477"
                 data-label="Radisson Blu"
               >
                 <div>
@@ -295,9 +295,10 @@
             .addClass("active")
             .siblings()
             .removeClass("active");
-          var latt = parseInt($(this).attr("data-lat"));
-          var lngg = parseInt($(this).attr("data-lng"));
+          var latt = parseFloat($(this).attr("data-lat"));
+          var lngg = parseFloat($(this).attr("data-lng"));
           var labb = $(this).attr("data-label");
+          console.log(latt + " - "+lngg)
           setCoords(latt, lngg, labb);
         });
         $(document).on("click", "#toggle", function() {
@@ -345,7 +346,7 @@
     <script
       async
       defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBn0xxROxeV8-8jos4X8hxxs31zKv_cTqg&callback=initMap"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSK4vqrOG3caqUr6dxAVhA7MrdMmq63q0&callback=initMap"
     ></script>
   </body>
 </html>
