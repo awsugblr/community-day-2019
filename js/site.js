@@ -1,45 +1,5 @@
 $(function() {
-  var latt = 12.9520205;
-  var lngg = 77.6895809;
-  var venue = "Radisson Blu";
 
-  function setCoords(latt, lngg, venue) {
-    this.latt = latt;
-    this.lngg = lngg;
-    this.venue = venue;
-    console.log("clicked");
-    initMap();
-    $(this).addClass("hello");
-  }
-  function initMap() {
-    var uluru = { lat: latt, lng: lngg };
-    var map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 15,
-      center: uluru,
-      scrollwheel: false
-    });
-    var markerIcon = {
-      url: "https://image.flaticon.com/icons/svg/252/252025.svg",
-      scaledSize: new google.maps.Size(50, 50),
-      origin: new google.maps.Point(0, 0),
-      anchor: new google.maps.Point(32, 65),
-      labelOrigin: new google.maps.Point(25, 70)
-    };
-    var markerLabel = venue;
-    var marker = new google.maps.Marker({
-      map: map,
-      animation: google.maps.Animation.DROP,
-      position: uluru,
-      icon: markerIcon,
-      disableDefaultUI: true,
-      label: {
-        text: markerLabel,
-        color: "#eb3a44",
-        fontSize: "16px",
-        fontWeight: "bold"
-      }
-    });
-  }
   $(document).on("click", ".scroll", function() {
     $("html, body").animate(
       {
