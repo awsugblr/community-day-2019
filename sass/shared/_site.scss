@@ -299,17 +299,16 @@ div#myModal {
   align-items: center;
   justify-content: center;
   pointer-events: none;
+  background: rgba(0, 0, 0, 0.7);
   &.in {
     pointer-events: all;
   }
   iframe {
-    height: 100vh;
-    width: 100vw;
+    height: 50vh;
+    width: 100%;
   }
 
   .modal-dialog {
-    width: 100%;
-    height: 100%;
     margin: 0;
   }
 

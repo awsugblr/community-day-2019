@@ -620,29 +620,28 @@ div#myModal {
   align-items: center;
   justify-content: center;
   pointer-events: none;
+  background: rgba(0, 0, 0, 0.7);
 }
-/* line 302, ../sass/shared/_site.scss */
+/* line 303, ../sass/shared/_site.scss */
 div#myModal.in {
   pointer-events: all;
 }
-/* line 305, ../sass/shared/_site.scss */
+/* line 306, ../sass/shared/_site.scss */
 div#myModal iframe {
-  height: 100vh;
-  width: 100vw;
-}
-/* line 310, ../sass/shared/_site.scss */
-div#myModal .modal-dialog {
+  height: 50vh;
   width: 100%;
-  height: 100%;
+}
+/* line 311, ../sass/shared/_site.scss */
+div#myModal .modal-dialog {
   margin: 0;
 }
-/* line 316, ../sass/shared/_site.scss */
+/* line 315, ../sass/shared/_site.scss */
 div#myModal .modal-content {
   border-radius: 0;
   height: 100%;
   width: 100%;
 }
-/* line 322, ../sass/shared/_site.scss */
+/* line 321, ../sass/shared/_site.scss */
 div#myModal .modal-header {
   padding: 0;
   overflow: visible;
@@ -650,7 +649,7 @@ div#myModal .modal-header {
   position: relative;
   z-index: 99;
 }
-/* line 330, ../sass/shared/_site.scss */
+/* line 329, ../sass/shared/_site.scss */
 div#myModal button.close {
   position: absolute;
   right: 0;
@@ -663,7 +662,7 @@ div#myModal button.close {
   margin: 0;
   opacity: 1;
 }
-/* line 343, ../sass/shared/_site.scss */
+/* line 342, ../sass/shared/_site.scss */
 div#myModal .modal-body {
   padding: 0;
 }
