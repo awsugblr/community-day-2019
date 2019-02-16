@@ -68,13 +68,14 @@ input[type="reset"] {
   text-align: center;
   font-weight: 600;
   display: inline-block;
-  background-size: 110%;
   transition: all 0.25s ease;
   -moz-transition: all 0.25s ease;
   -webkit-transition: all 0.25s ease;
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 0, 0, 0.4);
+  background: -webkit-linear-gradient(135deg, #ff9900, #e28b08);
+  background-size: auto 110%;
 }
-/* line 505, ../sass/shared/_mixins.scss */
+/* line 506, ../sass/shared/_mixins.scss */
 button:hover,
 .button:hover,
 input[type="button"]:hover,
@@ -85,7 +86,7 @@ input[type="reset"]:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 17px 2px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.2);
 }
-/* line 510, ../sass/shared/_mixins.scss */
+/* line 511, ../sass/shared/_mixins.scss */
 button:active,
 .button:active,
 input[type="button"]:active,
@@ -95,7 +96,7 @@ input[type="reset"]:active {
   transform: translate(0);
   transition: none;
 }
-/* line 517, ../sass/shared/_mixins.scss */
+/* line 518, ../sass/shared/_mixins.scss */
 button i:not(.material-icons),
 button span:not(.material-icons),
 .button i:not(.material-icons),
@@ -108,7 +109,7 @@ input[type="reset"] i:not(.material-icons),
 input[type="reset"] span:not(.material-icons) {
   display: block;
 }
-/* line 521, ../sass/shared/_mixins.scss */
+/* line 522, ../sass/shared/_mixins.scss */
 button.small,
 .button.small,
 input[type="button"].small,
@@ -121,7 +122,7 @@ input[type="reset"].small {
   border-radius: 3px;
   font-weight: normal;
 }
-/* line 529, ../sass/shared/_mixins.scss */
+/* line 530, ../sass/shared/_mixins.scss */
 button.large,
 .button.large,
 input[type="button"].large,
@@ -134,7 +135,7 @@ input[type="reset"].large {
   letter-spacing: 1px;
   padding: 0 25px;
 }
-/* line 537, ../sass/shared/_mixins.scss */
+/* line 538, ../sass/shared/_mixins.scss */
 button.plain,
 .button.plain,
 input[type="button"].plain,
@@ -145,7 +146,7 @@ input[type="reset"].plain {
   border: solid 1px #ff9900;
   box-shadow: none;
 }
-/* line 542, ../sass/shared/_mixins.scss */
+/* line 543, ../sass/shared/_mixins.scss */
 button.plain:hover,
 .button.plain:hover,
 input[type="button"].plain:hover,
@@ -153,7 +154,7 @@ input[type="submit"].plain:hover,
 input[type="reset"].plain:hover {
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 0, 0, 0.4);
 }
-/* line 545, ../sass/shared/_mixins.scss */
+/* line 546, ../sass/shared/_mixins.scss */
 button.plain.white,
 .button.plain.white,
 input[type="button"].plain.white,
@@ -163,7 +164,7 @@ input[type="reset"].plain.white {
   background: transparent !important;
   border: solid 2px #fff;
 }
-/* line 551, ../sass/shared/_mixins.scss */
+/* line 552, ../sass/shared/_mixins.scss */
 button.white,
 .button.white,
 input[type="button"].white,
@@ -172,7 +173,7 @@ input[type="reset"].white {
   background: #fff;
   color: #ff9900;
 }
-/* line 555, ../sass/shared/_mixins.scss */
+/* line 556, ../sass/shared/_mixins.scss */
 button[disabled],
 .button[disabled],
 input[type="button"][disabled],
@@ -184,7 +185,7 @@ input[type="reset"][disabled] {
   color: #999999 !important;
   cursor: default;
 }
-/* line 562, ../sass/shared/_mixins.scss */
+/* line 563, ../sass/shared/_mixins.scss */
 button.icon-grp,
 .button.icon-grp,
 input[type="button"].icon-grp,
@@ -203,7 +204,7 @@ input[type="reset"].icon-grp {
   align-items: center;
   margin: auto;
 }
-/* line 566, ../sass/shared/_mixins.scss */
+/* line 567, ../sass/shared/_mixins.scss */
 button.icon-grp span,
 button.icon-grp i,
 .button.icon-grp span,
@@ -217,7 +218,7 @@ input[type="reset"].icon-grp i {
   font-size: 16px;
   margin-right: 10px;
 }
-/* line 572, ../sass/shared/_mixins.scss */
+/* line 573, ../sass/shared/_mixins.scss */
 button.icon-grp.rt span,
 button.icon-grp.rt i,
 .button.icon-grp.rt span,
@@ -449,19 +450,19 @@ input[type="reset"].button-sm {
     opacity: 1;
   }
 }
-/* line 586, ../sass/shared/_mixins.scss */
+/* line 587, ../sass/shared/_mixins.scss */
 .scroll-it::-webkit-scrollbar {
   width: 5px;
   background: #eee;
 }
-/* line 591, ../sass/shared/_mixins.scss */
+/* line 592, ../sass/shared/_mixins.scss */
 .scroll-it::-webkit-scrollbar-thumb {
   background-color: transparent;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 598, ../sass/shared/_mixins.scss */
+/* line 599, ../sass/shared/_mixins.scss */
 .scroll-it:hover::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.3);
   -moz-border-radius: 5px;
@@ -1302,7 +1303,7 @@ div#myModal .modal-body {
 }
 /* line 490, ../sass/shared/_home.scss */
 #page .section-5 {
-  padding: 100px 0;
+  padding: 100px 0 200px;
   background: #fff;
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 0, 0, 0.4);
 }
@@ -1512,8 +1513,71 @@ div#myModal .modal-body {
 #page .section-5 .sponsers .cats .flex-it .f1 > div:not(.head).konfhub {
   background-image: url(../images/spons/konfhub.svg);
 }
-
 /* line 668, ../sass/shared/_home.scss */
+#page .section-6 {
+  margin: -50px auto 100px;
+}
+/* line 670, ../sass/shared/_home.scss */
+#page .section-6 .foot-fk {
+  position: relative;
+  background: #232f3f;
+  padding: 50px;
+  color: #fff;
+  line-height: 1.5;
+  font-size: 2rem;
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 0, 0, 0.4);
+}
+/* line 678, ../sass/shared/_home.scss */
+#page .section-6 .foot-fk .main-heading-ttl {
+  font-weight: 900;
+  font-size: 4vw;
+  margin: 0;
+  position: absolute;
+  bottom: 0100%;
+  line-height: 0.7;
+}
+/* line 686, ../sass/shared/_home.scss */
+#page .section-6 .foot-fk .left-text {
+  padding-right: 50px;
+}
+/* line 689, ../sass/shared/_home.scss */
+#page .section-6 .foot-fk #mc_embed_signup div.mce_inline_error {
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: #f6bfbf;
+  color: red;
+  font-weight: normal;
+}
+/* line 697, ../sass/shared/_home.scss */
+#page .section-6 .foot-fk .input-group {
+  display: flex;
+  width: 100%;
+}
+/* line 700, ../sass/shared/_home.scss */
+#page .section-6 .foot-fk .input-group > .f2 {
+  flex-grow: 1;
+}
+/* line 703, ../sass/shared/_home.scss */
+#page .section-6 .foot-fk .input-group input {
+  padding: 0 15px;
+  color: #232f3f;
+}
+/* line 707, ../sass/shared/_home.scss */
+#page .section-6 .foot-fk .input-group button,
+#page .section-6 .foot-fk .input-group input {
+  height: 50px;
+  line-height: 50px;
+  width: 100%;
+  border: 0;
+}
+/* line 713, ../sass/shared/_home.scss */
+#page .section-6 .foot-fk .input-group button:hover,
+#page .section-6 .foot-fk .input-group input:hover {
+  transform: none;
+}
+
+/* line 721, ../sass/shared/_home.scss */
 #toggle {
   width: 70px;
   height: 70px;
@@ -1529,28 +1593,28 @@ div#myModal .modal-body {
   display: none;
 }
 @media only screen and (max-width: 991px) {
-  /* line 668, ../sass/shared/_home.scss */
+  /* line 721, ../sass/shared/_home.scss */
   #toggle {
     display: flex;
   }
 }
-/* line 685, ../sass/shared/_home.scss */
+/* line 738, ../sass/shared/_home.scss */
 #toggle span {
   position: relative;
   display: block;
 }
-/* line 688, ../sass/shared/_home.scss */
+/* line 741, ../sass/shared/_home.scss */
 #toggle span:after, #toggle span:before {
   content: "";
   position: absolute;
   left: 0;
   top: -9px;
 }
-/* line 695, ../sass/shared/_home.scss */
+/* line 748, ../sass/shared/_home.scss */
 #toggle span:after {
   top: 9px;
 }
-/* line 699, ../sass/shared/_home.scss */
+/* line 752, ../sass/shared/_home.scss */
 #toggle span,
 #toggle span:after,
 #toggle span:before {
@@ -1561,31 +1625,31 @@ div#myModal .modal-body {
   backface-visibility: hidden;
   border-radius: 2px;
 }
-/* line 709, ../sass/shared/_home.scss */
+/* line 762, ../sass/shared/_home.scss */
 #toggle.on {
   left: 15px;
 }
-/* line 711, ../sass/shared/_home.scss */
+/* line 764, ../sass/shared/_home.scss */
 #toggle.on span,
 #toggle.on span:after,
 #toggle.on span:before {
   width: 70%;
 }
-/* line 716, ../sass/shared/_home.scss */
+/* line 769, ../sass/shared/_home.scss */
 #toggle.on span {
   background-color: transparent;
 }
-/* line 719, ../sass/shared/_home.scss */
+/* line 772, ../sass/shared/_home.scss */
 #toggle.on span:after {
   transform: rotate(-45deg) translate(7px, -8px);
 }
-/* line 722, ../sass/shared/_home.scss */
+/* line 775, ../sass/shared/_home.scss */
 #toggle.on span::before {
   transform: rotate(45deg) translate(5px, 5px);
 }
 
 @media only screen and (max-width: 991px) {
-  /* line 729, ../sass/shared/_home.scss */
+  /* line 782, ../sass/shared/_home.scss */
   body {
     padding: 0 0 70px !important;
   }

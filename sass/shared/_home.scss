@@ -488,7 +488,7 @@
     padding: 100px 0;
   }
   .section-5 {
-    padding: 100px 0;
+    padding: 100px 0 200px;
     background: #fff;
     @include theme-shadow;
     @include respondToBelow(sm) {
@@ -659,6 +659,59 @@
                 }
               }
             }
+          }
+        }
+      }
+    }
+  }
+
+  .section-6 {
+    margin: -50px auto 100px;
+    .foot-fk {
+      position: relative;
+      background: $black_bg;
+      padding: 50px;
+      color: #fff;
+      line-height: 1.5;
+      font-size: 2rem;
+      @include theme-shadow;
+      .main-heading-ttl {
+        font-weight: 900;
+        font-size: 4vw;
+        margin: 0;
+        position: absolute;
+        bottom: 0100%;
+        line-height: 0.7;
+      }
+      .left-text {
+        padding-right: 50px;
+      }
+      #mc_embed_signup div.mce_inline_error {
+        position: absolute;
+        left: 0;
+        right: 0;
+        background: #f6bfbf;
+        color: red;
+        font-weight: normal;
+      }
+      .input-group {
+        display: flex;
+        width: 100%;
+        > .f2 {
+          flex-grow: 1;
+        }
+        input {
+          padding: 0 15px;
+          color: $black_bg;
+        }
+        button,
+        input {
+          height: 50px;
+          line-height: 50px;
+          width: 100%;
+          border: 0;
+          &:hover {
+            transform: none;
           }
         }
       }
