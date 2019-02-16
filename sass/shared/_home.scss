@@ -190,6 +190,7 @@
         @include respondToBelow(sm) {
           li {
             flex-grow: unset;
+            height: 65px;
           }
           align-items: center;
           flex-direction: column;
@@ -229,12 +230,12 @@
           }
         }
         @include respondToBelow(xs) {
-          height: 50px;
+          height: 50px !important;
           font-size: 14px;
         }
         &.spec {
           @include respondToBelow(xs) {
-            height: 100%;
+            height: 100% !important;
           }
           a {
             height: 100%;
@@ -246,6 +247,8 @@
             @include respondToBelow(xs) {
               height: 100%;
               font-size: 18px;
+              width: calc(100% - 70px);
+              margin-left: auto;
             }
           }
         }
@@ -324,7 +327,9 @@
       @include theme-shadow;
       border-top: solid 10px $dark_base_color;
       transform: translateY(70px);
-
+      h4.heading-ttl {
+        color: #fff;
+      }
       @include respondToBelow(sm) {
         transform: translateY(0);
       }
@@ -486,6 +491,10 @@
   }
   .section-4 {
     padding: 100px 0;
+
+    @include respondToBelow(sm) {
+      padding: 50px 0;
+    }
   }
   .section-5 {
     padding: 100px 0 200px;
@@ -495,6 +504,15 @@
       padding: 50px 0;
     }
     .sponsers {
+      .tmp {
+        @include respondToBelow(sm) {
+          font-size: 7vw !important;
+          padding: 50px;
+          b {
+            font-size: 8vw !important;
+          }
+        }
+      }
       .cats {
         @include respondToBelow(sm) {
           display: flex;
@@ -667,6 +685,9 @@
 
   .section-6 {
     margin: -50px auto 100px;
+    @include respondToBelow(sm) {
+      margin: 0;
+    }
     .foot-fk {
       position: relative;
       background: $black_bg;
@@ -675,6 +696,22 @@
       line-height: 1.5;
       font-size: 2rem;
       @include theme-shadow;
+      @include respondToBelow(sm) {
+        font-size: 1rem;
+        padding: 25px 25px 70px;
+      }
+      .flex-it {
+        @include respondToBelow(sm) {
+          flex-wrap: wrap;
+        }
+        .texting {
+          font-size: 2rem;
+          margin-bottom: 15px;
+          @include respondToAbove(md) {
+            font-size: 30px;
+          }
+        }
+      }
       .main-heading-ttl {
         font-weight: 900;
         font-size: 4vw;
@@ -682,9 +719,22 @@
         position: absolute;
         bottom: 0100%;
         line-height: 0.7;
+        left: 0;
+        @include respondToBelow(sm) {
+          font-size: 8vw;
+          right: 0;
+          text-align: center;
+        }
       }
       .left-text {
-        padding-right: 50px;
+        @include respondToAbove(md) {
+          padding-right: 50px;
+        }
+        & + div {
+          @include respondToBelow(sm) {
+            width: 100%;
+          }
+        }
       }
       #mc_embed_signup div.mce_inline_error {
         position: absolute;
@@ -791,5 +841,25 @@ body {
   }
   0% {
     transform: translate(-30px);
+  }
+}
+i.icon.large {
+  font-size: 30px;
+}
+#page .section-1 #nav-bar li #sub-button.sub-button {
+  @include respondToBelow(sm) {
+    position: absolute;
+    z-index: 999;
+    left: calc(100% + 10px);
+    height: 50px;
+    width: 50px;
+    border: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ff9900;
+    border-radius: 50%;
+    bottom: calc(70px + 10px);
   }
 }
