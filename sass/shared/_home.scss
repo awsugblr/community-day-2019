@@ -497,7 +497,7 @@
     }
   }
   .section-5 {
-    padding: 100px 0 200px;
+    padding: 100px 0 100px;
     background: #fff;
     @include theme-shadow;
     @include respondToBelow(sm) {
@@ -682,8 +682,114 @@
       }
     }
   }
-
   .section-6 {
+    padding: 100px 0 200px;
+    background: #fff;
+    @include theme-shadow;
+    @include respondToBelow(sm) {
+      padding: 50px 0;
+    }
+    .volunteers {
+      .vl-i {
+        .person {
+          align-items: center;
+          width: 20%;
+          display: flex;
+          flex-direction: column;
+          padding: 15px;
+          margin: 10px 0;
+          .img {
+            width: 125px;
+            height: 125px;
+            margin: auto;
+            background-position: center;
+            background-size: 100%;
+            background-repeat: no-repeat;
+            border-radius: 20px;
+            @include theme-shadow;
+            position: relative;
+            overflow: hidden;
+            a {
+              position: absolute;
+              left: 0;
+              right: 0;
+              top: 0;
+              bottom: 0;
+              transition: all 0.25s;
+              transform: translateY(100%);
+              margin: auto;
+              background: rgba($black_bg, 0.85);
+              color: #00acee;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding: 5px;
+              font-size: 80%;
+              flex-direction: column;
+            }
+            &:hover {
+              a {
+                transform: translateY(0);
+              }
+            }
+          }
+          &:before {
+            order: 1;
+            content: attr(data-fname);
+            font-weight: 600;
+            margin-top: 10px;
+            display: block;
+            font-size: 19px;
+          }
+          &:after {
+            font-size: 14px;
+            order: 2;
+            content: attr(data-lname);
+          }
+          &[data-fname="Jeevan"] .img {
+            background-image: url(../images/vols/jeevan.jpg);
+          }
+          &[data-fname="Sathyajith"] .img {
+            background-image: url(../images/vols/sathya.png);
+          }
+          &[data-fname="Runcy"] .img {
+            background-image: url(../images/vols/runcy.jpg);
+          }
+          &[data-fname="Prashanth"] .img {
+            background-image: url(../images/vols/prashanth.png);
+          }
+          &[data-fname="Krishna"] .img {
+            background-image: url(../images/vols/krishna.jpg);
+          }
+          &[data-fname="Anand"] .img {
+            background-image: url(../images/vols/anand.jpg);
+          }
+          &[data-fname="Rahul"] .img {
+            background-image: url(../images/vols/rahul.jpg);
+          }
+          &[data-fname="Mayank"] .img {
+            background-image: url(../images/vols/mayank.jpg);
+          }
+          &[data-fname="Sahil"] .img {
+            background-image: url(../images/vols/sahil.jpg);
+          }
+          &[data-fname="Harsha"] .img {
+            background-image: url(../images/vols/harsha.jpg);
+          }
+          &[data-fname="Akhil"] .img {
+            background-image: url(../images/vols/akhil.jpg);
+          }
+          &[data-fname="Bhuvaneswari"] .img {
+            background-image: url(../images/vols/bhuvaneswari.jpg);
+          }
+          &[data-fname="Praveen"] .img {
+            background-image: url(../images/vols/veen.jpg);
+          }
+        }
+      }
+    }
+  }
+  .section-7 {
     margin: -50px auto 100px;
     @include respondToBelow(sm) {
       margin: 0;
@@ -714,10 +820,10 @@
       }
       .main-heading-ttl {
         font-weight: 900;
-        font-size: 4vw;
+        font-size: 6vw;
         margin: 0;
         position: absolute;
-        bottom: 0100%;
+        bottom: 100%;
         line-height: 0.7;
         left: 0;
         @include respondToBelow(sm) {
