@@ -1328,38 +1328,38 @@ div#myModal .modal-body {
 }
 @media only screen and (max-width: 991px) {
   /* line 507, ../sass/shared/_home.scss */
-  #page .section-5 .sponsers .tmp {
+  #page .section-5 .sponsors .tmp {
     font-size: 7vw !important;
     padding: 50px;
   }
   /* line 511, ../sass/shared/_home.scss */
-  #page .section-5 .sponsers .tmp b {
+  #page .section-5 .sponsors .tmp b {
     font-size: 8vw !important;
   }
 }
 @media only screen and (max-width: 991px) {
   /* line 516, ../sass/shared/_home.scss */
-  #page .section-5 .sponsers .cats {
+  #page .section-5 .sponsors .cats {
     display: flex;
     overflow: auto;
     white-space: nowrap;
   }
   /* line 521, ../sass/shared/_home.scss */
-  #page .section-5 .sponsers .cats > div {
+  #page .section-5 .sponsors .cats > div {
     min-width: 100%;
     border: solid 1px #ddd;
     border-width: 1px 0;
     padding: 25px;
   }
   /* line 526, ../sass/shared/_home.scss */
-  #page .section-5 .sponsers .cats > div:first-child {
+  #page .section-5 .sponsors .cats > div:first-child {
     margin-left: 20%;
     border-radius: 30px 0 0 30px;
     border-left-width: 1px;
     position: relative;
   }
   /* line 531, ../sass/shared/_home.scss */
-  #page .section-5 .sponsers .cats > div:first-child:before {
+  #page .section-5 .sponsors .cats > div:first-child:before {
     content: "";
     position: absolute;
     height: 10px;
@@ -1374,7 +1374,7 @@ div#myModal .modal-body {
     animation: swipe 1s infinite alternate;
   }
   /* line 546, ../sass/shared/_home.scss */
-  #page .section-5 .sponsers .cats > div:first-child:after {
+  #page .section-5 .sponsors .cats > div:first-child:after {
     content: "";
     position: absolute;
     left: -20%;
@@ -1388,19 +1388,19 @@ div#myModal .modal-body {
     border-color: transparent #ff9900 transparent transparent;
   }
   /* line 561, ../sass/shared/_home.scss */
-  #page .section-5 .sponsers .cats > div:last-child {
+  #page .section-5 .sponsors .cats > div:last-child {
     border-radius: 0 30px 30px 0;
     border-right-width: 1px;
   }
 }
 /* line 567, ../sass/shared/_home.scss */
-#page .section-5 .sponsers .cats .flex-it {
+#page .section-5 .sponsors .cats .flex-it {
   align-items: center;
   margin-top: 50px;
 }
 @media only screen and (max-width: 991px) {
   /* line 567, ../sass/shared/_home.scss */
-  #page .section-5 .sponsers .cats .flex-it {
+  #page .section-5 .sponsors .cats .flex-it {
     flex-wrap: wrap;
     position: relative;
     margin: 0;
@@ -1408,7 +1408,7 @@ div#myModal .modal-body {
   }
 }
 /* line 576, ../sass/shared/_home.scss */
-#page .section-5 .sponsers .cats .flex-it .fhf {
+#page .section-5 .sponsors .cats .flex-it .fhf {
   position: relative;
   z-index: 1;
   height: 100px;
@@ -1416,7 +1416,7 @@ div#myModal .modal-body {
 }
 @media only screen and (max-width: 991px) {
   /* line 576, ../sass/shared/_home.scss */
-  #page .section-5 .sponsers .cats .flex-it .fhf {
+  #page .section-5 .sponsors .cats .flex-it .fhf {
     position: absolute;
     left: 0;
     height: auto;
@@ -1425,7 +1425,7 @@ div#myModal .modal-body {
   }
 }
 /* line 589, ../sass/shared/_home.scss */
-#page .section-5 .sponsers .cats .flex-it .fhf .head::before {
+#page .section-5 .sponsors .cats .flex-it .fhf .head::before {
   content: "";
   left: 0;
   position: absolute;
@@ -1436,12 +1436,12 @@ div#myModal .modal-body {
 }
 @media only screen and (max-width: 991px) {
   /* line 589, ../sass/shared/_home.scss */
-  #page .section-5 .sponsers .cats .flex-it .fhf .head::before {
+  #page .section-5 .sponsors .cats .flex-it .fhf .head::before {
     width: 15px;
   }
 }
 /* line 601, ../sass/shared/_home.scss */
-#page .section-5 .sponsers .cats .flex-it .fhf .head span {
+#page .section-5 .sponsors .cats .flex-it .fhf .head span {
   transform: translate(-30%) rotate(-90deg);
   font-size: 23px;
   text-transform: uppercase;
@@ -1457,7 +1457,7 @@ div#myModal .modal-body {
 }
 @media only screen and (max-width: 991px) {
   /* line 601, ../sass/shared/_home.scss */
-  #page .section-5 .sponsers .cats .flex-it .fhf .head span {
+  #page .section-5 .sponsors .cats .flex-it .fhf .head span {
     transform: translate(-100%) rotate(-90deg);
     font-size: 30px;
     width: 300px;
@@ -1467,14 +1467,14 @@ div#myModal .modal-body {
 }
 @media only screen and (max-width: 991px) {
   /* line 624, ../sass/shared/_home.scss */
-  #page .section-5 .sponsers .cats .flex-it .f1 {
+  #page .section-5 .sponsors .cats .flex-it .f1 {
     width: 100%;
     flex-grow: unset;
     flex-basis: unset;
   }
 }
 /* line 631, ../sass/shared/_home.scss */
-#page .section-5 .sponsers .cats .flex-it .f1 > div:not(.head) {
+#page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head) {
   position: relative;
   z-index: 2;
   font-size: 0;
@@ -1485,56 +1485,56 @@ div#myModal .modal-body {
 }
 @media only screen and (max-width: 991px) {
   /* line 631, ../sass/shared/_home.scss */
-  #page .section-5 .sponsers .cats .flex-it .f1 > div:not(.head) {
+  #page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head) {
     background-size: auto 60%;
   }
 }
 /* line 642, ../sass/shared/_home.scss */
-#page .section-5 .sponsers .cats .flex-it .f1 > div:not(.head).hotstar {
+#page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).hotstar {
   background-image: url(../images/spons/hotstar.png);
 }
 /* line 645, ../sass/shared/_home.scss */
-#page .section-5 .sponsers .cats .flex-it .f1 > div:not(.head).intel {
+#page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).intel {
   background-image: url(../images/spons/intel.png);
 }
 /* line 648, ../sass/shared/_home.scss */
-#page .section-5 .sponsers .cats .flex-it .f1 > div:not(.head).wheelsbox {
+#page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).wheelsbox {
   background-image: url(../images/spons/wheelsbox.png);
 }
 /* line 651, ../sass/shared/_home.scss */
-#page .section-5 .sponsers .cats .flex-it .f1 > div:not(.head).moengage {
+#page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).moengage {
   background-image: url(../images/spons/moengage.png);
 }
 /* line 654, ../sass/shared/_home.scss */
-#page .section-5 .sponsers .cats .flex-it .f1 > div:not(.head).swiggy {
+#page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).swiggy {
   background-image: url(../images/spons/swiggy.png);
 }
 /* line 657, ../sass/shared/_home.scss */
-#page .section-5 .sponsers .cats .flex-it .f1 > div:not(.head).elastic {
+#page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).elastic {
   background-image: url(../images/spons/elastic.png);
 }
 /* line 660, ../sass/shared/_home.scss */
-#page .section-5 .sponsers .cats .flex-it .f1 > div:not(.head).postman {
+#page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).postman {
   background-image: url(../images/spons/postman.png);
 }
 /* line 663, ../sass/shared/_home.scss */
-#page .section-5 .sponsers .cats .flex-it .f1 > div:not(.head).medlife {
+#page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).medlife {
   background-image: url(../images/spons/medlife.png);
 }
 /* line 666, ../sass/shared/_home.scss */
-#page .section-5 .sponsers .cats .flex-it .f1 > div:not(.head).sumologic {
+#page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).sumologic {
   background-image: url(../images/spons/sumologic.png);
 }
 /* line 669, ../sass/shared/_home.scss */
-#page .section-5 .sponsers .cats .flex-it .f1 > div:not(.head).wone {
+#page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).wone {
   background-image: url(../images/spons/wone.png);
 }
 /* line 672, ../sass/shared/_home.scss */
-#page .section-5 .sponsers .cats .flex-it .f1 > div:not(.head).cloud {
+#page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).cloud {
   background-image: url(../images/spons/cloud.png);
 }
 /* line 675, ../sass/shared/_home.scss */
-#page .section-5 .sponsers .cats .flex-it .f1 > div:not(.head).konfhub {
+#page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).konfhub {
   background-image: url(../images/spons/konfhub.png);
 }
 /* line 685, ../sass/shared/_home.scss */
