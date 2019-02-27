@@ -639,6 +639,9 @@
                 @include respondToBelow(sm) {
                   background-size: auto 60%;
                 }
+                &.jfrog {
+                  background-image: url(../images/spons/jfrog.png);
+                }
                 &.hotstar {
                   background-image: url(../images/spons/hotstar.png);
                 }
