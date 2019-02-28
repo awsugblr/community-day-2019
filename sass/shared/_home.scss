@@ -631,6 +631,11 @@
               &:not(.head) {
                 position: relative;
                 z-index: 2;
+                display: flex;
+                a {
+                  height: 100%;
+                  width: 100%;
+                }
                 font-size: 0;
                 height: 100px;
                 background-position: center;
