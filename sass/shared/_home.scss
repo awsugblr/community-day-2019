@@ -506,10 +506,10 @@
     .sponsors {
       .tmp {
         @include respondToBelow(sm) {
-          font-size: 7vw !important;
-          padding: 50px;
+          font-size: 4vw !important;
+          padding: 30px;
           b {
-            font-size: 8vw !important;
+            font-size: 6vw !important;
           }
         }
       }
@@ -626,6 +626,7 @@
               width: 100%;
               flex-grow: unset;
               flex-basis: unset;
+              min-height: 100px;
             }
             > div {
               &:not(.head) {
@@ -639,10 +640,10 @@
                 font-size: 0;
                 height: 100px;
                 background-position: center;
-                background-size: 60%;
+                background-size: auto 70%;
                 background-repeat: no-repeat;
                 @include respondToBelow(sm) {
-                  background-size: auto 60%;
+                  background-size: 70%;
                 }
                 &.jfrog {
                   background-image: url(../images/spons/jfrog.png);
@@ -780,7 +781,7 @@
           flex-direction: column;
           padding: 15px;
           margin: 10px 0;
-          &:first-child {
+          &.push {
             @include respondToAbove(md) {
               margin-left: 2.5%;
             }
@@ -908,6 +909,9 @@
           &[data-fname="Ganesh"] .img {
             background-image: url(../images/vols/ganesh.jpg);
           }
+          &[data-fname="Kaivalya"] .img {
+            background-image: url(../images/vols/kaivalya.jpg);
+          }
         }
       }
     }
@@ -916,6 +920,20 @@
     margin: -50px auto 100px;
     @include respondToBelow(sm) {
       margin: 0;
+    }
+    .container {
+      position: relative;
+      &:before {
+        position: absolute;
+        background: url(../images/dot_bg.png) center no-repeat;
+        background-size: cover;
+        height: 150px;
+        width: 150px;
+        left: 100%;
+        transform: translate(-50px, -50px);
+        content: "";
+        top: 0;
+      }
     }
     .foot-fk {
       position: relative;
