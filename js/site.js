@@ -43,7 +43,7 @@ $(function() {
   });
   $(document).scroll(function() {
     $(".section.hdr > .content").css({
-      top: 0 - $(this).scrollTop() / 3,
+      top: 0 - $(this).scrollTop() / 2,
       filter:
         "blur(" +
         ($(this).scrollTop() / $(".section.hdr > .content").height()) * 5 +
