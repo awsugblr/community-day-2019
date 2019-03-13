@@ -355,6 +355,7 @@
         position: relative;
         z-index: 1;
       }
+
       .headin-ttl {
         color: $black_bg;
         color: #232f3f;
@@ -363,12 +364,19 @@
         @include respondToAbove(md) {
           font-size: 75px;
           position: absolute;
-          right: -70px;
+          // right: -70px;
+          // transform: rotate(-90deg) translate(-70%, 150%);
+          // transform-origin: top center;
+          left: 100%;
+          top: 0;
+          bottom: 0;
+          text-align: center;
+          transform: rotate(-180deg);
+          margin: 0 0 0 30px;
+          writing-mode: vertical-lr;
           text-transform: uppercase;
           font-weight: 900;
           letter-spacing: 10px;
-          transform: rotate(-90deg) translate(-70%, 150%);
-          transform-origin: top center;
           text-shadow: -2px 2px 3px rgba(0, 0, 0, 0.25);
         }
       }
@@ -388,11 +396,13 @@
       }
       .left_in {
         #map {
-          height: 500px;
+          min-height: 500px;
           width: 100%;
           box-shadow: 5px 4px 20px 0 rgba(0, 0, 0, 0.14),
             10px 7px 10px -5px rgba(0, 0, 0, 0.4);
+          height: 100%;
           @include respondToBelow(sm) {
+            min-height: 0;
             margin: 0 auto 30px;
             height: 50vh;
           }
@@ -401,6 +411,8 @@
     }
     .right {
       padding-left: 200px;
+      padding-right: 0;
+
       h4 {
         font-size: 30px;
         small {
@@ -411,6 +423,7 @@
         display: flex;
         flex-direction: column;
         position: relative;
+
         .marked {
           position: absolute;
           left: 0;
@@ -450,16 +463,31 @@
             color: #fff;
           }
           cursor: pointer;
-          width: 80%;
+          width: 100%;
           margin: auto;
           height: 50%;
           display: flex;
-          flex-direction: column;
           align-items: center;
           justify-content: center;
           position: relative;
           z-index: 3;
-          padding: 15px;
+          padding: 30px;
+          @include respondToBelow(sm) {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 10px !important;
+          }
+          .rand_cls {
+            @include respondToAbove(md) {
+              width: 40%;
+              margin-right: 30px;
+            }
+            text-align: center;
+            @include respondToBelow(sm) {
+              color: $dark_base_color;
+            }
+          }
           @include respondToBelow(sm) {
             font-size: 12px;
           }
@@ -476,6 +504,7 @@
         padding: 0;
         h4 {
           font-size: 16px;
+          margin: 0 0 14px;
         }
         .right_in {
           flex-direction: row;
@@ -495,6 +524,10 @@
     @include respondToBelow(sm) {
       padding: 50px 0;
     }
+  }
+  .section-talk {
+    padding: 50px;
+    background-color: #eee;
   }
   .section-5 {
     padding: 100px 0 100px;
@@ -683,6 +716,10 @@
                 }
                 &.konfhub {
                   background-image: url(../images/spons/konfhub.png);
+                }
+
+                &.alexa {
+                  background-image: url(../images/spons/alexa.png);
                 }
               }
             }
@@ -933,6 +970,9 @@
         transform: translate(-50px, -50px);
         content: "";
         top: 0;
+        @include respondToBelow(sm) {
+          left: 0;
+        }
       }
     }
     .foot-fk {
