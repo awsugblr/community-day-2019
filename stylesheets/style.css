@@ -1863,21 +1863,25 @@ div#myModal .modal-body {
 #page .section-6 .volunteers .vl-i .person[data-fname="Kaivalya"] .img {
   background-image: url(../images/vols/kaivalya.jpg);
 }
-/* line 956, ../sass/shared/_home.scss */
+/* line 952, ../sass/shared/_home.scss */
+#page .section-6 .volunteers .vl-i .person[data-fname="Gaurav"] .img {
+  background-image: url(../images/vols/gaurav.jpg);
+}
+/* line 959, ../sass/shared/_home.scss */
 #page .section-7 {
   margin: -50px auto 100px;
 }
 @media only screen and (max-width: 991px) {
-  /* line 956, ../sass/shared/_home.scss */
+  /* line 959, ../sass/shared/_home.scss */
   #page .section-7 {
     margin: 0;
   }
 }
-/* line 961, ../sass/shared/_home.scss */
+/* line 964, ../sass/shared/_home.scss */
 #page .section-7 .container {
   position: relative;
 }
-/* line 963, ../sass/shared/_home.scss */
+/* line 966, ../sass/shared/_home.scss */
 #page .section-7 .container:before {
   position: absolute;
   background: url(../images/dot_bg.png) center no-repeat;
@@ -1890,12 +1894,12 @@ div#myModal .modal-body {
   top: 0;
 }
 @media only screen and (max-width: 991px) {
-  /* line 963, ../sass/shared/_home.scss */
+  /* line 966, ../sass/shared/_home.scss */
   #page .section-7 .container:before {
     left: 0;
   }
 }
-/* line 978, ../sass/shared/_home.scss */
+/* line 981, ../sass/shared/_home.scss */
 #page .section-7 .foot-fk {
   position: relative;
   background: #232f3f;
@@ -1906,30 +1910,30 @@ div#myModal .modal-body {
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 0, 0, 0.4);
 }
 @media only screen and (max-width: 991px) {
-  /* line 978, ../sass/shared/_home.scss */
+  /* line 981, ../sass/shared/_home.scss */
   #page .section-7 .foot-fk {
     font-size: 1rem;
     padding: 25px 25px 70px;
   }
 }
 @media only screen and (max-width: 991px) {
-  /* line 990, ../sass/shared/_home.scss */
+  /* line 993, ../sass/shared/_home.scss */
   #page .section-7 .foot-fk .flex-it {
     flex-wrap: wrap;
   }
 }
-/* line 994, ../sass/shared/_home.scss */
+/* line 997, ../sass/shared/_home.scss */
 #page .section-7 .foot-fk .flex-it .texting {
   font-size: 2rem;
   margin-bottom: 15px;
 }
 @media only screen and (min-width: 992px) {
-  /* line 994, ../sass/shared/_home.scss */
+  /* line 997, ../sass/shared/_home.scss */
   #page .section-7 .foot-fk .flex-it .texting {
     font-size: 30px;
   }
 }
-/* line 1002, ../sass/shared/_home.scss */
+/* line 1005, ../sass/shared/_home.scss */
 #page .section-7 .foot-fk .main-heading-ttl {
   font-weight: 900;
   font-size: 6vw;
@@ -1940,7 +1944,7 @@ div#myModal .modal-body {
   left: 0;
 }
 @media only screen and (max-width: 991px) {
-  /* line 1002, ../sass/shared/_home.scss */
+  /* line 1005, ../sass/shared/_home.scss */
   #page .section-7 .foot-fk .main-heading-ttl {
     font-size: 8vw;
     right: 0;
@@ -1948,18 +1952,18 @@ div#myModal .modal-body {
   }
 }
 @media only screen and (min-width: 992px) {
-  /* line 1016, ../sass/shared/_home.scss */
+  /* line 1019, ../sass/shared/_home.scss */
   #page .section-7 .foot-fk .left-text {
     padding-right: 50px;
   }
 }
 @media only screen and (max-width: 991px) {
-  /* line 1020, ../sass/shared/_home.scss */
+  /* line 1023, ../sass/shared/_home.scss */
   #page .section-7 .foot-fk .left-text + div {
     width: 100%;
   }
 }
-/* line 1026, ../sass/shared/_home.scss */
+/* line 1029, ../sass/shared/_home.scss */
 #page .section-7 .foot-fk #mc_embed_signup div.mce_inline_error {
   position: absolute;
   left: 0;
@@ -1968,21 +1972,21 @@ div#myModal .modal-body {
   color: red;
   font-weight: normal;
 }
-/* line 1034, ../sass/shared/_home.scss */
+/* line 1037, ../sass/shared/_home.scss */
 #page .section-7 .foot-fk .input-group {
   display: flex;
   width: 100%;
 }
-/* line 1037, ../sass/shared/_home.scss */
+/* line 1040, ../sass/shared/_home.scss */
 #page .section-7 .foot-fk .input-group > .f2 {
   flex-grow: 1;
 }
-/* line 1040, ../sass/shared/_home.scss */
+/* line 1043, ../sass/shared/_home.scss */
 #page .section-7 .foot-fk .input-group input {
   padding: 0 15px;
   color: #232f3f;
 }
-/* line 1044, ../sass/shared/_home.scss */
+/* line 1047, ../sass/shared/_home.scss */
 #page .section-7 .foot-fk .input-group button,
 #page .section-7 .foot-fk .input-group input {
   height: 50px;
@@ -1990,13 +1994,13 @@ div#myModal .modal-body {
   width: 100%;
   border: 0;
 }
-/* line 1050, ../sass/shared/_home.scss */
+/* line 1053, ../sass/shared/_home.scss */
 #page .section-7 .foot-fk .input-group button:hover,
 #page .section-7 .foot-fk .input-group input:hover {
   transform: none;
 }
 
-/* line 1058, ../sass/shared/_home.scss */
+/* line 1061, ../sass/shared/_home.scss */
 #toggle {
   width: 70px;
   height: 70px;
@@ -2012,28 +2016,28 @@ div#myModal .modal-body {
   display: none;
 }
 @media only screen and (max-width: 991px) {
-  /* line 1058, ../sass/shared/_home.scss */
+  /* line 1061, ../sass/shared/_home.scss */
   #toggle {
     display: flex;
   }
 }
-/* line 1075, ../sass/shared/_home.scss */
+/* line 1078, ../sass/shared/_home.scss */
 #toggle span {
   position: relative;
   display: block;
 }
-/* line 1078, ../sass/shared/_home.scss */
+/* line 1081, ../sass/shared/_home.scss */
 #toggle span:after, #toggle span:before {
   content: "";
   position: absolute;
   left: 0;
   top: -9px;
 }
-/* line 1085, ../sass/shared/_home.scss */
+/* line 1088, ../sass/shared/_home.scss */
 #toggle span:after {
   top: 9px;
 }
-/* line 1089, ../sass/shared/_home.scss */
+/* line 1092, ../sass/shared/_home.scss */
 #toggle span,
 #toggle span:after,
 #toggle span:before {
@@ -2044,31 +2048,31 @@ div#myModal .modal-body {
   backface-visibility: hidden;
   border-radius: 2px;
 }
-/* line 1099, ../sass/shared/_home.scss */
+/* line 1102, ../sass/shared/_home.scss */
 #toggle.on {
   left: 15px;
 }
-/* line 1101, ../sass/shared/_home.scss */
+/* line 1104, ../sass/shared/_home.scss */
 #toggle.on span,
 #toggle.on span:after,
 #toggle.on span:before {
   width: 70%;
 }
-/* line 1106, ../sass/shared/_home.scss */
+/* line 1109, ../sass/shared/_home.scss */
 #toggle.on span {
   background-color: transparent;
 }
-/* line 1109, ../sass/shared/_home.scss */
+/* line 1112, ../sass/shared/_home.scss */
 #toggle.on span:after {
   transform: rotate(-45deg) translate(7px, -8px);
 }
-/* line 1112, ../sass/shared/_home.scss */
+/* line 1115, ../sass/shared/_home.scss */
 #toggle.on span::before {
   transform: rotate(45deg) translate(5px, 5px);
 }
 
 @media only screen and (max-width: 991px) {
-  /* line 1119, ../sass/shared/_home.scss */
+  /* line 1122, ../sass/shared/_home.scss */
   body {
     padding: 0 0 70px !important;
   }
@@ -2082,13 +2086,13 @@ div#myModal .modal-body {
     transform: translate(-30px);
   }
 }
-/* line 1133, ../sass/shared/_home.scss */
+/* line 1136, ../sass/shared/_home.scss */
 i.icon.large {
   font-size: 30px;
 }
 
 @media only screen and (max-width: 991px) {
-  /* line 1136, ../sass/shared/_home.scss */
+  /* line 1139, ../sass/shared/_home.scss */
   #page .section-1 #nav-bar li #sub-button.sub-button {
     position: absolute;
     z-index: 999;
