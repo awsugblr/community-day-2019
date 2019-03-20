@@ -1590,6 +1590,10 @@ div#myModal .modal-body {
 #page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).alexa {
   background-image: url(../images/spons/alexa.png);
 }
+/* line 721, ../sass/shared/_home.scss */
+#page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).jetbrains {
+  background-image: url(../images/spons/jetbrains.png);
+}
 /* line 731, ../sass/shared/_home.scss */
 #page .section-8 {
   padding: 100px 0;
