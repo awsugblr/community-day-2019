@@ -605,12 +605,16 @@
             position: relative;
             margin: 0;
             padding-left: 50px;
+            height: 100%;
           }
           .fhf {
             position: relative;
             z-index: 1;
             height: 100px;
             transform: translateX(25px);
+            flex-grow: unset;
+            flex-basis: unset;
+            width: 10%;
             @include respondToBelow(sm) {
               position: absolute;
               left: 0;
@@ -625,7 +629,7 @@
                 position: absolute;
                 top: 0;
                 bottom: 0;
-                width: 25px;
+                width: 15px;
                 background: #ddd;
                 @include respondToBelow(sm) {
                   width: 15px;
@@ -655,10 +659,11 @@
             }
           }
           .f1 {
+            flex-grow: unset;
+            flex-basis: unset;
+            width: 30%;
             @include respondToBelow(sm) {
               width: 100%;
-              flex-grow: unset;
-              flex-basis: unset;
               min-height: 100px;
             }
             > div {
@@ -681,29 +686,14 @@
                 &.jfrog {
                   background-image: url(../images/spons/jfrog.png);
                 }
-                &.hotstar {
-                  background-image: url(../images/spons/hotstar.png);
-                }
-                &.intel {
-                  background-image: url(../images/spons/intel.png);
+                &.jetbrains {
+                  background-image: url(../images/spons/jetbrains.png);
                 }
                 &.wheelsbox {
                   background-image: url(../images/spons/wheelsbox.png);
                 }
-                &.moengage {
-                  background-image: url(../images/spons/moengage.png);
-                }
-                &.swiggy {
-                  background-image: url(../images/spons/swiggy.png);
-                }
                 &.elastic {
                   background-image: url(../images/spons/elastic.png);
-                }
-                &.postman {
-                  background-image: url(../images/spons/postman.png);
-                }
-                &.medlife {
-                  background-image: url(../images/spons/medlife.png);
                 }
                 &.sumologic {
                   background-image: url(../images/spons/sumologic.png);
@@ -711,13 +701,9 @@
                 &.wone {
                   background-image: url(../images/spons/wone.png);
                 }
-                &.cloud {
-                  background-image: url(../images/spons/cloud.png);
-                }
                 &.konfhub {
                   background-image: url(../images/spons/konfhub.png);
                 }
-
                 &.alexa {
                   background-image: url(../images/spons/alexa.png);
                 }
