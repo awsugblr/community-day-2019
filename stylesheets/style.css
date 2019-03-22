@@ -1574,6 +1574,9 @@ div#myModal .modal-body {
 #page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).alexa {
   background-image: url(../images/spons/alexa.png);
 }
+#page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).postman {
+  background-image: url(../images/spons/postman.png);
+}
 /* line 717, ../sass/shared/_home.scss */
 #page .section-8 {
   padding: 100px 0;
