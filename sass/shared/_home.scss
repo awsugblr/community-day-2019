@@ -717,6 +717,7 @@
       }
     }
   }
+
   .section-8 {
     padding: 100px 0;
     color: #fff;
@@ -1046,6 +1047,66 @@
       }
     }
   }
+  .section-tickets {
+    background: #fff;
+
+    @include respondToBelow(sm) {
+      padding: 50px 0;
+    }
+    .buy-wrapper {
+      margin-top: 50px;
+      @include respondToBelow(sm) {
+        margin-top: 25px !important;
+      }
+    }
+    .row {
+      @include respondToBelow(sm) {
+        margin: 0 15px;
+        flex-wrap: wrap;
+        > div {
+          width: calc(50% - 15px / 2);
+          margin-bottom: 15px;
+          padding: 0;
+          &:nth-child(odd) {
+            margin-right: 15px;
+          }
+        }
+      }
+    }
+    .card {
+      @include respondToBelow(xs) {
+        h3 {
+          font-size: 16px;
+        }
+      }
+      &.with_icon {
+        &.tick_conf {
+          .bg_img {
+            background-image: url(../images/tick_conf.svg);
+          }
+        }
+        &.tick_work_1 {
+          .bg_img {
+            background-image: url(../images/tick_work_1.svg);
+          }
+        }
+        &.tick_work_2 {
+          .bg_img {
+            background-image: url(../images/tick_work_2.svg);
+          }
+        }
+        &.combo {
+          .bg_img {
+            background-image: url(../images/combo.svg);
+            background-size: contain;
+            @include respondToBelow(xs) {
+              width: 120px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 #toggle {
   width: 70px;
@@ -1140,5 +1201,39 @@ i.icon.large {
     background: #ff9900;
     border-radius: 50%;
     bottom: calc(70px + 10px);
+  }
+}
+
+.card {
+  background: #fff;
+  padding: 30px 15px;
+  text-align: center;
+  @include theme-shadow();
+  height: 100%;
+  h3 {
+    margin: 0 0 15px;
+    color: $dark_base_color;
+  }
+  p {
+    font-size: 14px;
+    color: $muted_color;
+    line-height: 1.2;
+  }
+  &.with_icon {
+    position: relative;
+    .bg_img {
+      margin: 0 auto 15px;
+      height: 75px;
+      width: 75px;
+      background-size: auto 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+  &.dark {
+    background: $black_bg;
+    p {
+      color: #fff;
+    }
   }
 }
