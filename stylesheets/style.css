@@ -1550,6 +1550,9 @@ div#myModal .modal-body {
 #page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).jetbrains {
   background-image: url(../images/spons/jetbrains.png);
 }
+#page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).powerup {
+  background-image: url(../images/spons/powerup.png);
+}
 /* line 692, ../sass/shared/_home.scss */
 #page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).wheelsbox {
   background-image: url(../images/spons/wheelsbox.png);
