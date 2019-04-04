@@ -293,13 +293,9 @@ ul.circle {
   }
 }
 
-div#myModal {
-  padding: 0 !important;
-  display: flex !important;
-  align-items: center;
-  justify-content: center;
-  pointer-events: none;
+.modal {
   background: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
   &.in {
     pointer-events: all;
   }
@@ -308,38 +304,102 @@ div#myModal {
     width: 100%;
   }
 
-  .modal-dialog {
-    margin: 0;
-  }
-
-  .modal-content {
-    border-radius: 0;
-    height: 100%;
-    width: 100%;
-  }
-
   .modal-header {
-    padding: 0;
-    overflow: visible;
-    height: 0;
-    position: relative;
-    z-index: 99;
+    .heading-ttl {
+      margin: 0;
+    }
   }
-
   button.close {
-    position: absolute;
-    right: 0;
-    top: 0;
+    border-radius: 50%;
     height: 30px;
     width: 30px;
-    border-radius: 50%;
-    background: $dark_base_color;
-    z-index: 9999;
-    margin: 0;
     opacity: 1;
+    background: $dark_base_color;
   }
+  &.fillo {
+    .modal-header {
+      background: $dark_base_color;
+      color: #fff;
+      h4 {
+        p {
+          font-size: 25px;
+          color: #fff;
+        }
+      }
+      button {
+        background: #fff;
+        color: $dark_base_color;
+      }
+    }
+    .modal-dialog {
+      @include respondToAbove(md) {
+        width: 70%;
+      }
+    }
+    .modal-body {
+      @include respondToAbove(md) {
+        padding: 50px;
+      }
+      .small-head {
+        margin: 15px 0 7px;
+        font-size: 16px;
+        color: $dark_base_color;
+      }
+      p,
+      li {
+        font-size: 14px;
+        line-height: 1.5;
+      }
+      .wid {
+        @include respondToAbove(md) {
+          max-width: 70%;
+          margin: auto;
+        }
+        .block {
+          margin-bottom: 30px;
+          border: solid 1px #ddd;
+          padding: 15px;
+          background: #f7f7f7;
+          ul {
+            list-style-type: circle;
+            margin-left: 15px;
+            margin-top: 15px;
+          }
+        }
+      }
+    }
+  }
+  &#myModal {
+    padding: 0 !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    .modal-dialog {
+      margin: 0;
+    }
 
-  .modal-body {
-    padding: 0;
+    .modal-content {
+      border-radius: 0;
+      height: 100%;
+      width: 100%;
+    }
+    .modal-header {
+      padding: 0;
+      overflow: visible;
+      height: 0;
+      position: relative;
+      z-index: 99;
+    }
+    .modal-body {
+      padding: 0;
+    }
+    button.close {
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 9999;
+      margin: 0;
+    }
   }
 }

@@ -615,57 +615,127 @@ ul.circle li {
 }
 
 /* line 296, ../sass/shared/_site.scss */
-div#myModal {
+.modal {
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+}
+/* line 299, ../sass/shared/_site.scss */
+.modal.in {
+  pointer-events: all;
+}
+/* line 302, ../sass/shared/_site.scss */
+.modal iframe {
+  height: 50vh;
+  width: 100%;
+}
+/* line 308, ../sass/shared/_site.scss */
+.modal .modal-header .heading-ttl {
+  margin: 0;
+}
+/* line 312, ../sass/shared/_site.scss */
+.modal button.close {
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  opacity: 1;
+  background: #ff9900;
+}
+/* line 320, ../sass/shared/_site.scss */
+.modal.fillo .modal-header {
+  background: #ff9900;
+  color: #fff;
+}
+/* line 324, ../sass/shared/_site.scss */
+.modal.fillo .modal-header h4 p {
+  font-size: 25px;
+  color: #fff;
+}
+/* line 329, ../sass/shared/_site.scss */
+.modal.fillo .modal-header button {
+  background: #fff;
+  color: #ff9900;
+}
+@media only screen and (min-width: 992px) {
+  /* line 334, ../sass/shared/_site.scss */
+  .modal.fillo .modal-dialog {
+    width: 70%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  /* line 339, ../sass/shared/_site.scss */
+  .modal.fillo .modal-body {
+    padding: 50px;
+  }
+}
+/* line 343, ../sass/shared/_site.scss */
+.modal.fillo .modal-body .small-head {
+  margin: 15px 0 7px;
+  font-size: 16px;
+  color: #ff9900;
+}
+/* line 348, ../sass/shared/_site.scss */
+.modal.fillo .modal-body p,
+.modal.fillo .modal-body li {
+  font-size: 14px;
+  line-height: 1.5;
+}
+@media only screen and (min-width: 992px) {
+  /* line 353, ../sass/shared/_site.scss */
+  .modal.fillo .modal-body .wid {
+    max-width: 70%;
+    margin: auto;
+  }
+}
+/* line 358, ../sass/shared/_site.scss */
+.modal.fillo .modal-body .wid .block {
+  margin-bottom: 30px;
+  border: solid 1px #ddd;
+  padding: 15px;
+  background: #f7f7f7;
+}
+/* line 363, ../sass/shared/_site.scss */
+.modal.fillo .modal-body .wid .block ul {
+  list-style-type: circle;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+/* line 372, ../sass/shared/_site.scss */
+.modal#myModal {
   padding: 0 !important;
   display: flex !important;
   align-items: center;
   justify-content: center;
   pointer-events: none;
-  background: rgba(0, 0, 0, 0.7);
 }
-/* line 303, ../sass/shared/_site.scss */
-div#myModal.in {
-  pointer-events: all;
-}
-/* line 306, ../sass/shared/_site.scss */
-div#myModal iframe {
-  height: 50vh;
-  width: 100%;
-}
-/* line 311, ../sass/shared/_site.scss */
-div#myModal .modal-dialog {
+/* line 378, ../sass/shared/_site.scss */
+.modal#myModal .modal-dialog {
   margin: 0;
 }
-/* line 315, ../sass/shared/_site.scss */
-div#myModal .modal-content {
+/* line 382, ../sass/shared/_site.scss */
+.modal#myModal .modal-content {
   border-radius: 0;
   height: 100%;
   width: 100%;
 }
-/* line 321, ../sass/shared/_site.scss */
-div#myModal .modal-header {
+/* line 387, ../sass/shared/_site.scss */
+.modal#myModal .modal-header {
   padding: 0;
   overflow: visible;
   height: 0;
   position: relative;
   z-index: 99;
 }
-/* line 329, ../sass/shared/_site.scss */
-div#myModal button.close {
+/* line 394, ../sass/shared/_site.scss */
+.modal#myModal .modal-body {
+  padding: 0;
+}
+/* line 397, ../sass/shared/_site.scss */
+.modal#myModal button.close {
   position: absolute;
   right: 0;
   top: 0;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  background: #ff9900;
   z-index: 9999;
   margin: 0;
-  opacity: 1;
-}
-/* line 342, ../sass/shared/_site.scss */
-div#myModal .modal-body {
-  padding: 0;
 }
 
 /* line 2, ../sass/shared/_home.scss */
@@ -1993,6 +2063,7 @@ div#myModal .modal-body {
 /* line 1050, ../sass/shared/_home.scss */
 #page .section-tickets {
   background: #fff;
+  padding: 100px 0;
 }
 @media only screen and (max-width: 991px) {
   /* line 1050, ../sass/shared/_home.scss */
@@ -2010,54 +2081,113 @@ div#myModal .modal-body {
     margin-top: 25px !important;
   }
 }
+/* line 1063, ../sass/shared/_home.scss */
+#page .section-tickets .card button {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: normal;
+}
 @media only screen and (max-width: 991px) {
-  /* line 1062, ../sass/shared/_home.scss */
+  /* line 1063, ../sass/shared/_home.scss */
+  #page .section-tickets .card button {
+    position: static;
+    height: 35px;
+    border-radius: 5px;
+    margin-top: 10px;
+    background: #fff;
+    color: #ff9900;
+    border: solid 1px #ff9900;
+    box-shadow: none;
+  }
+}
+@media only screen and (min-width: 992px) {
+  /* line 1087, ../sass/shared/_home.scss */
+  #page .section-tickets .card:hover button {
+    height: 45px;
+  }
+}
+@media only screen and (max-width: 991px) {
+  /* line 1094, ../sass/shared/_home.scss */
   #page .section-tickets .row {
     margin: 0 15px;
     flex-wrap: wrap;
   }
-  /* line 1066, ../sass/shared/_home.scss */
+  /* line 1098, ../sass/shared/_home.scss */
   #page .section-tickets .row > div {
     width: calc(50% - 15px / 2);
     margin-bottom: 15px;
     padding: 0;
   }
-  /* line 1070, ../sass/shared/_home.scss */
-  #page .section-tickets .row > div:nth-child(odd) {
+  /* line 1102, ../sass/shared/_home.scss */
+  #page .section-tickets .row > div:nth-child(1) {
+    order: 1;
     margin-right: 15px;
+  }
+  /* line 1106, ../sass/shared/_home.scss */
+  #page .section-tickets .row > div:nth-child(2) {
+    order: 3;
+    margin-right: 15px;
+  }
+  /* line 1110, ../sass/shared/_home.scss */
+  #page .section-tickets .row > div:nth-child(3) {
+    order: 4;
+  }
+  /* line 1113, ../sass/shared/_home.scss */
+  #page .section-tickets .row > div:nth-child(4) {
+    order: 2;
   }
 }
 @media only screen and (max-width: 400px) {
-  /* line 1078, ../sass/shared/_home.scss */
+  /* line 1121, ../sass/shared/_home.scss */
   #page .section-tickets .card h3 {
     font-size: 16px;
   }
 }
-/* line 1084, ../sass/shared/_home.scss */
+/* line 1125, ../sass/shared/_home.scss */
+#page .section-tickets .card p {
+  line-height: 1.5;
+}
+@media only screen and (max-width: 991px) {
+  /* line 1129, ../sass/shared/_home.scss */
+  #page .section-tickets .card.with_icon .bg_img {
+    height: 50px;
+    width: 50px;
+  }
+}
+/* line 1136, ../sass/shared/_home.scss */
 #page .section-tickets .card.with_icon.tick_conf .bg_img {
   background-image: url(../images/tick_conf.svg);
 }
-/* line 1089, ../sass/shared/_home.scss */
+/* line 1141, ../sass/shared/_home.scss */
 #page .section-tickets .card.with_icon.tick_work_1 .bg_img {
   background-image: url(../images/tick_work_1.svg);
 }
-/* line 1094, ../sass/shared/_home.scss */
+/* line 1146, ../sass/shared/_home.scss */
 #page .section-tickets .card.with_icon.tick_work_2 .bg_img {
   background-image: url(../images/tick_work_2.svg);
 }
-/* line 1099, ../sass/shared/_home.scss */
+/* line 1151, ../sass/shared/_home.scss */
 #page .section-tickets .card.with_icon.combo .bg_img {
   background-image: url(../images/combo.svg);
-  background-size: contain;
+  background-size: 100%;
+  width: 80%;
 }
 @media only screen and (max-width: 400px) {
-  /* line 1099, ../sass/shared/_home.scss */
+  /* line 1151, ../sass/shared/_home.scss */
   #page .section-tickets .card.with_icon.combo .bg_img {
     width: 120px;
   }
 }
 
-/* line 1111, ../sass/shared/_home.scss */
+/* line 1164, ../sass/shared/_home.scss */
 #toggle {
   width: 70px;
   height: 70px;
@@ -2073,28 +2203,28 @@ div#myModal .modal-body {
   display: none;
 }
 @media only screen and (max-width: 991px) {
-  /* line 1111, ../sass/shared/_home.scss */
+  /* line 1164, ../sass/shared/_home.scss */
   #toggle {
     display: flex;
   }
 }
-/* line 1128, ../sass/shared/_home.scss */
+/* line 1181, ../sass/shared/_home.scss */
 #toggle span {
   position: relative;
   display: block;
 }
-/* line 1131, ../sass/shared/_home.scss */
+/* line 1184, ../sass/shared/_home.scss */
 #toggle span:after, #toggle span:before {
   content: "";
   position: absolute;
   left: 0;
   top: -9px;
 }
-/* line 1138, ../sass/shared/_home.scss */
+/* line 1191, ../sass/shared/_home.scss */
 #toggle span:after {
   top: 9px;
 }
-/* line 1142, ../sass/shared/_home.scss */
+/* line 1195, ../sass/shared/_home.scss */
 #toggle span,
 #toggle span:after,
 #toggle span:before {
@@ -2105,31 +2235,31 @@ div#myModal .modal-body {
   backface-visibility: hidden;
   border-radius: 2px;
 }
-/* line 1152, ../sass/shared/_home.scss */
+/* line 1205, ../sass/shared/_home.scss */
 #toggle.on {
   left: 15px;
 }
-/* line 1154, ../sass/shared/_home.scss */
+/* line 1207, ../sass/shared/_home.scss */
 #toggle.on span,
 #toggle.on span:after,
 #toggle.on span:before {
   width: 70%;
 }
-/* line 1159, ../sass/shared/_home.scss */
+/* line 1212, ../sass/shared/_home.scss */
 #toggle.on span {
   background-color: transparent;
 }
-/* line 1162, ../sass/shared/_home.scss */
+/* line 1215, ../sass/shared/_home.scss */
 #toggle.on span:after {
   transform: rotate(-45deg) translate(7px, -8px);
 }
-/* line 1165, ../sass/shared/_home.scss */
+/* line 1218, ../sass/shared/_home.scss */
 #toggle.on span::before {
   transform: rotate(45deg) translate(5px, 5px);
 }
 
 @media only screen and (max-width: 991px) {
-  /* line 1172, ../sass/shared/_home.scss */
+  /* line 1225, ../sass/shared/_home.scss */
   body {
     padding: 0 0 70px !important;
   }
@@ -2143,13 +2273,13 @@ div#myModal .modal-body {
     transform: translate(-30px);
   }
 }
-/* line 1186, ../sass/shared/_home.scss */
+/* line 1239, ../sass/shared/_home.scss */
 i.icon.large {
   font-size: 30px;
 }
 
 @media only screen and (max-width: 991px) {
-  /* line 1189, ../sass/shared/_home.scss */
+  /* line 1242, ../sass/shared/_home.scss */
   #page .section-1 #nav-bar li #sub-button.sub-button {
     position: absolute;
     z-index: 999;
@@ -2167,7 +2297,7 @@ i.icon.large {
   }
 }
 
-/* line 1207, ../sass/shared/_home.scss */
+/* line 1260, ../sass/shared/_home.scss */
 .card {
   background: #fff;
   padding: 30px 15px;
@@ -2175,22 +2305,28 @@ i.icon.large {
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 0, 0, 0.4);
   height: 100%;
 }
-/* line 1213, ../sass/shared/_home.scss */
-.card h3 {
+/* line 1266, ../sass/shared/_home.scss */
+.card h4.headin-ttl {
   margin: 0 0 15px;
   color: #ff9900;
 }
-/* line 1217, ../sass/shared/_home.scss */
+@media only screen and (max-width: 991px) {
+  /* line 1266, ../sass/shared/_home.scss */
+  .card h4.headin-ttl {
+    color: #232f3f;
+  }
+}
+/* line 1273, ../sass/shared/_home.scss */
 .card p {
   font-size: 14px;
   color: #999999;
   line-height: 1.2;
 }
-/* line 1222, ../sass/shared/_home.scss */
+/* line 1278, ../sass/shared/_home.scss */
 .card.with_icon {
   position: relative;
 }
-/* line 1224, ../sass/shared/_home.scss */
+/* line 1280, ../sass/shared/_home.scss */
 .card.with_icon .bg_img {
   margin: 0 auto 15px;
   height: 75px;
@@ -2198,12 +2334,4 @@ i.icon.large {
   background-size: auto 100%;
   background-position: center;
   background-repeat: no-repeat;
-}
-/* line 1233, ../sass/shared/_home.scss */
-.card.dark {
-  background: #232f3f;
-}
-/* line 1235, ../sass/shared/_home.scss */
-.card.dark p {
-  color: #fff;
 }

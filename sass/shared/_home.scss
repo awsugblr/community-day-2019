@@ -1052,7 +1052,6 @@
   }
   .section-tickets {
     background: #fff;
-
     padding: 100px 0;
     @include respondToBelow(sm) {
       padding: 50px 0;
@@ -1063,6 +1062,38 @@
         margin-top: 25px !important;
       }
     }
+    .card {
+      button {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        line-height: normal;
+        @include respondToBelow(sm) {
+          position: static;
+          height: 35px;
+          border-radius: 5px;
+          margin-top: 10px;
+          background: #fff;
+          color: $dark_base_color;
+          border: solid 1px $dark_base_color;
+          box-shadow: none;
+        }
+      }
+      &:hover {
+        button {
+          @include respondToAbove(md) {
+            height: 45px;
+          }
+        }
+      }
+    }
     .row {
       @include respondToBelow(sm) {
         margin: 0 15px;
@@ -1071,8 +1102,19 @@
           width: calc(50% - 15px / 2);
           margin-bottom: 15px;
           padding: 0;
-          &:nth-child(odd) {
+          &:nth-child(1) {
+            order: 1;
             margin-right: 15px;
+          }
+          &:nth-child(2) {
+            order: 3;
+            margin-right: 15px;
+          }
+          &:nth-child(3) {
+            order: 4;
+          }
+          &:nth-child(4) {
+            order: 2;
           }
         }
       }
@@ -1083,7 +1125,16 @@
           font-size: 16px;
         }
       }
+      p {
+        line-height: 1.5;
+      }
       &.with_icon {
+        .bg_img {
+          @include respondToBelow(sm) {
+            height: 50px;
+            width: 50px;
+          }
+        }
         &.tick_conf {
           .bg_img {
             background-image: url(../images/tick_conf.svg);
@@ -1102,7 +1153,8 @@
         &.combo {
           .bg_img {
             background-image: url(../images/combo.svg);
-            background-size: contain;
+            background-size: 100%;
+            width: 80%;
             @include respondToBelow(xs) {
               width: 120px;
             }
@@ -1214,9 +1266,12 @@ i.icon.large {
   text-align: center;
   @include theme-shadow();
   height: 100%;
-  h3 {
+  h4.headin-ttl {
     margin: 0 0 15px;
     color: $dark_base_color;
+    @include respondToBelow(sm) {
+      color: $black_bg;
+    }
   }
   p {
     font-size: 14px;
@@ -1232,12 +1287,6 @@ i.icon.large {
       background-size: auto 100%;
       background-position: center;
       background-repeat: no-repeat;
-    }
-  }
-  &.dark {
-    background: $black_bg;
-    p {
-      color: #fff;
     }
   }
 }
