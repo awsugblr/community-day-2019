@@ -290,27 +290,30 @@
           <div class="row flex-it">
             <div class="col-md-3">
               <div class="card tick_conf with_icon">
-                <h3>Conference</h3>
+                <h4 class="heading-ttl">Conference</h4>
                 <div class="bg_img"></div>
                 <p>Gives you access to the conference on 27th July, 2019</p>
               </div>
             </div>
             <div class="col-md-3">
               <div class="card tick_work_1 with_icon dark">
-                <h3>Workshop - 1</h3>
+                <h4 class="heading-ttl">Serverless Workshop</h4>
                 <div class="bg_img"></div>
                 <p>Gets you access to Serverless Workshop on 26th July, 2019</p>
+                <button type="button" data-toggle="modal" data-target="#workshop_1">Details</button>
               </div>
             </div>
             <div class="col-md-3 ">
               <div class="card tick_work_2 with_icon">
-                <h3>Workshop - 2</h3>
+                <h4 class="heading-ttl">Deep learning workshop</h4>
                 <div class="bg_img"></div>
                 <p>Gets you access to Deep learning workshop on 26th July, 2019</p>
+                <button type="button" data-toggle="modal" data-target="#workshop_2">Details</button>
+
               </div>
             </div><div class="col-md-3 ">
               <div class="card combo with_icon dark">
-                <h3>Combo</h3>
+                <h4 class="heading-ttl">Combo</h4>
                 <div class="bg_img"></div>
                 <p>Gives you access to conference and any one workshop</p>
               </div>
@@ -319,6 +322,251 @@
           <div class="buy-wrapper row flex-it">
             <div class="f1">
               <a class="button large" href="https://konfhub.com/awsdaysblr" target="_blank">Buy Tickets</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modals-->
+      <div id="workshop_1" class="modal fade fillo" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="heading-ttl"><p>Serverless on AWS</p></h4>
+            </div>
+            <div class="modal-body">
+              <p>Hands-on Workshop on Developing AWSome App - a Serverless Food-delivery Application</p>
+              <p class="heading-ttl small-head">Abstract:</p>
+              <p>Get hands-on experience with AWS and serverless applications in this workshop conducted by experts from AWS. </p>
+              <p>In this workshop you'll deploy a simple web application that enables users to request food from the AWSome Food
+                website using services like <strong>AWS Lambda, Amazon API Gateway, Amazon S3, Amazon DynamoDB, AWS Step Functions and
+                  Amazon Cognito. </strong></p>
+              <p>
+                With the knowledge from the workshop, you can build and deploy your own serverless applications using these services
+                for common use cases like web applications, analytics, and more.
+              </p>
+              <p class="heading-ttl small-head">Format:</p>
+              <p>
+                Full-day hands-on workshop (yes, do bring your laptops)</p>
+
+              <p class="heading-ttl small-head">Application – Technical Description:</p>
+              <p>
+                The application will present users with an HTML & JS based user interface for ordering food items and indicating the
+                location where they would like the food to be delivered. The interface on the backend with a RESTful web service will
+                submit the request and find and dispatch food to the requester’s location. The application will also provide
+                facilities for users to register with the service and log in before ordering food.</p>
+              <p>
+                The application architecture uses S3 hosts static web resources including HTML, CSS, JavaScript, and image files which
+                are loaded in the user's browser. JavaScript executed in the browser sends and receives data from a backend API built
+                using Lambda & Step Functions and API Gateway. Amazon Cognito provides user management and authentication functions to
+                secure the backend API. Finally, DynamoDB provides a persistence layer where data can be stored by the API's Lambda
+                function.</p>
+
+              <p class="heading-ttl small-head">Pre-requisites:</p>
+              <ul>
+                <li><strong>AWS Account:</strong> In order to complete this workshop you'll need an AWS Account with access to create
+                  AWS IAM, S3, DynamoDB,
+                  Lambda, Step Functions, API Gateway and Cognito resources. All of the resources you will launch as part of this
+                  workshop
+                  are eligible for the AWS free tier if your account is less than 12 months old. See the <a
+                    href="https://aws.amazon.com/free/" target="_blank">AWS Free Tier page</a> for more
+                  details.</li>
+                <li><strong>Essential JavaScript, HTML/CSS & Python knowledge:</strong> The front-end used JS and HTML/CSS and the
+                  backend code is written in
+                  Python; hence working knowledge is needed on these languages for this workshop.</li>
+              </ul>
+
+              <div class="wid">
+                <p class="text-center heading-ttl small-head">Agenda:</p>
+                <div class="block">
+                  <p><strong>Session 1: Getting Started with Serverless Development</strong></p>
+                  <ul>
+                    <li>
+                      Essentials of serverless development
+                    </li>
+                    <li>
+                      Introduction to the essential AWS services used in this workshop and how they relate to each other: AWS Lambda,
+                      Amazon API Gateway, Amazon S3, Amazon DynamoDB, AWS Step Functions and Amazon Cognito.
+                    </li>
+                    <li>
+                      Hands-on: Clone the GitHub repo for the “AWSome Food” application
+                    </li>
+                  </ul>
+                </div>
+                <div class="block">
+                  <p><strong>Session 2: Static Website Hosting</strong></p>
+                  <ul>
+                    <li>
+                      How to use S3 for static website hosting
+                    </li>
+                    <li>
+                      Hands-on: Create an S3 bucket, upload content, add a bucket policy to allow public reads, and enable website
+                      hosting; validate the hosted website
+                    </li>
+                  </ul>
+                </div>
+                <div class="block">
+                  <p><strong>Session 3: User Management</strong></p>
+                  <ul>
+                    <li>
+
+                      How to perform user authentication and registration with Amazon Cognito User Pools
+                    </li>
+                    <li>
+                      Hands-on: Create an Amazon Cognito user pool, add an application client, updating the Config.js file in your
+                      website
+                      bucket, and validate the implementation.
+                    </li>
+                  </ul>
+                </div>
+                <div class="block">
+                  <p class="text-center"><strong>Lunch break </strong></p>
+                </div>
+                <div class="block">
+                  <p><strong>Session 4: Serverless Service Backend </strong></p>
+                  <ul>
+                    <li>
+                      How to use AWS Lambda, Step Functions, and Amazon DynamoDB to build a backend process for handling requests from
+                      your
+                      web application.
+                    </li>
+                    <li>
+                      Hands-on: Create DynamoDB table, create an IAM role for the lambda and step functions, create lambdas for
+                      handing
+                      requests; validate implementation
+                    </li>
+                  </ul>
+                </div>
+                <div class="block">
+                  <p><strong>Session 5: RESTful APIs with AWS Lambda and Amazon API Gateway</strong></p>
+
+                  <ul>
+                    <li>How to use API Gateway to expose the created lambda and step functions as a RESTful API.
+                    </li>
+                    <li>Hands-on: Create a new REST API, create a Cognito User Pools Authorizer, create a new resource and method,
+                      deploy your
+                      API, update the website config; validate the implementation.</li>
+                  </ul>
+                </div>
+                <div class="block">
+                  <p><strong>Session 6: Putting things together and next steps</strong></p>
+                  <ul>
+                    <li>How to test the implementation & perform load testing</li>
+                    <li>How to monitor the application, logging, debugging, etc</li>
+                    <li>Wrap-up and key takeaways</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="workshop_2" class="modal fade fillo" role="dialog">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="heading-ttl">
+                <p>Deep Learning on AWS</p>
+              </h4>
+            </div>
+          <div class="modal-body">
+            <p>Learn about cloud-based Deep Learning solutions on AWS</p>
+            <p class="heading-ttl small-head">Description</p>
+            <p>
+              In this one-day course, you will learn cloud-based deep learning (DL)
+              solutions on the AWS platform. You will learn how to run your models on the
+              cloud using Amazon EC2‒based deep learning Amazon Machine Image (AMI) and
+              Apache MXNet on AWS frameworks. In addition, you will learn how to use
+              Amazon SageMaker and deploy your deep learning models using AWS services
+              like AWS Lambda and Amazon Elastic Container Service (Amazon ECS)—all while
+              designing intelligent systems on AWS.
+            </p>
+
+            <div class="wid">
+              <p class="text-center heading-ttl small-head">Intended Audience</p>
+              <div class="block">
+                <p>
+                  <strong>This course is intended for:</strong>
+                </p>
+                <ul>
+                  <li>
+                    Developers who are responsible for developing deep learning
+                    applications
+                  </li>
+                  <li>
+                    Developers who want to understand concepts behind deep learning and
+                    how to implement a deep learning solution on AWS
+                  </li>
+                </ul>
+              </div>
+              <p class="text-center heading-ttl small-head">Course Objectives</p>
+              <div class="block">
+                <p><strong>In this course, you will learn how to: </strong></p>
+                <ul>
+                  <li>
+                    Define machine learning (ML) and deep learning
+                  </li>
+                  <li>
+                    Identify the concepts in a deep learning ecosystem
+                  </li>
+                  <li>
+                    Leverage Amazon SageMaker and MXNet programming frameworks for deep
+                    learning workloads
+                  </li>
+                  <li>Fit AWS solutions for deep learning deployments</li>
+                </ul>
+              </div>
+              <p class="text-center heading-ttl small-head">Prerequisites</p>
+              <div class="block">
+                <p>
+                  <strong>We recommend that attendees of this course have the following
+                    prerequisites:</strong>
+                </p>
+                <ul>
+                  <li>
+                    Basic understanding of machine learning processes
+                  </li>
+                  <li>
+                    Basic understanding of AWS core services like Amazon EC2 and knowledge
+                    of AWS SDKs
+                  </li>
+                  <li>
+                    Basic knowledge of a scripting language, such as Python
+                  </li>
+                </ul>
+              </div>
+              <p class="text-center heading-ttl small-head">Delivery Method</p>
+              <div class="block">
+                <p>
+                  <strong>This course is delivered through a mix of:</strong>
+                </p>
+                <ul>
+                  <li>
+                    Classroom training
+                  </li>
+                  <li>
+                    Hands-on labs
+                  </li>
+                </ul>
+              </div>
+
+              <p class="text-center heading-ttl small-head">Hands-on Activity</p>
+              <div class="block">
+                <p>
+                  <strong>This course allows you to test new skills and apply knowledge to your
+                    working environment through a variety of practical exercises.
+                  </strong>
+                </p>
+              </div>
+            </div>
+          </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
           </div>
         </div>
