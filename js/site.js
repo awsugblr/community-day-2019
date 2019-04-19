@@ -1,5 +1,4 @@
 $(function() {
-
   $(document).on("click", ".scroll", function() {
     $("html, body").animate(
       {
@@ -43,17 +42,18 @@ $(function() {
   });
   $(document).scroll(function() {
     $(".section.hdr > .content").css({
-      top: 0 - $(this).scrollTop() / 2,
-      filter:
-        "blur(" +
-        ($(this).scrollTop() / $(".section.hdr > .content").height()) * 5 +
-        "px)"
+      top: 0 - $(this).scrollTop() / 1.5,
+      opacity: 1 - $(this).scrollTop() / $(".section.hdr > .content").height()
+      // filter:
+      //   "blur(" +
+      //   ($(this).scrollTop() / $(".section.hdr > .content").height()) * 5 +
+      //   "px)"
     });
     if ($(this).scrollTop() < $(".section.hdr > .content").height()) {
       $(".section.hdr").css({
         background:
           "rgba(0,0,0," +
-          $(this).scrollTop() / $(".section.hdr > .content").height() +
+          $(this).scrollTop() / $(".section.hdr > .content").height() / 0.25 +
           ")"
       });
     }

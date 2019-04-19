@@ -402,4 +402,27 @@ ul.circle {
       margin: 0;
     }
   }
+  &#workshop_1 {
+    .modal-footer {
+      .row {
+        @include respondToAbove(md) {
+          display: flex;
+          align-items: center;
+        }
+
+        @include respondToBelow(sm) {
+          > div {
+            text-align: center;
+          }
+        }
+        .col-md-3 > div {
+          text-align: left;
+          @include respondToBelow(sm) {
+            text-align: center;
+            margin: 15px 0;
+          }
+        }
+      }
+    }
+  }
 }

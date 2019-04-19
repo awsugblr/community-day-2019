@@ -215,6 +215,7 @@
             background: $dark_base_color;
           }
           display: flex;
+          cursor: pointer;
           align-items: center;
           justify-content: center;
         }
@@ -1129,6 +1130,10 @@
         line-height: 1.5;
       }
       &.with_icon {
+        &.border {
+          border: solid 1px $border_color;
+          box-shadow: none;
+        }
         .bg_img {
           @include respondToBelow(sm) {
             height: 50px;
