@@ -78,10 +78,7 @@ $(function() {
         {
           scrollTop: $(hash).offset().top - 70
         },
-        700,
-        function() {
-          window.location.hash = hash;
-        }
+        700
       );
     }
   });

@@ -537,6 +537,13 @@
     @include respondToBelow(sm) {
       padding: 50px 0;
     }
+    &.inv {
+      background: transparent;
+      box-shadow: none;
+      .sponsors .cats .flex-it .f1 > div:not(.head) {
+        background-color: #fff;
+      }
+    }
     .sponsors {
       .tmp {
         @include respondToBelow(sm) {
@@ -662,12 +669,14 @@
           .f1 {
             flex-grow: unset;
             flex-basis: unset;
-            width: 30%;
+            width: 22.5%;
+            padding: 0 7.5px;
             @include respondToBelow(sm) {
               width: 100%;
               min-height: 100px;
             }
             > div {
+              border: solid 1px $border_color;
               &:not(.head) {
                 position: relative;
                 z-index: 2;
@@ -679,7 +688,7 @@
                 font-size: 0;
                 height: 100px;
                 background-position: center;
-                background-size: auto 70%;
+                background-size: auto 65%;
                 background-repeat: no-repeat;
                 @include respondToBelow(sm) {
                   background-size: 70%;
