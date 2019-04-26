@@ -21,6 +21,7 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
   <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/mystyles.css" />
 
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -422,7 +423,7 @@
 
               </div>
               <div class="col-md-2">
-                <img id="myImg" src="images\Madhu.jpg" alt="Snow">
+                <img class="speakerImg" src="images\Madhu.jpg" alt="speaker img">
 
               </div>
 
@@ -440,7 +441,7 @@
 
 
 
-                <img id="myImg" src="images/Srushith.jpg" alt="Snow">
+                <img class="speakerImg" src="images/Srushith.jpg" alt="speaker img">
 
 
               </div>
@@ -472,102 +473,144 @@
               <p>Deep Learning on AWS</p>
             </h4>
           </div>
-          <div class="modal-body">
-            <p>Learn about cloud-based Deep Learning solutions on AWS</p>
-            <p class="heading-ttl small-head">Description</p>
-            <p>
-              In this one-day course, you will learn cloud-based deep learning (DL)
-              solutions on the AWS platform. You will learn how to run your models on the
-              cloud using Amazon EC2‒based deep learning Amazon Machine Image (AMI) and
-              Apache MXNet on AWS frameworks. In addition, you will learn how to use
-              Amazon SageMaker and deploy your deep learning models using AWS services
-              like AWS Lambda and Amazon Elastic Container Service (Amazon ECS)—all while
-              designing intelligent systems on AWS.
-            </p>
+        <div class="modal-body">
+          <p>Learn about cloud-based Deep Learning solutions on AWS</p>
+          <p class="heading-ttl small-head">Description</p>
+          <p>
+            In this one-day course, you will learn cloud-based deep learning (DL)
+            solutions on the AWS platform. You will learn how to run your models on the
+            cloud using Amazon EC2‒based deep learning Amazon Machine Image (AMI) and
+            Apache MXNet on AWS frameworks. In addition, you will learn how to use
+            Amazon SageMaker and deploy your deep learning models using AWS services
+            like AWS Lambda and Amazon Elastic Container Service (Amazon ECS)—all while
+            designing intelligent systems on AWS.
+          </p>
 
-            <div class="wid">
-              <p class="text-center heading-ttl small-head">Intended Audience</p>
-              <div class="block">
-                <p>
-                  <strong>This course is intended for:</strong>
-                </p>
-                <ul>
-                  <li>
-                    Developers who are responsible for developing deep learning
-                    applications
-                  </li>
-                  <li>
-                    Developers who want to understand concepts behind deep learning and
-                    how to implement a deep learning solution on AWS
-                  </li>
-                </ul>
-              </div>
-              <p class="text-center heading-ttl small-head">Course Objectives</p>
-              <div class="block">
-                <p><strong>In this course, you will learn how to: </strong></p>
-                <ul>
-                  <li>
-                    Define machine learning (ML) and deep learning
-                  </li>
-                  <li>
-                    Identify the concepts in a deep learning ecosystem
-                  </li>
-                  <li>
-                    Leverage Amazon SageMaker and MXNet programming frameworks for deep
-                    learning workloads
-                  </li>
-                  <li>Fit AWS solutions for deep learning deployments</li>
-                </ul>
-              </div>
-              <p class="text-center heading-ttl small-head">Prerequisites</p>
-              <div class="block">
-                <p>
-                  <strong>We recommend that attendees of this course have the following
-                    prerequisites:</strong>
-                </p>
-                <ul>
-                  <li>
-                    Basic understanding of machine learning processes
-                  </li>
-                  <li>
-                    Basic understanding of AWS core services like Amazon EC2 and knowledge
-                    of AWS SDKs
-                  </li>
-                  <li>
-                    Basic knowledge of a scripting language, such as Python
-                  </li>
-                </ul>
-              </div>
-              <p class="text-center heading-ttl small-head">Delivery Method</p>
-              <div class="block">
-                <p>
-                  <strong>This course is delivered through a mix of:</strong>
-                </p>
-                <ul>
-                  <li>
-                    Classroom training
-                  </li>
-                  <li>
-                    Hands-on labs
-                  </li>
-                </ul>
-              </div>
+          <div class="wid">
+            <p class="text-center heading-ttl small-head">Intended Audience</p>
+            <div class="block">
+              <p>
+                <strong>This course is intended for:</strong>
+              </p>
+              <ul>
+                <li>
+                  Developers who are responsible for developing deep learning
+                  applications
+                </li>
+                <li>
+                  Developers who want to understand concepts behind deep learning and
+                  how to implement a deep learning solution on AWS
+                </li>
+              </ul>
+            </div>
+            <p class="text-center heading-ttl small-head">Course Objectives</p>
+            <div class="block">
+              <p><strong>In this course, you will learn how to: </strong></p>
+              <ul>
+                <li>
+                  Define machine learning (ML) and deep learning
+                </li>
+                <li>
+                  Identify the concepts in a deep learning ecosystem
+                </li>
+                <li>
+                  Leverage Amazon SageMaker and MXNet programming frameworks for deep
+                  learning workloads
+                </li>
+                <li>Fit AWS solutions for deep learning deployments</li>
+              </ul>
+            </div>
+            <p class="text-center heading-ttl small-head">Prerequisites</p>
+            <div class="block">
+              <p>
+                <strong>We recommend that attendees of this course have the following
+                  prerequisites:</strong>
+              </p>
+              <ul>
+                <li>
+                  Basic understanding of machine learning processes
+                </li>
+                <li>
+                  Basic understanding of AWS core services like Amazon EC2 and knowledge
+                  of AWS SDKs
+                </li>
+                <li>
+                  Basic knowledge of a scripting language, such as Python
+                </li>
+              </ul>
+            </div>
+            <p class="text-center heading-ttl small-head">Delivery Method</p>
+            <div class="block">
+              <p>
+                <strong>This course is delivered through a mix of:</strong>
+              </p>
+              <ul>
+                <li>
+                  Classroom training
+                </li>
+                <li>
+                  Hands-on labs
+                </li>
+              </ul>
+            </div>
 
-              <p class="text-center heading-ttl small-head">Hands-on Activity</p>
-              <div class="block">
-                <p>
-                  <strong>This course allows you to test new skills and apply knowledge to your
-                    working environment through a variety of practical exercises.
-                  </strong>
-                </p>
-              </div>
+            <p class="text-center heading-ttl small-head">Hands-on Activity</p>
+            <div class="block">
+              <p>
+                <strong>This course allows you to test new skills and apply knowledge to your
+                  working environment through a variety of practical exercises.
+                </strong>
+              </p>
             </div>
           </div>
-          <div>
-            <img src=""></img>
-          </div>
+        </div>
+        <div>
+          <img src=""></img>
+        </div>
 
           <div class="modal-footer">
+             
+                  <br>
+                    <div class="row">
+                      <div class="col-md-1">
+    
+                      </div>
+                      <div class="col-md-2">
+                        <img class="speakerImg" src="images\shajee.jpg" alt="speaker img">
+    
+                     </div>
+    
+                    <div class="col-md-3">
+                        <div id="align">
+                        <h4 style="color:#ff9900">Technical Trainer</h4>
+                        <h4 ><a href="https://www.linkedin.com/in/shajee-pulukkool-87611724/?originalSubdomain=in" >Shajee Pulukkool</a></h4>
+                        <p>AISPL</p>
+                       </div>
+    
+                      </div>
+    
+    
+                      <div class="col-md-2">
+  
+    
+    
+                          <img class="speakerImg" src="images/Shinduri.jpg" alt="speaker img">
+    
+    
+                      </div>
+    
+    
+    
+    
+                    <div class="col-md-3">
+                      <div id="align1">
+                        <h4 style="color:#ff9900">Technical Trainer</h4>
+                        <h4 ><a href="https://www.linkedin.com/in/shinduri-ks-5142a7156/?originalSubdomain=in">Shinduri KS</a></h4>
+                        <p style="margin-top:-1px;"> AISPL</p></div>
+                       </div>
+                       </div>
+                       <br>
+                       <hr>
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
 

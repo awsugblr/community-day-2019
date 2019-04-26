@@ -1,0 +1,124 @@
+.speakerImg{ 
+    display: block;
+    width: 125px;
+    height: 125px;
+    margin: auto;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  
+  img {
+    vertical-align: middle;
+  }
+  .support{
+    text-align: justify;
+  }
+  
+  .workshopPage{
+    display: block;
+    padding: 40px;
+  }
+  
+  .workshopPage .modal-body {
+    position: relative;
+    
+    font-family: "Roboto", sans-serif;
+      color: #555;
+      padding:30px;
+      font-size: 16px;
+      font-weight: 300;
+  }
+  
+  .workshopPage .modal-body .wid {
+    max-width: 70%;
+    margin: auto;
+  }
+  
+  .workshopPage .modal-body .small-head {
+    margin: 15px 0 7px;
+    font-size: 16px;
+    color: #ff9900;
+  }
+  .workshopPage .modal-body .wid .block {
+    margin-bottom: 30px;
+    border: solid 1px #ddd;
+    padding: 15px;
+    background: #f7f7f7;
+  }
+  
+  .workshopPage .modal-body .wid .block ul {
+    list-style-type: circle;
+    margin-left: 15px;
+    margin-top: 15px;
+  }
+  #align{
+    text-align: justify;
+  }
+  
+  #align1{
+    text-align: left;
+  }
+  
+  
+  /* for mobile screens */
+  
+  @media only screen and (max-width: 600px) {
+    .workshopPage{
+      display: block;
+      padding: 5px;
+    }
+    
+    .workshopPage .modal-body {
+      position: relative;
+      
+      font-family: "Roboto", sans-serif;
+        color: #555;
+        padding:15px;
+        font-size: 16px;
+        font-weight: 300;
+    }
+    
+    .workshopPage .modal-body .wid {
+      max-width: 95%;
+      margin: auto;
+    }
+    
+    .workshopPage .modal-body .small-head {
+      margin: 15px 0 7px;
+      font-size: 16px;
+      color: #ff9900;
+    }
+    .workshopPage .modal-body .wid .block {
+      margin-bottom: 30px;
+      border: solid 1px #ddd;
+      padding: 15px;
+      background: #f7f7f7;
+    }
+    
+    .workshopPage .modal-body .wid .block ul {
+      list-style-type: circle;
+      margin-left: 15px;
+      margin-top: 15px;
+    }
+    .workshopPage .modal-body .p {
+      position: relative;
+      font-family: "Roboto", sans-serif;
+      color: #555;
+      padding: 30px;
+      font-size: 14px;
+      font-weight: 300;
+  }
+  #align{
+    text-align: center;
+    margin-bottom: 25px;
+  }
+  #align1{
+    text-align: center;
+  }
+  }
