@@ -1679,6 +1679,10 @@ ul.circle li {
 #page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).wheelsbox {
   background-image: url(../images/spons/wheelsbox.png);
 }
+
+#page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).indianstartups {
+  background-image: url(../images/spons/indianstartups.png);
+}
 /* line 717, ../sass/shared/_home.scss */
 #page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).elastic {
   background-image: url(../images/spons/elastic.png);
