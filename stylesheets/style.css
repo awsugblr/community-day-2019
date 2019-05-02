@@ -1671,6 +1671,10 @@ ul.circle li {
 #page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).tensult {
   background-image: url(../images/spons/tensult.png);
 }
+
+#page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).cloudyuga {
+  background-image: url(../images/spons/cloudyuga.png);
+}
 /* line 711, ../sass/shared/_home.scss */
 #page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).wwc {
   background-image: url(../images/spons/wwc.png);
