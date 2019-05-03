@@ -888,21 +888,15 @@ ul.circle li {
 /* line 507, ../sass/shared/_site.scss */
 .table .thead .tr.gap .td > div,
 .table .tbody .tr.gap .td > div {
-  background: rgba(255, 153, 0, 0.15);
+  background: rgba(255, 153, 0, 0.15) !important;
   color: #ff9900;
 }
-/* line 515, ../sass/shared/_site.scss */
-.table .thead .tr.sld .td > div,
-.table .tbody .tr.sld .td > div {
-  background: #ff9900;
-  color: #fff;
-}
 @media only screen and (min-width: 992px) {
-  /* line 524, ../sass/shared/_site.scss */
+  /* line 516, ../sass/shared/_site.scss */
   .table.fixit {
     padding-top: 70px;
   }
-  /* line 526, ../sass/shared/_site.scss */
+  /* line 518, ../sass/shared/_site.scss */
   .table.fixit .thead {
     position: fixed;
     top: 70px;
@@ -912,11 +906,11 @@ ul.circle li {
     margin: auto;
     z-index: 2;
   }
-  /* line 537, ../sass/shared/_site.scss */
+  /* line 529, ../sass/shared/_site.scss */
   .table.absit {
     padding-top: 0;
   }
-  /* line 539, ../sass/shared/_site.scss */
+  /* line 531, ../sass/shared/_site.scss */
   .table.absit .thead {
     position: absolute;
     top: auto;
@@ -929,90 +923,91 @@ ul.circle li {
   }
 }
 @media only screen and (max-width: 991px) {
-  /* line 552, ../sass/shared/_site.scss */
+  /* line 544, ../sass/shared/_site.scss */
   .table .thead {
     display: none;
   }
-  /* line 555, ../sass/shared/_site.scss */
+  /* line 547, ../sass/shared/_site.scss */
   .table .tbody {
     padding: 15px;
   }
-  /* line 557, ../sass/shared/_site.scss */
+  /* line 549, ../sass/shared/_site.scss */
   .table .tbody > .tr {
     min-width: 100%;
     flex-direction: column;
     justify-content: center;
   }
-  /* line 561, ../sass/shared/_site.scss */
+  /* line 553, ../sass/shared/_site.scss */
   .table .tbody > .tr .td {
     flex-grow: unset !important;
     flex-basis: unset !important;
     background: #fff;
   }
-  /* line 565, ../sass/shared/_site.scss */
+  /* line 557, ../sass/shared/_site.scss */
   .table .tbody > .tr .td > div {
     background: transparent;
     border: 0;
   }
-  /* line 568, ../sass/shared/_site.scss */
+  /* line 560, ../sass/shared/_site.scss */
   .table .tbody > .tr .td > div:before {
     content: "";
     color: #ff9900;
   }
-  /* line 574, ../sass/shared/_site.scss */
+  /* line 566, ../sass/shared/_site.scss */
   .table .tbody > .tr .td:nth-child(2) > div:before {
     content: "Room 1";
   }
-  /* line 579, ../sass/shared/_site.scss */
+  /* line 571, ../sass/shared/_site.scss */
   .table .tbody > .tr .td:nth-child(3) > div:before {
     content: "Room 2";
   }
-  /* line 584, ../sass/shared/_site.scss */
+  /* line 576, ../sass/shared/_site.scss */
   .table .tbody > .tr .td:nth-child(4) > div:before {
     content: "Room 3";
   }
-  /* line 589, ../sass/shared/_site.scss */
+  /* line 581, ../sass/shared/_site.scss */
   .table .tbody > .tr .td:nth-child(5) > div:before {
     content: "Room 4";
   }
-  /* line 594, ../sass/shared/_site.scss */
+  /* line 586, ../sass/shared/_site.scss */
   .table .tbody > .tr .td[colspan="4"] > div {
     padding: 5px 0 0;
     position: relative;
   }
-  /* line 597, ../sass/shared/_site.scss */
+  /* line 589, ../sass/shared/_site.scss */
   .table .tbody > .tr .td[colspan="4"] > div:before {
     content: none;
   }
-  /* line 600, ../sass/shared/_site.scss */
+  /* line 592, ../sass/shared/_site.scss */
   .table .tbody > .tr .td[colspan="4"] > div p {
     margin-bottom: 20px;
     margin-top: -10px;
   }
 }
 
-/* line 612, ../sass/shared/_site.scss */
-.floating_toast {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 70px;
-  padding: 20px;
-  z-index: 99;
-  display: flex;
-  justify-content: flex-end;
-  pointer-events: none;
+@media only screen and (max-width: 991px) {
+  /* line 605, ../sass/shared/_site.scss */
+  .floating_toast {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 70px;
+    padding: 20px;
+    z-index: 99;
+    display: flex;
+    justify-content: flex-end;
+    pointer-events: none;
+  }
+  /* line 615, ../sass/shared/_site.scss */
+  .floating_toast a {
+    pointer-events: auto;
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 10px;
+    background: #ff9900;
+    font-size: 12px;
+  }
 }
-/* line 622, ../sass/shared/_site.scss */
-.floating_toast a {
-  pointer-events: auto;
-  padding: 5px 10px;
-  color: #fff;
-  border-radius: 10px;
-  background: #ff9900;
-  font-size: 12px;
-}
-
 /* line 2, ../sass/shared/_home.scss */
 #page .section {
   position: relative;
