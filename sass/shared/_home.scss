@@ -340,6 +340,10 @@
     padding: 50px;
     background: #fff;
     @include theme-shadow;
+    &.inv {
+      background: transparent;
+      box-shadow: none;
+    }
     @include respondToBelow(sm) {
       padding: 25px;
       .container {
@@ -521,7 +525,30 @@
   }
   .section-4 {
     padding: 100px 0;
-
+    background: #fff;
+    .table {
+      border: 0;
+      & .thead .tr .td > div,
+      & .thead .tr .th > div,
+      & .tbody .tr .td > div,
+      & .tbody .tr .th > div {
+        background: #f7f7f7;
+      }
+    }
+    &.inv {
+      background: transparent;
+      box-shadow: none;
+      .table {
+        border: 0;
+        & .thead .tr .td > div,
+        & .thead .tr .th > div,
+        & .tbody .tr .td > div,
+        & .tbody .tr .th > div {
+          background: #fff;
+        }
+      }
+    }
+    @include theme-shadow;
     @include respondToBelow(sm) {
       padding: 50px 0;
     }
@@ -794,6 +821,10 @@
     @include respondToBelow(sm) {
       padding: 50px 0;
     }
+    &.inv {
+      background: transparent;
+      box-shadow: none;
+    }
     .volunteers {
       .vl-i {
         flex-wrap: wrap;
@@ -1053,6 +1084,10 @@
   .section-tickets {
     background: #fff;
     padding: 100px 0;
+    &.inv {
+      background: transparent;
+      box-shadow: none;
+    }
     @include respondToBelow(sm) {
       padding: 50px 0;
     }
