@@ -1,6 +1,8 @@
 $(function() {
   tableScroll();
-  toastScroll();
+  if ($(window).width() < 996) {
+    toastScroll();
+  }
   $(document).on("click", ".scroll", function() {
     $("html, body").animate(
       {
@@ -117,7 +119,10 @@ $(function() {
     }
 
     tableScroll();
-    toastScroll();
+
+    if ($(window).width() < 996) {
+      toastScroll();
+    }
 
     if ($(this).scrollTop() >= $(".section.hdr > .content").height()) {
       $("#nav-bar").addClass("fixi-it");

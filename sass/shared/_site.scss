@@ -505,16 +505,8 @@ ul.circle {
       &.gap {
         .td {
           > div {
-            background: rgba($dark_base_color, 0.15);
+            background: rgba($dark_base_color, 0.15) !important;
             color: $dark_base_color;
-          }
-        }
-      }
-      &.sld {
-        .td {
-          > div {
-            background: $dark_base_color;
-            color: #fff;
           }
         }
       }
@@ -609,22 +601,24 @@ ul.circle {
   }
 }
 
-.floating_toast {
-  position: fixed;
-  left: 0;
-  right: 0;
-  bottom: 70px;
-  padding: 20px;
-  z-index: 99;
-  display: flex;
-  justify-content: flex-end;
-  pointer-events: none;
-  a {
-    pointer-events: auto;
-    padding: 5px 10px;
-    color: #fff;
-    border-radius: 10px;
-    background: $dark_base_color;
-    font-size: 12px;
+@include respondToBelow(sm) {
+  .floating_toast {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 70px;
+    padding: 20px;
+    z-index: 99;
+    display: flex;
+    justify-content: flex-end;
+    pointer-events: none;
+    a {
+      pointer-events: auto;
+      padding: 5px 10px;
+      color: #fff;
+      border-radius: 10px;
+      background: $dark_base_color;
+      font-size: 12px;
+    }
   }
 }
