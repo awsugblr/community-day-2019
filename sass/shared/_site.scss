@@ -426,3 +426,9 @@ ul.circle {
     }
   }
 }
+
+.st-sticky-share-buttons {
+  @include respondToBelow(sm) {
+    display: none !important;
+  }
+}
