@@ -39,14 +39,27 @@
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
     ></script>
-      <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123754553-1"></script>
-      <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123754553-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
 
-        gtag('config', 'UA-123754553-1');
-      </script>
+      gtag('config', 'UA-123754553-1');
+    </script>
+    <link 
+      rel="manifest" 
+      href="/manifest.json" 
+    />
+    <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+    <script>
+      var OneSignal = window.OneSignal || [];
+      OneSignal.push(function() {
+        OneSignal.init({
+          appId: "b3f01cfa-1a70-4f46-9dd1-202a1ae14385",
+        });
+      });
+    </script>
   </head>
   <body>
     <div id="page">
