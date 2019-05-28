@@ -1948,6 +1948,12 @@ ul.circle li {
 #page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).konfhub {
   background-image: url(../images/spons/konfhub.jpg);
 }
+#page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).fame {
+  background-image: url(../images/spons/fame.jpg);
+}
+#page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).fbdcblr {
+  background-image: url(../images/spons/fbdcblr.jpg);
+}
 /* line 736, ../sass/shared/_home.scss */
 #page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).alexa {
   background-image: url(../images/spons/alexa.jpg);
