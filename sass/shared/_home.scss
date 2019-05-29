@@ -585,13 +585,23 @@
         .flex-it {
           align-items: center;
           margin-top: 50px;
+          @include respondToAbove(md) {
+            flex-wrap: wrap;
+            position: relative;
+            padding-left: 7%;
+          }
           @include respondToBelow(sm) {
             margin-top: 50px;
-            position: relative;
             overflow: auto;
           }
           .fhf {
-            position: relative;
+            @include respondToAbove(md) {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              margin: auto;
+            }
             z-index: 1;
             flex-grow: unset;
             flex-basis: unset;
@@ -713,7 +723,7 @@
                   background-image: url(../images/spons/wheelsbox.jpg);
                 }
                 &.epsilon {
-                  background-image: url(../images/spons/epsilon.png);
+                  background-image: url(../images/spons/epsilon.jpg);
                 }
                 &.indianstartups {
                   background-image: url(../images/spons/indianstartups.jpg);
@@ -741,6 +751,19 @@
                 }
                 &.alexa {
                   background-image: url(../images/spons/alexa.jpg);
+                }
+                &.goclouds {
+                  background-image: url(../images/spons/goclouds.jpg);
+                }
+                &.knowledgehut {
+                  background-image: url(../images/spons/knowledgehut.jpg);
+                }
+              }
+            }
+            @include respondToAbove(md) {
+              &:nth-child(6n) {
+                ~ .f1 {
+                  margin-top: 15px;
                 }
               }
             }
