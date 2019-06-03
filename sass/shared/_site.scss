@@ -375,6 +375,9 @@ ul.circle {
     align-items: center;
     justify-content: center;
     pointer-events: none;
+    &.in {
+      pointer-events: auto;
+    }
     .modal-dialog {
       margin: 0;
     }
