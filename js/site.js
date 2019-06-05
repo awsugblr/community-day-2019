@@ -53,6 +53,7 @@ $(function() {
       "#agenda",
       "#workshop",
       "#sponsors",
+      "#speakers",
       "#volunteers",
       "#subscribe"
     ];
@@ -63,6 +64,7 @@ $(function() {
       "Agenda",
       "Workshops",
       "Sponsors",
+      "Speakers",
       "Volunteers",
       "Share"
     ];
@@ -72,7 +74,10 @@ $(function() {
         secidx = i + 1;
       }
     });
-    if ($(this).scrollTop() + $(this).height() > $("#subscribe").offset().top) {
+    if (
+      $(this).scrollTop() + $(this).height() >
+      $("#volunteers").offset().top
+    ) {
       $(".floating_toast a")
         .attr("href", "#home")
         .text("Goto Top");
