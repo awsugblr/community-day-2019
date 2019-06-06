@@ -136,6 +136,11 @@
               max-width: 75%;
               margin: auto;
               position: relative;
+              .awsugblr_logo {
+                display: block;
+                margin: auto;
+                text-align: center;
+              }
               .enlarge {
                 font-size: 25px;
                 text-align: center;
@@ -340,6 +345,10 @@
     padding: 50px;
     background: #fff;
     @include theme-shadow;
+    &.inv {
+      background: transparent;
+      box-shadow: none;
+    }
     @include respondToBelow(sm) {
       padding: 25px;
       .container {
@@ -521,7 +530,30 @@
   }
   .section-4 {
     padding: 100px 0;
-
+    background: #fff;
+    .table {
+      border: 0;
+      & .thead .tr .td > div,
+      & .thead .tr .th > div,
+      & .tbody .tr .td > div,
+      & .tbody .tr .th > div {
+        background: #f7f7f7;
+      }
+    }
+    &.inv {
+      background: transparent;
+      box-shadow: none;
+      .table {
+        border: 0;
+        & .thead .tr .td > div,
+        & .thead .tr .th > div,
+        & .tbody .tr .td > div,
+        & .tbody .tr .th > div {
+          background: #fff;
+        }
+      }
+    }
+    @include theme-shadow;
     @include respondToBelow(sm) {
       padding: 50px 0;
     }
@@ -555,39 +587,40 @@
         }
       }
       .cats {
-        @include respondToBelow(sm) {
-          display: flex;
-          overflow: auto;
-          white-space: nowrap;
-          > div {
-            min-width: 100%;
-            border: solid 1px #ddd;
-            border-width: 1px 0;
-            padding: 25px;
-            &:first-child {
-              margin-left: 20%;
-              border-radius: 30px 0 0 30px;
-              border-left-width: 1px;
-              position: relative;
-              &:before {
-                content: "";
-                position: absolute;
-                height: 10px;
-                width: 10px;
-                background: rgba($dark_base_color, 1);
-                right: calc(100% + 10px);
-                top: 0;
-                bottom: 0;
-                margin: auto;
-                border-radius: 50%;
-                box-shadow: 0 0 0 5px #fff,
-                  0 0 0 9px rgba($dark_base_color, 0.5);
-                animation: swipe 1s infinite alternate;
-              }
+        .flex-it {
+          align-items: center;
+          margin-top: 50px;
+          @include respondToAbove(md) {
+            flex-wrap: wrap;
+            position: relative;
+            padding-left: 7%;
+          }
+          @include respondToBelow(sm) {
+            margin-top: 50px;
+            overflow: auto;
+          }
+          .fhf {
+            @include respondToAbove(md) {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              margin: auto;
+            }
+            z-index: 1;
+            flex-grow: unset;
+            flex-basis: unset;
+            width: 7%;
+            height: 100px;
+            transform: translateX(25px);
+            @include respondToBelow(sm) {
+              margin-left: 5%;
+              min-width: 10%;
+              margin-right: 5%;
               &:after {
                 content: "";
                 position: absolute;
-                left: -20%;
+                left: -75px;
                 top: 0;
                 bottom: 0;
                 height: 0;
@@ -598,37 +631,6 @@
                 border-color: transparent rgba(255, 153, 0, 1) transparent
                   transparent;
               }
-            }
-            &:last-child {
-              border-radius: 0 30px 30px 0;
-              border-right-width: 1px;
-            }
-          }
-        }
-        .flex-it {
-          align-items: center;
-          margin-top: 50px;
-          @include respondToBelow(sm) {
-            flex-wrap: wrap;
-            position: relative;
-            margin: 0;
-            padding-left: 50px;
-            height: 100%;
-          }
-          .fhf {
-            position: relative;
-            z-index: 1;
-            height: 100px;
-            transform: translateX(25px);
-            flex-grow: unset;
-            flex-basis: unset;
-            width: 10%;
-            @include respondToBelow(sm) {
-              position: absolute;
-              left: 0;
-              height: auto;
-              top: 0;
-              bottom: 0;
             }
             .head {
               &::before {
@@ -644,8 +646,8 @@
                 }
               }
               span {
-                transform: translate(-30%) rotate(-90deg);
                 font-size: 23px;
+
                 text-transform: uppercase;
                 width: 100%;
                 transform-origin: center;
@@ -656,12 +658,13 @@
                 left: 0;
                 top: 0;
                 bottom: 0;
+                writing-mode: vertical-lr;
+                transform: translate(-20px) rotate(-180deg);
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
                 @include respondToBelow(sm) {
-                  transform: translate(-100%) rotate(-90deg);
-                  font-size: 30px;
-                  width: 300px;
-                  transform-origin: top right;
-                  left: -25px;
+                  font-size: 14px;
                 }
               }
             }
@@ -669,11 +672,15 @@
           .f1 {
             flex-grow: unset;
             flex-basis: unset;
-            width: 22.5%;
+            width: 18.6%;
             padding: 0 7.5px;
             @include respondToBelow(sm) {
-              width: 100%;
-              min-height: 100px;
+              min-width: 50%;
+              padding: 0;
+              &:last-child {
+                min-width: calc(50% + 50px);
+                padding-right: 50px;
+              }
             }
             > div {
               border: solid 1px $border_color;
@@ -688,49 +695,80 @@
                 font-size: 0;
                 height: 100px;
                 background-position: center;
-                background-size: auto 65%;
+                background-size: 75%;
                 background-repeat: no-repeat;
+                &.sq {
+                  background-size: auto 65%;
+                }
                 @include respondToBelow(sm) {
-                  background-size: 70%;
+                  background-size: 80%;
                 }
                 &.jfrog {
-                  background-image: url(../images/spons/jfrog.png);
+                  background-image: url(../images/spons/jfrog.jpg);
                 }
                 &.jetbrains {
-                  background-image: url(../images/spons/jetbrains.png);
+                  background-image: url(../images/spons/jetbrains.jpg);
                 }
                 &.freshworks {
-                  background-image: url(../images/spons/freshworks.png);
+                  background-image: url(../images/spons/freshworks.jpg);
                 }
                 &.powerup {
-                  background-image: url(../images/spons/powerup.png);
+                  background-image: url(../images/spons/powerup.jpg);
                 }
                 &.tensult {
-                  background-image: url(../images/spons/tensult.png);
+                  background-image: url(../images/spons/tensult.jpg);
+                }
+                &.cloudyuga {
+                  background-image: url(../images/spons/cloudyuga.jpg);
                 }
                 &.wwc {
-                  background-image: url(../images/spons/wwc.png);
+                  background-image: url(../images/spons/wwc.jpg);
                 }
                 &.wheelsbox {
-                  background-image: url(../images/spons/wheelsbox.png);
+                  background-image: url(../images/spons/wheelsbox.jpg);
+                }
+                &.epsilon {
+                  background-image: url(../images/spons/epsilon.jpg);
+                }
+                &.indianstartups {
+                  background-image: url(../images/spons/indianstartups.jpg);
                 }
                 &.elastic {
-                  background-image: url(../images/spons/elastic.png);
+                  background-image: url(../images/spons/elastic.jpg);
                 }
                 &.postman {
-                  background-image: url(../images/spons/postman.png);
+                  background-image: url(../images/spons/postman.jpg);
                 }
                 &.sumologic {
-                  background-image: url(../images/spons/sumologic.png);
+                  background-image: url(../images/spons/sumologic.jpg);
                 }
                 &.wone {
-                  background-image: url(../images/spons/wone.png);
+                  background-image: url(../images/spons/wone.jpg);
                 }
                 &.konfhub {
-                  background-image: url(../images/spons/konfhub.png);
+                  background-image: url(../images/spons/konfhub.jpg);
+                }
+                &.fame {
+                  background-image: url(../images/spons/fame.jpg);
+                }
+                &.fbdcblr {
+                  background-image: url(../images/spons/fbdcblr.jpg);
                 }
                 &.alexa {
-                  background-image: url(../images/spons/alexa.png);
+                  background-image: url(../images/spons/alexa.jpg);
+                }
+                &.goclouds {
+                  background-image: url(../images/spons/goclouds.jpg);
+                }
+                &.knowledgehut {
+                  background-image: url(../images/spons/knowledgehut.jpg);
+                }
+              }
+            }
+            @include respondToAbove(md) {
+              &:nth-child(6n) {
+                ~ .f1 {
+                  margin-top: 15px;
                 }
               }
             }
@@ -819,6 +857,10 @@
     @include theme-shadow;
     @include respondToBelow(sm) {
       padding: 50px 0;
+    }
+    &.inv {
+      background: transparent;
+      box-shadow: none;
     }
     .volunteers {
       .vl-i {
@@ -1016,16 +1058,23 @@
       }
       .main-heading-ttl {
         font-weight: 900;
-        font-size: 6vw;
+        font-size: 3vw;
         margin: 0;
         position: absolute;
         bottom: 100%;
         line-height: 0.7;
         left: 0;
+        right: 0;
+        display: inline;
+        text-align: center;
         @include respondToBelow(sm) {
           font-size: 8vw;
-          right: 0;
-          text-align: center;
+        }
+      }
+      .st-total {
+        .st-label,
+        .st-shares {
+          color: $dark_base_color;
         }
       }
       .left-text {
@@ -1072,6 +1121,10 @@
   .section-tickets {
     background: #fff;
     padding: 100px 0;
+    &.inv {
+      background: transparent;
+      box-shadow: none;
+    }
     @include respondToBelow(sm) {
       padding: 50px 0;
     }
@@ -1259,7 +1312,7 @@ body {
     transform: translate(0);
   }
   0% {
-    transform: translate(-30px);
+    transform: translate(-10px);
   }
 }
 i.icon.large {
