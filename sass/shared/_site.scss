@@ -375,6 +375,9 @@ ul.circle {
     align-items: center;
     justify-content: center;
     pointer-events: none;
+    &.in {
+      pointer-events: auto;
+    }
     .modal-dialog {
       margin: 0;
     }
@@ -423,6 +426,202 @@ ul.circle {
           }
         }
       }
+    }
+  }
+}
+
+.st-sticky-share-buttons {
+  @include respondToBelow(sm) {
+    display: none !important;
+  }
+}
+
+.table {
+  .thead,
+  .tbody {
+    .tr {
+      margin-bottom: 15px;
+      display: flex;
+      .td,
+      .th {
+        display: flex;
+        flex-direction: column;
+        > div {
+          border-left: solid 1px rgba(0, 0, 0, 0.15);
+          flex-grow: 1;
+          padding: 15px;
+          background: #fff;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+        text-align: left;
+        flex: 0 0 21.25%;
+        &.idx {
+          flex: 0 0 15%;
+          font-size: 14px;
+          > div {
+            border: 0;
+            color: $dark_base_color;
+            font-weight: 600;
+          }
+          &:not(.th) {
+            > div {
+              flex-direction: row;
+              align-items: center;
+              padding-right: 0;
+              position: relative;
+            }
+          }
+        }
+        &[colspan="4"] {
+          flex: 1 0 0;
+          text-align: center;
+          font-size: 18px;
+          > div {
+            padding: 5px;
+          }
+        }
+        p {
+          @include respondToBelow(sm) {
+            margin-top: 7px;
+          }
+          & + p {
+            font-size: 12px;
+            color: #999;
+            @include respondToAbove(md) {
+              margin-top: 7px;
+            }
+            &:before {
+              content: "--- ";
+            }
+          }
+        }
+      }
+      .th {
+        text-align: center;
+        > div {
+          background: $black_bg !important;
+          color: $dark_base_color;
+        }
+      }
+      &.gap {
+        .td {
+          > div {
+            background: rgba($dark_base_color, 0.15) !important;
+            color: $dark_base_color;
+          }
+        }
+      }
+    }
+  }
+  @include respondToAbove(md) {
+    &.fixit {
+      padding-top: 70px;
+      .thead {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        max-width: 1200px;
+        margin: auto;
+        z-index: 2;
+      }
+    }
+
+    &.absit {
+      padding-top: 0;
+      .thead {
+        position: absolute;
+        top: auto;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        max-width: 1200px;
+        margin: auto;
+        z-index: 2;
+      }
+    }
+  }
+  @include respondToBelow(sm) {
+    .thead {
+      display: none;
+    }
+    .tbody {
+      padding: 15px;
+      > .tr {
+        min-width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        .td {
+          flex-grow: unset !important;
+          flex-basis: unset !important;
+          background: #fff;
+          > div {
+            background: transparent;
+            border: 0;
+            &:before {
+              content: "";
+              color: $dark_base_color;
+            }
+          }
+          &:nth-child(2) > div {
+            &:before {
+              content: "Room 1";
+            }
+          }
+          &:nth-child(3) > div {
+            &:before {
+              content: "Room 2";
+            }
+          }
+          &:nth-child(4) > div {
+            &:before {
+              content: "Room 3";
+            }
+          }
+          &:nth-child(5) > div {
+            &:before {
+              content: "Room 4";
+            }
+          }
+          &[colspan="4"] {
+            > div {
+              padding: 5px 0 0;
+              position: relative;
+              &:before {
+                content: none;
+              }
+              p {
+                margin-bottom: 20px;
+                margin-top: -10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@include respondToBelow(sm) {
+  .floating_toast {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 70px;
+    padding: 20px;
+    z-index: 99;
+    display: flex;
+    justify-content: flex-end;
+    pointer-events: none;
+    a {
+      pointer-events: auto;
+      padding: 5px 10px;
+      color: #fff;
+      border-radius: 10px;
+      background: $dark_base_color;
+      font-size: 12px;
     }
   }
 }
