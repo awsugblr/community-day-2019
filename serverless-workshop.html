@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AWS Community Day 2019</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+    <link rel="manifest" href="images/site.webmanifest" />
+    <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="msapplication-config" content="images/browserconfig.xml" />
+    <meta name="theme-color" content="#ffffff" />
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/mystyles.css" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123754553-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag("js", new Date());
+
+        gtag("config", "UA-123754553-1");
+
+        $(document).on("click", "#toggle", function() {
+      $(this).toggleClass("on");
+      $("#nav-bar").toggleClass("active");
+    });
+
+    $(document).on("click", "#nav-bar ul li", function() {
+      $("#nav-bar").removeClass("active");
+      $("#toggle").removeClass("on");
+    });
+    </script>
+</head>
+
+
+<body>
+
+    <div id="page">
+        <div class="section section-1 hdr">
+            <div class="content">
+                <div class="container">
+
+                </div>
+            </div>
+            <div id="nav-bar">
+                <p id="toggle"><span></span></p>
+                <li class="spec">
+                    <a href="https://konfhub.com/awsdaysblr" target="_blank">Buy Tickets @ Early Bird Price</a
+                >
+              </li>
+              <ul>
+                <li>
+                  <a href="index.html#com_info">About Community Day</a>
+                </li>
+                <li>
+                    <a href="index.html#venues">Venues</a>
+                </li>
+                <li>
+                    <a href="index.html#agenda">Agenda</a>
+                </li>
+                <li>
+                    <a href="index.html#cfp">CFP</a>
+                </li>
+                <li>
+                    <a href="index.html#sponsors">Sponsors</a>
+                </li>
+                <li>
+                    <a href="index.html">Speakers</a>
+                </li>
+                <li>
+                    <a href="#workshop">Workshop</a>
+                </li>
+                <li>
+                    <a href="index.html#volunteers">Volunteers</a>
+                </li>
+                <li>
+                    <a href="https://communityday.awsugblr.in/2018" target="_blank">Community Day 2018</a>
+                </li>
+                <li>
+                    <a href="index.html#subscribe" id="sub-button" class="sub-button">
+                        <i class="icon large ion-md-notifications-outline"></i>
+                    </a>
+                </li>
+                </ul>
+            </div>
+        </div>
+        <!-- design -->
+
+        <div id="workshop" class="workshopPage" role="dialog">
+
+            <div class="modal-content">
+                <div class="modal-header" style="background: #ff9900;">
+
+                    <h4 class="heading-ttl" style="color:white;font-size: 25px;  font-weight: 600;
+                line-height: 1.5;"><p>Serverless on AWS</p></h4>
+                </div>
+                <div class="modal-body">
+                    <p>Hands-on Workshop on Developing AWSome App - a Serverless Food-delivery Application</p>
+                    <p class="heading-ttl small-head">Abstract:</p>
+                    <p>Get hands-on experience with AWS and serverless applications in this workshop conducted by experts from AWS. </p>
+                    <p>In this workshop you'll deploy a simple web application that enables users to request food from the AWSome Food website using services like <strong>AWS Lambda, Amazon API Gateway, Amazon S3, Amazon DynamoDB, AWS Step Functions and
+                    Amazon Cognito. </strong></p>
+                    <p>
+                        With the knowledge from the workshop, you can build and deploy your own serverless applications using these services for common use cases like web applications, analytics, and more.
+                    </p>
+                    <p class="heading-ttl small-head">Format:</p>
+                    <p>
+                        Full-day hands-on workshop (yes, do bring your laptops)</p>
+
+                    <p class="heading-ttl small-head">Application – Technical Description:</p>
+                    <p>
+                        The application will present users with an HTML & JS based user interface for ordering food items and indicating the location where they would like the food to be delivered. The interface on the backend with a RESTful web service will submit the request and find and dispatch food to the requester’s location. The application will also provide facilities for users to register with the service and log in before ordering food.</p>
+                    <p>
+                        The application architecture uses S3 hosts static web resources including HTML, CSS, JavaScript, and image files which are loaded in the user's browser. JavaScript executed in the browser sends and receives data from a backend API built using Lambda & Step Functions and API Gateway. Amazon Cognito provides user management and authentication functions to secure the backend API. Finally, DynamoDB provides a persistence layer where data can be stored by the API's Lambda function.
+                    </p>
+
+                    <p class="heading-ttl small-head">Pre-requisites:</p>
+                    <ul>
+                        <li><strong>AWS Account:</strong> In order to complete this workshop you'll need an AWS Account with access to create AWS IAM, S3, DynamoDB, Lambda, Step Functions, API Gateway and Cognito resources. All of the resources you will launch as part of this workshop are eligible for the AWS free tier if your account is less than 12 months old. See the <a href="https://aws.amazon.com/free/" target="_blank">AWS Free Tier page</a> for more details.
+                        </li>
+                        <li><strong>Essential JavaScript, HTML/CSS & Python knowledge:</strong> The front-end used JS and HTML/CSS and the backend code is written in Python; hence working knowledge is needed on these languages for this workshop.</li>
+                    </ul>
+
+                    <div class="wid">
+                        <p class="text-center heading-ttl small-head">Agenda:</p>
+                        <div class="block">
+                            <p><strong>Session 1: Getting Started with Serverless Development</strong></p>
+                            <ul>
+                                <li>
+                                    Essentials of serverless development
+                                </li>
+                                <li>
+                                    Introduction to the essential AWS services used in this workshop and how they relate to each other: AWS Lambda, Amazon API Gateway, Amazon S3, Amazon DynamoDB, AWS Step Functions and Amazon Cognito.
+                                </li>
+                                <li>
+                                    Hands-on: Clone the GitHub repo for the “AWSome Food” application
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="block">
+                            <p><strong>Session 2: Static Website Hosting</strong></p>
+                            <ul>
+                                <li>
+                                    How to use S3 for static website hosting
+                                </li>
+                                <li>
+                                    Hands-on: Create an S3 bucket, upload content, add a bucket policy to allow public reads, and enable website hosting; validate the hosted website
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="block">
+                            <p><strong>Session 3: User Management</strong></p>
+                            <ul>
+                                <li>
+
+                                    How to perform user authentication and registration with Amazon Cognito User Pools
+                                </li>
+                                <li>
+                                    Hands-on: Create an Amazon Cognito user pool, add an application client, updating the Config.js file in your website bucket, and validate the implementation.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="block">
+                            <p class="text-center"><strong>Lunch break </strong></p>
+                        </div>
+                        <div class="block">
+                            <p><strong>Session 4: Serverless Service Backend </strong></p>
+                            <ul>
+                                <li>
+                                    How to use AWS Lambda, Step Functions, and Amazon DynamoDB to build a backend process for handling requests from your web application.
+                                </li>
+                                <li>
+                                    Hands-on: Create DynamoDB table, create an IAM role for the lambda and step functions, create lambdas for handing requests; validate implementation
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="block">
+                            <p><strong>Session 5: RESTful APIs with AWS Lambda and Amazon API Gateway</strong></p>
+
+                            <ul>
+                                <li>How to use API Gateway to expose the created lambda and step functions as a RESTful API.
+                                </li>
+                                <li>Hands-on: Create a new REST API, create a Cognito User Pools Authorizer, create a new resource and method, deploy your API, update the website config; validate the implementation.</li>
+                            </ul>
+                        </div>
+                        <div class="block">
+                            <p><strong>Session 6: Putting things together and next steps</strong></p>
+                            <ul>
+                                <li>How to test the implementation & perform load testing</li>
+                                <li>How to monitor the application, logging, debugging, etc</li>
+                                <li>Wrap-up and key takeaways</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <br>
+                    <div class="row">
+                        <div class="col-md-2">
+                        </div>
+                        <div class="col-md-2">
+
+                            <img class="speakerImg" src="images\madhu.jpg" alt="speaker image">
+
+                        </div>
+
+                        <div class="col-md-2">
+                            <div id="align">
+                                <h4 style="color:#ff9900">Workshop Trainer</h4>
+                                <h4><a href="https://www.linkedin.com/in/madhusudanshekar/" target="_blank">Madhusudhan Shekar</a></h4>
+                                <p><a href="https://aws.amazon.com/" target="_blank">AWS</a></p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-2">
+                            <img class="speakerImg" src="images/srushith.jpg" alt="speaker image">
+                        </div>
+                        <div class="col-md-2">
+                            <div id="align1">
+                                <h4 style="color:#ff9900">Supporting Trainer (Hands-on labs) </h4>
+                                <h4><a href="https://www.linkedin.com/in/srushith/" target="_blank">Srushith R</a></h4>
+                                <p><a href="https://konfhub.com/" target="_blank">KonfHub</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>  
+
+</body>
+
+</html>
