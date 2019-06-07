@@ -142,7 +142,7 @@
       <div id="nav-bar">
         <p id="toggle"><span></span></p>
         <li class="spec">
-          <a href="https://konfhub.com/awsdaysblr" target="_blank">Buy Tickets @ Early Bird Price</a>
+          <a class="buy-ticket-link" >Buy Tickets @ Early Bird Price</a>
         </li>
         <ul>
           <li>
@@ -309,7 +309,7 @@
         </div>
         <div class="buy-wrapper row flex-it">
           <div class="f1">
-            <a class="button large" href="https://konfhub.com/awsdaysblr" target="_blank">Buy Tickets</a>
+            <a class="button large buy-ticket-link">Buy Tickets</a>
           </div>
         </div>
       </div>
@@ -1921,6 +1921,49 @@
   </script>
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSK4vqrOG3caqUr6dxAVhA7MrdMmq63q0&callback=initMap"></script>
+     <!-- getting utm parameter and passing to konfhub start -->
+  <script>
+    $(".buy-ticket-link").on("click", ()=> {
+       checkForUtmAvilableOrNot(decodeURIComponent(location.href)).then((formResolve) =>{
+          window.open("https://konfhub.com/awsdaysblr?"+formResolve, "_blank");
+       }).catch((fromReject) => {
+          window.open("https://konfhub.com/awsdaysblr","_blank");
+       });
+    });
+
+    let checkForUtmAvilableOrNot = (_currentUrl) => {
+      return new Promise((resolve,reject) => {
+        if(_currentUrl.indexOf("utm_source")>-1){
+          let qp = _currentUrl.slice(_currentUrl.indexOf('?') + 1)
+          let a = qp.split("&");
+          let _utmPara = "";
+          a.forEach((v,j)=>{
+            try{
+            if(j>2)return;
+            let _utm = checkForSpecialChar(v);
+            _utmPara += _utm == 1 ? j == 2 ? v : v+"&" : v.slice(0,_utm);
+            }catch(err){
+              console.log(err);
+            }
+          });
+          resolve(_utmPara);
+        }else{
+           reject(0);
+        }
+      })
+    };
+    let specialChars = "<>@!#$?%^&*()+[]{}:;|'\"\\,./~`-";
+    let checkForSpecialChar = function(string){
+      let _indexOf = string.length;
+    for(i = 0; i < specialChars.length;i++){
+      if(string.indexOf(specialChars[i]) > -1){
+        _indexOf = _indexOf > string.indexOf(specialChars[i]) ? string.indexOf(specialChars[i]) : _indexOf
+        }
+    }
+    return _indexOf != string.length ? _indexOf : 1;
+    }
+  </script>
+  <!-- getting utm parameter and passing to konfhub end -->
 </body>
 
 </html>
