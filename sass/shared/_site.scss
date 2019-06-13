@@ -437,6 +437,11 @@ ul.circle {
 }
 
 .table {
+  .thead {
+    .tr {
+      border: solid 2px $dark_base_color;
+    }
+  }
   .thead,
   .tbody {
     .tr {
@@ -501,15 +506,27 @@ ul.circle {
       .th {
         text-align: center;
         > div {
+          color: $dark_base_color !important;
           background: $black_bg !important;
-          color: $dark_base_color;
         }
       }
       &.gap {
         .td {
           > div {
-            background: rgba($dark_base_color, 0.15) !important;
-            color: $dark_base_color;
+            background: $dark_base_color !important;
+            color: $black_bg;
+          }
+        }
+      }
+      &.last {
+        @include respondToAbove(md) {
+          display: block;
+          .td:first-child > div {
+            padding: 30px 0 5px;
+          }
+          .td:last-child > div {
+            padding: 5px 0 30px;
+            font-size: 20px;
           }
         }
       }
@@ -526,6 +543,9 @@ ul.circle {
         max-width: 1200px;
         margin: auto;
         z-index: 2;
+        .tr {
+          border-width: 0 2px;
+        }
       }
     }
 
