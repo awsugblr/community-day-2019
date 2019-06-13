@@ -541,8 +541,8 @@
       }
     }
     &.inv {
-      background: transparent;
       box-shadow: none;
+      background: $black_bg;
       .table {
         border: 0;
         & .thead .tr .td > div,
@@ -762,6 +762,9 @@
                 }
                 &.knowledgehut {
                   background-image: url(../images/spons/knowledgehut.jpg);
+                }
+                &.hasura {
+                  background-image: url(../images/spons/hasura.jpg);
                 }
               }
             }
@@ -1050,8 +1053,8 @@
         background-size: cover;
         height: 150px;
         width: 150px;
-        left: 100%;
-        transform: translate(-50px, -50px);
+        right: 100%;
+        transform: translate(50px, -50px);
         content: "";
         top: 0;
         @include respondToBelow(sm) {
