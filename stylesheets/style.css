@@ -2628,8 +2628,42 @@ ul.circle li {
     width: 120px;
   }
 }
+/* line 1271, ../sass/shared/_home.scss */
+#page .section-tickets .card.sold:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(35, 47, 63, 0.85);
+}
+/* line 1280, ../sass/shared/_home.scss */
+#page .section-tickets .card.sold:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 25px;
+  bottom: 0;
+  height: 125px;
+  width: 125px;
+  background: url(../images/sold.svg) center no-repeat;
+  background-size: 100%;
+  margin: auto;
+  animation: swing 2s infinite alternate ease-in-out;
+  transform-origin: top center;
+}
 
-/* line 1273, ../sass/shared/_home.scss */
+@keyframes swing {
+  from {
+    transform: rotate(5deg);
+  }
+  to {
+    transform: rotate(-7deg);
+  }
+}
+/* line 1308, ../sass/shared/_home.scss */
 #toggle {
   width: 70px;
   height: 70px;
@@ -2645,28 +2679,28 @@ ul.circle li {
   display: none;
 }
 @media only screen and (max-width: 991px) {
-  /* line 1273, ../sass/shared/_home.scss */
+  /* line 1308, ../sass/shared/_home.scss */
   #toggle {
     display: flex;
   }
 }
-/* line 1290, ../sass/shared/_home.scss */
+/* line 1325, ../sass/shared/_home.scss */
 #toggle span {
   position: relative;
   display: block;
 }
-/* line 1293, ../sass/shared/_home.scss */
+/* line 1328, ../sass/shared/_home.scss */
 #toggle span:after, #toggle span:before {
   content: "";
   position: absolute;
   left: 0;
   top: -9px;
 }
-/* line 1300, ../sass/shared/_home.scss */
+/* line 1335, ../sass/shared/_home.scss */
 #toggle span:after {
   top: 9px;
 }
-/* line 1304, ../sass/shared/_home.scss */
+/* line 1339, ../sass/shared/_home.scss */
 #toggle span,
 #toggle span:after,
 #toggle span:before {
@@ -2677,31 +2711,31 @@ ul.circle li {
   backface-visibility: hidden;
   border-radius: 2px;
 }
-/* line 1314, ../sass/shared/_home.scss */
+/* line 1349, ../sass/shared/_home.scss */
 #toggle.on {
   left: 15px;
 }
-/* line 1316, ../sass/shared/_home.scss */
+/* line 1351, ../sass/shared/_home.scss */
 #toggle.on span,
 #toggle.on span:after,
 #toggle.on span:before {
   width: 70%;
 }
-/* line 1321, ../sass/shared/_home.scss */
+/* line 1356, ../sass/shared/_home.scss */
 #toggle.on span {
   background-color: transparent;
 }
-/* line 1324, ../sass/shared/_home.scss */
+/* line 1359, ../sass/shared/_home.scss */
 #toggle.on span:after {
   transform: rotate(-45deg) translate(7px, -8px);
 }
-/* line 1327, ../sass/shared/_home.scss */
+/* line 1362, ../sass/shared/_home.scss */
 #toggle.on span::before {
   transform: rotate(45deg) translate(5px, 5px);
 }
 
 @media only screen and (max-width: 991px) {
-  /* line 1334, ../sass/shared/_home.scss */
+  /* line 1369, ../sass/shared/_home.scss */
   body {
     padding: 0 0 70px !important;
   }
@@ -2715,13 +2749,13 @@ ul.circle li {
     transform: translate(-10px);
   }
 }
-/* line 1348, ../sass/shared/_home.scss */
+/* line 1383, ../sass/shared/_home.scss */
 i.icon.large {
   font-size: 30px;
 }
 
 @media only screen and (max-width: 991px) {
-  /* line 1351, ../sass/shared/_home.scss */
+  /* line 1386, ../sass/shared/_home.scss */
   #page .section-1 #nav-bar li #sub-button.sub-button {
     position: absolute;
     z-index: 999;
@@ -2739,7 +2773,7 @@ i.icon.large {
   }
 }
 
-/* line 1369, ../sass/shared/_home.scss */
+/* line 1404, ../sass/shared/_home.scss */
 .card {
   background: #fff;
   padding: 30px 15px;
@@ -2747,28 +2781,28 @@ i.icon.large {
   box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(0, 0, 0, 0.4);
   height: 100%;
 }
-/* line 1375, ../sass/shared/_home.scss */
+/* line 1410, ../sass/shared/_home.scss */
 .card h4.headin-ttl {
   margin: 0 0 15px;
   color: #ff9900;
 }
 @media only screen and (max-width: 991px) {
-  /* line 1375, ../sass/shared/_home.scss */
+  /* line 1410, ../sass/shared/_home.scss */
   .card h4.headin-ttl {
     color: #232f3f;
   }
 }
-/* line 1382, ../sass/shared/_home.scss */
+/* line 1417, ../sass/shared/_home.scss */
 .card p {
   font-size: 14px;
   color: #999999;
   line-height: 1.2;
 }
-/* line 1387, ../sass/shared/_home.scss */
+/* line 1422, ../sass/shared/_home.scss */
 .card.with_icon {
   position: relative;
 }
-/* line 1389, ../sass/shared/_home.scss */
+/* line 1424, ../sass/shared/_home.scss */
 .card.with_icon .bg_img {
   margin: 0 auto 15px;
   height: 75px;
