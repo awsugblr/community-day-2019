@@ -1267,9 +1267,44 @@
           }
         }
       }
+      &.sold {
+        &:before {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          background: rgba($black_bg, 0.85);
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          right: 0;
+          top: 25px;
+          bottom: 0;
+          height: 125px;
+          width: 125px;
+          background: url(../images/sold.svg) center no-repeat;
+          background-size: 100%;
+          margin: auto;
+          animation: swing 2s infinite alternate ease-in-out;
+          transform-origin: top center;
+        }
+      }
     }
   }
 }
+@keyframes swing {
+  from {
+    transform: rotate(5deg);
+  }
+  to {
+    transform: rotate(-7deg);
+  }
+}
+
 #toggle {
   width: 70px;
   height: 70px;
