@@ -940,7 +940,7 @@
               align-items: center;
               justify-content: center;
               padding: 5px;
-              font-size: 80%;
+              font-size: 0;
               flex-direction: column;
               transform: translateY(100%);
               @include respondToBelow(sm) {
