@@ -2020,6 +2020,9 @@ ul.circle li {
 #page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).knowledgehut {
   background-image: url(../images/spons/knowledgehut.jpg);
 }
+#page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).efy {
+  background-image: url(../images/spons/efy.jpg);
+}
 /* line 766, ../sass/shared/_home.scss */
 #page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).hasura {
   background-image: url(../images/spons/hasura.jpg);
