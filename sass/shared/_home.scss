@@ -901,16 +901,16 @@
         justify-content: unset;
         .person {
           align-items: center;
-          width: 14%;
+          width: 16.666%;
           display: flex;
           flex-direction: column;
           padding: 15px;
           margin: 10px 0;
-          @include respondToAbove(md) {
-            &:nth-child(13n + 1) {
-              margin-left: 7%;
-            }
-          }
+          // @include respondToAbove(md) {
+          //   &:nth-child(13n + 1) {
+          //     margin-left: 7%;
+          //   }
+          // }
           &.push {
             @include respondToAbove(md) {
               margin-left: 2.5%;
