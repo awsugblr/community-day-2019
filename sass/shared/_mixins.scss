@@ -553,7 +553,7 @@
     background: #fff;
     color: $dark_base_color;
   }
-  &[disabled] {
+  &[disabled],&.disabled {
     pointer-events: none;
     background: #eee !important;
     box-shadow: none;

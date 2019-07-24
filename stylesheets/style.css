@@ -174,11 +174,15 @@ input[type="reset"].white {
   color: #ff9900;
 }
 /* line 556, ../sass/shared/_mixins.scss */
-button[disabled],
+button[disabled], button.disabled,
 .button[disabled],
+.button.disabled,
 input[type="button"][disabled],
+input[type="button"].disabled,
 input[type="submit"][disabled],
-input[type="reset"][disabled] {
+input[type="submit"].disabled,
+input[type="reset"][disabled],
+input[type="reset"].disabled {
   pointer-events: none;
   background: #eee !important;
   box-shadow: none;
