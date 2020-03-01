@@ -1944,6 +1944,11 @@ ul.circle li {
     background-size: 80%;
   }
 }
+
+#page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).open {
+  background-image: url(../images/spons/open.jpg);
+}
+
 /* line 706, ../sass/shared/_home.scss */
 #page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).jfrog {
   background-image: url(../images/spons/jfrog.jpg);
