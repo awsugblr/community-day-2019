@@ -2634,6 +2634,13 @@ ul.circle li {
 #page .section-tickets .card.with_icon.tick_work_2 .bg_img {
   background-image: url(../images/tick_work_2.svg);
 }
+
+
+#page .section-tickets .card.with_icon.tick_work_3 .bg_img {
+  background-image: url(../images/tick_soundcloud.svg);
+  background-size: 75px;
+}
+
 /* line 1273, ../sass/shared/_home.scss */
 #page .section-tickets .card.with_icon.combo .bg_img {
   background-image: url(../images/combo.svg);
