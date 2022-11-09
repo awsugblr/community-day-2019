@@ -1,141 +1,1179 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="">
-	<meta name="author" content="">
+  <title>AWS Community Day Philippines 2023</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
+  <link rel="manifest" href="images/site.webmanifest" />
+  <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5" />
+  <link rel="shortcut icon" href="images/favicon.ico" />
+  <meta name="msapplication-TileColor" content="#da532c" />
+  <meta name="msapplication-config" content="images/browserconfig.xml" />
+  <meta name="theme-color" content="#ffffff" />
 
-	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png"/>
-	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png"/>
-	<link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png"/>
-    <link rel="manifest" href="images/site.webmanifest">
-    <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="images/favicon.ico">
-	<meta property="og:url" content="https://communityday.awsug.ph" />
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="AWS Community Day 2020 Philippines" />
-	<meta property="og:description" content="AWS Community Day is a community-organized event featuring technical discussions led by expert AWS users and community leaders. AWS Community Day is being organized by AWS Users Group - Philippines. This group is for anyone interested in Amazon Web Services, Cloud Computing, AWS design implementation and servicing, EC2, S3, High Scalability Computing, Real Life uses of AWS and cloud servers, SaaS, IAAS, PAAS and many more" />
-	<meta property="og:image" content="https://s3.ap-south-1.amazonaws.com/aws-community-ph/community-day-logo-sq.png" />
-	<meta property="og:image:secure_url" content="https://s3.ap-south-1.amazonaws.com/aws-community-ph/community-day-logo-sq.png"/>
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<title>AWS Community Day Philippines 2020</title>
-	<!-- MAIN CSS FILES===================================
-	======================================================= -->
-	<link rel="stylesheet" href="https://doplrafkvxyec.cloudfront.net/assets/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://doplrafkvxyec.cloudfront.net/assets/css/font-awesome.min.css">
-	<link rel="stylesheet" href="https://doplrafkvxyec.cloudfront.net/assets/css/line-icons.min.css">
-	<link rel="stylesheet" href="https://doplrafkvxyec.cloudfront.net/assets/css/owl.carousel.css">
-	<link rel="stylesheet" href="https://doplrafkvxyec.cloudfront.net/assets/css/owl.theme.css">
-	<link rel="stylesheet" href="https://doplrafkvxyec.cloudfront.net/assets/css/owl.transitions.css">
-	<link rel="stylesheet" href="https://doplrafkvxyec.cloudfront.net/assets/css/animate.css">
-	<!-- CUSTOM STYLE	-->
-	<link id="theme" rel="stylesheet" href="https://doplrafkvxyec.cloudfront.net/assets/css/theme.css">
-	<link rel="stylesheet" href="https://doplrafkvxyec.cloudfront.net/assets/css/style1.css">
-	<link rel="stylesheet" href="https://doplrafkvxyec.cloudfront.net/assets/css/responsive.css">
+  <meta property="og:url" content="https://communityday.awsug.ph" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="AWS Community Day Philippines 2023" />
+  <meta property="og:description" content="AWS Community Day Philippines 2023 is being organized by AWS User Group Philippines (AWSUG.PH). We're united by community-led learnings and diversified by the wide variety of tools and technologies closely knit with Amazon Web Services." />
+  <meta property="og:image" content="https://communityday.awsug.ph/images/community-day-logo-sq.png" />
+  <meta property="og:image:secure_url" content="https://communityday.awsug.ph/images/community-day-logo-sq.png" />
 
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
-	 crossorigin="anonymous">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@AWSUG.PH">
+  <meta name="twitter:creator" content="@SathyaBhat">
+  <meta name="twitter:title" content="AWS Users Group Philippines">
+  <meta name="twitter:description" content="AWSUG.PH is volunteer driven, group of passionate Amazon Web Services (aka AWS) {Developers, Architects, Users, Evangelists} who meet to {share best practices, discuss up coming features, pit falls, etc} in Philippines.">
+  <meta name="twitter:image" content="https://communityday.awsug.ph/images/community-day-logo-sq.png">
 
-	<style>
-		.table>thead>tr>th,
-		.table>thead>tr>td,
-		.table>tbody>tr>th,
-		.table>tbody>tr>td,
-		.table>tfoot>tr>th,
-		.table>tfoot>tr>td {
-			padding: 10px 4px
-		}
 
-		#shareImg:hover {
-			opacity: 0.8;
-			cursor: pointer;
-		}
-	</style>
+  
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+    integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/site.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet" />
 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/mystyles.css" />
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXX-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "UA-XXXXXXXXXX-1");
+  </script>
+  <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=636bcd11bdc1a20013080618&product=inline-share-buttons&source=platform" async="async"></script>
+  <!--script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5b63095a78eb8b00113e362f&product=inline-share-buttons"></script-->
+  <link
+  rel="manifest"
+  href="/manifest.json"
+  />
+  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+  <script>
+    var OneSignal = window.OneSignal || [];
+    OneSignal.push(function() {
+      OneSignal.init({
+        appId: "b3f01cfa-1a70-4f46-9dd1-202a1ae14385",
+      });
+    });
+  </script>
+  <!-- Facebook Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1112628635595414');
+    fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1112628635595414&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Facebook Pixel Code -->
 </head>
-<!-- .theme-option-->
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+<body>
+  <div id="page">
+    <div class="section section-1 hdr" id="home">
+      <div class="content">
+        <div class="container">
+          <div>
+            <div wid="50%" class="left">
+              <div class="left_in">
+                <img src="images/logo.png" />
+                <div class="txt">
+                  <h4 class="headin-ttl">
+                    Coming Soon in 2023, Philippines
+                  </h4>
+                  <p>
+                    AWS User Group Philippines (AWSUG.PH) is back with a bang to
+                    host the most awaited event, AWS Community Day Philippines
+                    2023, unveiling success stories, use cases & much more
+                    from industry leaders.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div wid="50%" class="right">
+              <div class="gal flex-it col">
+                <div class="top f1 flex-it">
+                  <div class="f2 ims im1"></div>
+                  <div class="f1 ims im2"></div>
+                </div>
+                <div class="bot f1 flex-it">
+                  <div class="f1 ims im3"></div>
+                  <div class="f2 flex-it col">
+                    <div class="f1 flex-it">
+                      <div class="f1 ims im4"></div>
+                      <div class="f1 ims im5"></div>
+                    </div>
+                    <div class="f1 ims im6"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="right_in">
+                <p class="AWSUGPH_logo">
+                  <img src="./images/AWSUGPH_logo.png"/>
+                </p>
+                <!--p class="enlarge">
+                  Thanks ❤️ everyone for making last Community Day 🎈 a huge
+                  success
+                </p>
+                <button class="white icon-grp rt" id="link">
+                  EXPLORE 2018
+                  <i class="icon large ion-md-play-circle"></i>
+                </button -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="nav-bar">
+        <p id="toggle"><span></span></p>
+        <li class="spec">
+          <a class="buy-ticket-link  button" href="#tickets" >Tickets</a>
+        </li>
+        <ul>
+          <li>
+            <a href="#com_info">About Community Day</a>
+          </li>
+          <li>
+            <a href="#cfp">CFP</a>
+          </li>
+          <!--li>
+            <a href="#venues">Venues</a>
+          </li-->
+          <!--li>
+            <a href="#agenda">Agenda</a>
+          </li-->
+          <li>
+            <a href="#agenda">Agenda</a>
+          </li>
 
-	<!--  banner slider end  -->
-	<section id="main-banner">
+          
+          <!--li>
+            <a href="#workshop">Workshop</a>
+          </li-->
+          <li>
+            <a href="#sponsors">Sponsors</a>
+          </li>
+          <li>
+              <a href="#speakers">Speakers</a>
+            </li>
+          <li>
+            <a href="#volunteers">Volunteers</a>
+          </li>
+          
+          <li>
+            <a href="#subscribe" id="sub-button" class="sub-button">
+              <i class="icon large ion-md-notifications-outline"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="section section-2">
+      <div class="container flex-it">
+        <div class="f1 left" id="com_info">
+          <div class="left_in">
+            <h4 class="headin-ttl">
+              WHO ARE WE?
+            </h4>
+            <p>
+              <b><a href="https://meetup.com/AWSUG.PH" target="_blank">AWS User Group Philippines (AWSUG.PH)</a></b>
+              is a Philippines based group united by community-led learnings and
+              diversified by the wide variety of tools and technologies
+              closely knit with Amazon Web Services, cloud computing
+              technology, AWS design implementation and servicing, high
+              scalability / performance computing, production use cases of
+              AWS, blockchain, Artificial Intelligence and much more.
+            </p>
+            <p>
+             AWS Community Days are community-organized cloud education events, featuring technical discussions
+              and demos led by expert AWS users and industry leaders from around the world
+            </p>
+            <p>
+              Community-based learning is the best way to enhance the concepts
+              being taught by connecting with enthusiasts in person, thereby
+              sharing first-hand experiences and familiar, accessible
+              examples.
+            </p>
+            <p>
+              All skills levels are welcome to help accomplish our motto of
+              learning, sharing and networking. Let's join hands to empower
+              this tech community to make it bigger and better!
+            </p>
+            <p>
+              <center>
+                <a href="https://www.meetup.com/AWS-User-Group-Philippines/" target="_blank">
+                  <i class="fa fa-meetup" aria-hidden="true" style="font-size:250%;"></i> </a>&nbsp;
+                
+                
+                  <a href="https://www.facebook.com/groups/AWSUGPH/" target="_blank">
+                  <i class="fa fa-facebook" aria-hidden="true" style="color:orange;font-size:250%;"></i> </a>&nbsp;
 
-		<div class="container">
-			<div class="row">
-				<div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3 col-sm-offset-3">
-					<div class="banner-main">
 
-						<h3 class="lg-title">
-							<img src="images/community-day-logo.png" class="img-responsive">
-						</h3>
-						
-						<h2>AWS Community Day Philippines 2020</h2>
+                <a href="https://www.linkedin.com/company/aws-user-group-philippines/" target="_blank">
+                  <i class="fa fa-linkedin" aria-hidden="true" style="font-size:250%"></i> </a>&nbsp;
 
-					</div>
-				</div>
+                  <a href="https://www.youtube.com/c/YoungCTO" target="_blank">
+                    <i class="fa fa-youtube" aria-hidden="true" style="color:orange;font-size:250%"></i> </a>&nbsp;
+
+                              </center>
+            </p>
+          </div>
+        </div>
+        <div class="f1 right" id="even_info">
+          <div class="right_in">
+            <h4 class="heading-ttl">
+              What to expect from AWS Community Day?
+            </h4>
+            <ul class="circle">
+              <li>
+                Renew, revive & revitalize to exemplify your excitement about
+                the work you do
+              </li>
+              <li>
+                Learn industry trends and intricacies about innovative
+                implementations from AWS experts
+              </li>
+              <li>
+                Harness the power of networking with 200+ AWS users, DevOps,
+                developers & solutions architects
+              </li>
+              <li>
+                Network with fellow AWS veterans & techies during breaks
+              </li>
+              <li>
+                Novice to pioneer on relentless pursuit to learn can rejoice
+                the AWS offerings & success stories under one roof.
+              </li>
+              <li>Take helpful and valuable information back to business</li>
+              <li>
+                Gain visibility to get more publicity for your esteemed
+                organisation
+              </li>
+              <li>
+                Sporting chance for active participants to win AWS goodies
+              </li>
+            </ul>
+          </div>
+          <br /><b>Please read the
+            <a href="./code-of-conduct.html" target="_blank">Code of Conduct</a>
+            for this event</b>
+        </div>
+      </div>
+    </div>
+    <div class="section section-tickets text-center" id="tickets">
+      <div class="container">
+        <h4 class="main-heading-ttl text-center">Get Tickets</h4>
+        <div class="row flex-it">
+          <div class="col-md-3">
+            <div class="card tick_conf with_icon border" notclass="sold">
+              <h4 class="heading-ttl">Conference</h4>
+              <div class="bg_img"></div>
+              <p>Gives you access to the conference on Day 1 2023 Morning</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="card tick_work_3 with_icon border dark" notclass="sold">
+              <h4 class="heading-ttl">Technical Foundation </h4>
+              <div class="bg_img"></div>
+              <p>Gets you access to Business & Technical Foundation and Solutions Architect Associate Track on Day 1 2023 Afternoon</p>
+
+            </div>
+          </div>
+          <div class="col-md-3 ">
+            <div class="card tick_work_2 with_icon border" notclass="sold">
+              <h4 class="heading-ttl">ML, Data, Gaming & VR </h4>
+              <div class="bg_img"></div>
+              <p>Gets you access to Machine Learning, Big Data, Analytics, Gaming and VR on Day 1 2023 Afternoon</p>
 
 
-			</div>
-			<!-- row end  -->
+            </div>
+          </div>
+          <div class="col-md-3 ">
+            <div class="card tick_work_1 with_icon border dark " notclass="sold">
+              <h4 class="heading-ttl">Serverless & Container</h4>
+              <div class="bg_img"></div>
+              <p>Gets you access to Serverless Architecture, Kubernetes and ECS Track on Day 1 2023 Afternoon</p>
+            </div>
+          </div>
+        </div>
+        <div class="buy-wrapper row flex-it">
+          <div class="f1">
+            <a class="button large buy-ticket-link" target="_blank" href="https://go.awsug.ph/interest-community-day-2023">Register Interest</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modals-->
+    <div id="workshop_1" class="modal fade fillo" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="heading-ttl">
+              <p>Serverless on AWS</p>
+            </h4>
+          </div>
+          <div class="modal-body">
+            <p>Hands-on Workshop on Developing AWSome App - a Serverless Food-delivery Application</p>
+            <p class="heading-ttl small-head">Abstract:</p>
+            <p>Get hands-on experience with AWS and serverless applications in this workshop conducted by experts from
+              AWS. </p>
+            <p>In this workshop you'll deploy a simple web application that enables users to request food from the
+              AWSome Food
+              website using services like <strong>AWS Lambda, Amazon API Gateway, Amazon S3, Amazon DynamoDB, AWS Step
+                Functions and
+                Amazon Cognito. </strong></p>
+            <p>
+              With the knowledge from the workshop, you can build and deploy your own serverless applications using
+              these services
+              for common use cases like web applications, analytics, and more.
+            </p>
+            <p class="heading-ttl small-head">Format:</p>
+            <p>
+              Full-day hands-on workshop (yes, do bring your laptops). The timings are as below:
+              <p>09.30am - 10.00am: Registration cum installation & setup </p>
+              <p>10.00am - 11.30pm: Session </p>
+              <p>11.30am - 11.45am: Tea break </p>
+              <p>11.45am - 01.00pm: Session</p>
+              <p>01.00pm - 02.00pm: Lunch</p>
+              <p>02.00pm - 03.30pm: Session</p>
+              <p>03.30pm - 03.45pm: Tea break</p>
+             <p> 03.45pm - 05.45pm: Session </p>
+              <p>05.45pm - 06.00pm: Wrap-up / closure    </p>
+            </p>
 
-		</div>
-		<!-- container end  -->
-	</section>
-	<!-- section slider end	-->
+            <p class="heading-ttl small-head">Application – Technical Description:</p>
+            <p>
+              The application will present users with an HTML & JS based user interface for ordering food items and
+              indicating the
+              location where they would like the food to be delivered. The interface on the backend with a RESTful web
+              service will
+              submit the request and find and dispatch food to the requester’s location. The application will also
+              provide
+              facilities for users to register with the service and log in before ordering food.</p>
+            <p>
+              The application architecture uses S3 hosts static web resources including HTML, CSS, JavaScript, and image
+              files which
+              are loaded in the user's browser. JavaScript executed in the browser sends and receives data from a
+              backend API built
+              using Lambda & Step Functions and API Gateway. Amazon Cognito provides user management and authentication
+              functions to
+              secure the backend API. Finally, DynamoDB provides a persistence layer where data can be stored by the
+              API's Lambda
+              function.</p>
 
-	<!-- section code of conduct Start	-->
-	<section id="section-conduct" class="section-padding ">
-		<div class="container">
-			<div class="row">
+            <p class="heading-ttl small-head">Pre-requisites:</p>
+            <ul>
+              <li><strong>AWS Account:</strong> In order to complete this workshop you'll need an AWS Account with
+                access to create
+                AWS IAM, S3, DynamoDB,
+                Lambda, Step Functions, API Gateway and Cognito resources. All of the resources you will launch as part
+                of this
+                workshop
+                are eligible for the AWS free tier if your account is less than 12 months old. See the <a
+                  href="https://aws.amazon.com/free/" target="_blank">AWS Free Tier page</a> for more
+                details.</li>
+              <li><strong>Essential JavaScript, HTML/CSS & Python knowledge:</strong> The front-end used JS and HTML/CSS
+                and the
+                backend code is written in
+                Python; hence working knowledge is needed on these languages for this workshop.</li>
+            </ul>
 
-				<div class="col-md-12 col-sm-12">
-					<div class="about-intro-1">
-					<h2>Importance</h2>
-					<p>					
-						The well-being of our members and participants is a top priority of AWS User Group Philippines. All AWS UGPh community events must be conducted in a safe and healthy environment. It is also our goal to make our first annual Conference: AWS Community Day Philippines a memorable and productive event.				
-					</p>
+            <div class="wid">
+              <p class="text-center heading-ttl small-head">Agenda:</p>
+              <div class="block">
+                <p><strong>Session 1: Getting Started with Serverless Development</strong></p>
+                <ul>
+                  <li>
+                    Essentials of serverless development
+                  </li>
+                  <li>
+                    Introduction to the essential AWS services used in this workshop and how they relate to each other:
+                    AWS Lambda,
+                    Amazon API Gateway, Amazon S3, Amazon DynamoDB, AWS Step Functions and Amazon Cognito.
+                  </li>
+                  <li>
+                    Hands-on: Clone the GitHub repo for the “AWSome Food” application
+                  </li>
+                </ul>
+              </div>
+              <div class="block">
+                <p><strong>Session 2: Static Website Hosting</strong></p>
+                <ul>
+                  <li>
+                    How to use S3 for static website hosting
+                  </li>
+                  <li>
+                    Hands-on: Create an S3 bucket, upload content, add a bucket policy to allow public reads, and enable
+                    website
+                    hosting; validate the hosted website
+                  </li>
+                </ul>
+              </div>
+              <div class="block">
+                <p><strong>Session 3: User Management</strong></p>
+                <ul>
+                  <li>
 
-					<p>
-						<h2>Consequences</h2>
-						<p>Thus, amidst the Covid-19 pandemic, the AWS User Group Philippines event organizers have made the difficult decision to cancel AWS Community Day Philippines 2020. We will instead prepare for a bigger AWS Community Day Philippines for 2021. The exact dates will be announced following the guidelines to be issued by government authorities.
-						</p>
+                    How to perform user authentication and registration with Amazon Cognito User Pools
+                  </li>
+                  <li>
+                    Hands-on: Create an Amazon Cognito user pool, add an application client, updating the Config.js file
+                    in your
+                    website
+                    bucket, and validate the implementation.
+                  </li>
+                </ul>
+              </div>
+              <div class="block">
+                <p class="text-center"><strong>Lunch break </strong></p>
+              </div>
+              <div class="block">
+                <p><strong>Session 4: Serverless Service Backend </strong></p>
+                <ul>
+                  <li>
+                    How to use AWS Lambda, Step Functions, and Amazon DynamoDB to build a backend process for handling
+                    requests from
+                    your
+                    web application.
+                  </li>
+                  <li>
+                    Hands-on: Create DynamoDB table, create an IAM role for the lambda and step functions, create
+                    lambdas for
+                    handing
+                    requests; validate implementation
+                  </li>
+                </ul>
+              </div>
+              <div class="block">
+                <p><strong>Session 5: RESTful APIs with AWS Lambda and Amazon API Gateway</strong></p>
 
-						<p>
-						Stay tuned for updates by bookmarking community.awsug.ph and AWS User Group Philippines Facebook group.
-						</p>
-					</p>
+                <ul>
+                  <li>How to use API Gateway to expose the created lambda and step functions as a RESTful API.
+                  </li>
+                  <li>Hands-on: Create a new REST API, create a Cognito User Pools Authorizer, create a new resource and
+                    method,
+                    deploy your
+                    API, update the website config; validate the implementation.</li>
+                </ul>
+              </div>
+              <div class="block">
+                <p><strong>Session 6: Putting things together and next steps</strong></p>
+                <ul>
+                  <li>How to test the implementation & perform load testing</li>
+                  <li>How to monitor the application, logging, debugging, etc</li>
+                  <li>Wrap-up and key takeaways</li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
-					<p>
-						<h2>Call for Speakers/Paper</h2>
-						<p>We are still in search for Speakers for our Regular Meetups this year and AWS Community Day Philippines 2021. Please submit using the form <a href="http://go.awsug.ph/speaker" target="_blank">HERE</a></p>
-					</p>
+          <div class="modal-footer">
+            <br>
+            <div class="row">
+              <div class="col-md-1">
 
-					<p>
-						<h2>Contact</h2>
-						<p>For any related concerns, please free free to contact <a href="https://awsug.ph" target="_blank">AWS User Group Philippines</a> organizers at <a href="mailto:info@awsug.ph">info@awsug.ph</a>
-					</p>
+              </div>
+              <div class="col-md-2">
+                <img class="speakerImg" src="images\madhu.jpg" alt="speaker img">
 
-					</div>
-				</div>
-			</div>
-			<!-- row end  -->
-		</div>
-		<!-- container end  -->
-	</section>
-	<!-- section code of conduct end	-->
+              </div>
 
-	<!-- Jquery plugin files	-->
-	<script src="https://doplrafkvxyec.cloudfront.net/assets/js/jquery.min.js"></script>
-	<script src="https://doplrafkvxyec.cloudfront.net/assets/js/bootstrap.min.js"></script>
-	<script src="https://doplrafkvxyec.cloudfront.net/assets/js/jquery.easing.1.3.min.js"></script>
-	<script src="https://doplrafkvxyec.cloudfront.net/assets/js/owl.carousel.js"></script>
-	<script src="https://doplrafkvxyec.cloudfront.net/assets/js/wow.min.js"></script>
-	<!-- CUSTOM JS FILE	-->
-	<script src="https://doplrafkvxyec.cloudfront.net/assets/js/custom.js"></script>
+              <div class="col-md-3">
+                <div id="align">
+                  <h4 style="color:#ff9900">Workshop Trainer</h4>
+                  <h4><a href="https://www.linkedin.com/in/madhusudanshekar/" target="_blank">Madhusudhan Shekar</a></h4>
+                  <p><a href="https://aws.amazon.com/" target="_blank">AWS</a></p>
+                </div>
 
+              </div>
+
+
+              <div class="col-md-2">
+
+
+
+                <img class="speakerImg" src="images/srushith.jpg" alt="speaker img">
+
+
+              </div>
+
+
+
+
+              <div class="col-md-3">
+                <div id="align1">
+                  <h4 style="color:#ff9900">Supporting Trainer <br /><small>(Hands-on labs)</small></h4>
+                  <h4><a href="https://www.linkedin.com/in/srushith/" target="_blank">Srushith R</a></h4>
+                  <p style="margin-top:-1px;"> <a href="https://konfhub.com/" target="_blank">KonfHub</a></p>
+                </div>
+              </div>
+            </div>
+            <br>
+            <hr>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="workshop_2" class="modal fade fillo" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="heading-ttl">
+              <p>Deep Learning on AWS</p>
+            </h4>
+          </div>
+        <div class="modal-body">
+          <p>Learn about cloud-based Deep Learning solutions on AWS</p>
+          <p class="heading-ttl small-head">Description</p>
+          <p>
+            In this one-day course, you will learn cloud-based deep learning (DL)
+            solutions on the AWS platform. You will learn how to run your models on the
+            cloud using Amazon EC2‒based deep learning Amazon Machine Image (AMI) and
+            Apache MXNet on AWS frameworks. In addition, you will learn how to use
+            Amazon SageMaker and deploy your deep learning models using AWS services
+            like AWS Lambda and Amazon Elastic Container Service (Amazon ECS)—all while
+            designing intelligent systems on AWS.
+          </p>
+          <p class="heading-ttl small-head">Format:</p>
+          <p>
+            Mix of class-room training and hands-on workshop (yes, do bring your laptops). The timings are as below:
+            <p>09.30am - 10.00am: Registration cum installation & setup </p>
+            <p>10.00am - 11.30pm: Session </p>
+            <p>11.30am - 11.45am: Tea break </p>
+            <p>11.45am - 01.00pm: Session</p>
+            <p>01.00pm - 02.00pm: Lunch</p>
+            <p>02.00pm - 03.30pm: Session</p>
+            <p>03.30pm - 03.45pm: Tea break</p>
+            <p>03.45pm - 05.45pm: Session </p>
+            <p>05.45pm - 06.00pm: Wrap-up / closure</p>
+          </p>
+
+            <p class="heading-ttl small-head">Intended Audience</p>
+            <div class="block">
+              <p>
+                <strong>This course is intended for:</strong>
+              </p>
+              <ul>
+                <li>
+                  Developers who are responsible for developing deep learning
+                  applications
+                </li>
+                <li>
+                  Developers who want to understand concepts behind deep learning and
+                  how to implement a deep learning solution on AWS
+                </li>
+              </ul>
+            </div>
+            <p class="heading-ttl small-head">Course Objectives</p>
+            <div class="block">
+              <p><strong>In this course, you will learn how to: </strong></p>
+              <ul>
+                <li>
+                  Define machine learning (ML) and deep learning
+                </li>
+                <li>
+                  Identify the concepts in a deep learning ecosystem
+                </li>
+                <li>
+                  Leverage Amazon SageMaker and MXNet programming frameworks for deep
+                  learning workloads
+                </li>
+                <li>Fit AWS solutions for deep learning deployments</li>
+              </ul>
+            </div>
+            <p class="heading-ttl small-head">Prerequisites</p>
+            <div class="block">
+              <p>
+                <strong>We recommend that attendees of this course have the following
+                  prerequisites:</strong>
+              </p>
+              <ul>
+                <li>
+                  Basic understanding of machine learning processes
+                </li>
+                <li>
+                  Basic understanding of AWS core services like Amazon EC2 and knowledge
+                  of AWS SDKs
+                </li>
+                <li>
+                  Basic knowledge of a scripting language, such as Python
+                </li>
+              </ul>
+            </div>
+
+
+            <p class="heading-ttl small-head">Hands-on Activity</p>
+            <div class="block">
+              <p>
+                <strong>This course allows you to test new skills and apply knowledge to your
+                  working environment through a variety of practical exercises.
+                </strong>
+              </p>
+            </div>
+        </div>
+        <div>
+          <img src=""></img>
+        </div>
+
+          <div class="modal-footer">
+
+                  <br>
+                    <div class="row">
+                      <div class="col-md-1">
+
+                      </div>
+
+                      <div class="col-md-2">
+                        <img class="speakerImg" src="images\hemanth.jpg" alt="speaker img">
+
+                     </div>
+
+                    <div class="col-md-3">
+                        <div id="align">
+                        <h4 style="color:#ff9900">Technical Trainer</h4>
+                        <h4 ><a href="https://www.linkedin.com/in/hemant-gahankari-57a1909/" target="_blank">Hemanth Gahankari</a></h4>
+                        <p><a href="https://aws.amazon.com/aispl/" target="_blank">AISPL</a></p>
+                       </div>
+
+                      </div>
+
+
+                      <div class="col-md-2">
+                          <img class="speakerImg" src="images/Shinduri.png" alt="speaker img">
+                      </div>
+
+
+
+
+                    <div class="col-md-3">
+                      <div id="align1">
+                        <h4 style="color:#ff9900">Technical Trainer</h4>
+                        <h4 ><a href="https://www.linkedin.com/in/shinduri-ks-5142a7156/" target="_blank">Shinduri KS</a></h4>
+                        <p><a href="https://aws.amazon.com/aispl/" target="_blank">AISPL</a></p>
+                      </div>
+                       </div>
+                       </div>
+                       <br>
+                       <hr>
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+   
+    <div class="section section-3 inv hide" id="venues">
+      <div class="container flex-it">
+        <div class="left f1 flex-it">
+          <h4 class="headin-ttl">
+            Venues
+          </h4>
+          <div class="left_in f1">
+            <div id="map"></div>
+          </div>
+        </div>
+        <!--div class="right f1">
+          <div class="right_in">
+            <div class="ven-1 ven active" data-lat="12.9767814" data-lng="77.6197088" data-label="Conrad Philippines">
+              <div class="rand_cls">
+                <span class="date_ori">1st  2023</span>
+                <h4 class="headin-ttl">Conference</h4>
+              </div>
+              <ul>
+                <li><b>Conrad Philippines,</b></li>
+                <li>25/3, Kensington Rd, Someshwarpura,</li>
+                <li>Ulsoor, Philippines,</li>
+                <li>Karnataka 560008</li>
+              </ul>
+            </div>
+            <div class="ven-2 ven" data-lat="12.9502273" data-lng="77.6967477" data-label="Radisson Blu">
+              <div class="rand_cls">
+                <span class="date_ori">26th July 2023</span>
+                <h4 class="headin-ttl">Workshop</h4>
+              </div>
+              <ul>
+                <li><b>Radisson Blu Philippines Outer Ring Road,</b></li>
+                <li>90-4, Sarjapur Outer Ring Rd,</li>
+                <li>Marathahalli, Philippines,</li>
+                <li>Karnataka 560037</li>
+              </ul>
+            </div>
+            <div class="marked"></div>
+          </div>
+        </div -->
+      </div>
+    </div>
+
+
+
+    <div class="section section-4 inv" id="agenda">
+      <div class="container">
+        <div class="agenda">
+          <h4 class="main-heading-ttl text-center">Agenda</h4>
+          <div class="text-center agenda">
+            <div class="table">
+              <div class="thead">
+                <div class="tr">
+                  <div class="th idx">
+                    <div>
+                      <p>Time</p>
+                    </div>
+                  </div>
+                  <div class="th">
+                    <div>
+                      <p>Track 1</p>
+                    </div>
+                  </div>
+                  <div class="th">
+                    <div>
+                      <p>Track 2</p>
+                    </div>
+                  </div>
+                  <div class="th">
+                    <div>
+                      <p>Track 3</p>
+                    </div>
+                  </div>
+                 
+                </div>
+              </div>
+              <div class="tbody">
+                <div class="tr">
+                  <div class="td idx">
+                    <div>
+                      <p>Day 0 - Eve</p>
+                    </div>
+                  </div>
+                  <div class="td" colspan="4">
+                    <div>
+                      <p>Welcome Party</p>
+                    </div>
+                  </div>
+                </div>
+
+
+                
+                <div class="tr gap">
+                  <div class="td idx">
+                    <div>
+                      <p>Day 1</p>
+                    </div>
+                  </div>
+                  <div class="td" colspan="4">
+                    <div>
+                      <p> Day 1 </p>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="tr">
+                  <div class="td idx">
+                    <div>
+                      <p>Morning</p>
+                    </div>
+                  </div>
+                  <div class="td" colspan="4">
+                    <div>
+                      <p>CONFERENCE / Main Hall</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="tr">
+                  <div class="td idx">
+                    <div>
+                      <p>Afternoon</p>
+                    </div>
+                  </div>
+                  <div class="td">
+                    <div>
+                      <p>Technical Foundation</p>
+                      <p> Topics on Business & Technical Foundation and Solutions Architect Associate Track</p>
+                    </div>
+                  </div>
+                  
+                  <div class="td">
+                    <div>
+                      <p>ML, DATA, GAMING & VR                      </p>
+                      <p> Topics on Machine Learning, Big Data, Analytics, Gaming and VR</p>
+                    </div>
+                  </div>
+                  
+                  <div class="td">
+                    <div>
+                      <p>SERVERLESS & CONTAINER</p>
+                      <p> Topics on Serverless Architecture, Kubernetes and ECS</p>
+                    </div>
+                  </div>
+
+                  <div class="td">
+                    <div>
+                    </div>
+                  </div>
+                  
+                  
+                </div>
+
+                <div class="tr">
+                  <div class="td idx">
+                    <div>
+                      <p>Evening</p>
+                    </div>
+                  </div>
+                  <div class="td" colspan="4">
+                    <div>
+                      <p>Network & Games</p>
+                    </div>
+                  </div>
+                </div>
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+    
+    <div class="section section-talk text-center" id="cfp">
+      <div class="container">
+        <img src="images/bgda.svg">
+        <div class="cfp">
+          <h4 class="main-heading-ttl">Submit a talk</h4>
+          <h4>Please submit using this form <a target="_new" href="https://go.awsug.ph/cfp-comday-2023">HERE</a></h4>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="section section-5" id="sponsors">
+
+      <div class="container">
+        <div class="sponsors">
+          <h4 class="main-heading-ttl text-center">Our Esteemed Sponsors</h4>
+          <div class="cats">
+            <div class="pltnm">
+              <div class="flex-it">
+                <div class="fhf">
+                  <div class="head"><span>Platinum</span></div>
+                </div>
+                <div class="f1">
+                  <div class="open">
+                    <!--a href="https://developer.amazon.com/alexa" target="_blank">Alexa</a-->
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="open">
+                    <!--a href="https://developer.amazon.com/alexa" target="_blank">Alexa</a-->
+                  </div>
+                  
+                </div>
+                
+              </div>
+            </div>
+            <div class="gld">
+              <div class="flex-it">
+                <div class="fhf">
+                  <div class="head"><span>Gold</span></div>
+                </div>
+                <div class="f1">
+                  <div class="open">
+                    <!--a href="https://developer.amazon.com/alexa" target="_blank">Alexa</a-->
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="open">
+                    <!--a href="https://developer.amazon.com/alexa" target="_blank">Alexa</a-->
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="open">
+                    <!--a href="https://developer.amazon.com/alexa" target="_blank">Alexa</a-->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slvr">
+              <div class="flex-it">
+                <div class="fhf">
+                  <div class="head"><span>Silver</span></div>
+                </div>
+                <div class="f1">
+                  <div class="open">
+                    <!--a href="https://developer.amazon.com/alexa" target="_blank">Alexa</a-->
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="open">
+                    <!--a href="https://developer.amazon.com/alexa" target="_blank">Alexa</a-->
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="open">
+                    <!--a href="https://developer.amazon.com/alexa" target="_blank">Alexa</a-->
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="open">
+                    <!--a href="https://developer.amazon.com/alexa" target="_blank">Alexa</a-->
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="open">
+                    <!--a href="https://developer.amazon.com/alexa" target="_blank">Alexa</a-->
+                  </div>
+                </div>
+               
+              </div>
+            </div>
+
+            <div class="media">
+              <div class="flex-it">
+                <div class="fhf">
+                  <div class="head"><span>Media</span></div>
+                </div>
+                <div class="f1">
+                  <div class="open">
+                    <!--a href="https://developer.amazon.com/alexa" target="_blank">Alexa</a-->
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="open">
+                    <!--a href="https://developer.amazon.com/alexa" target="_blank">Alexa</a-->
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="open">
+                    <!--a href="https://developer.amazon.com/alexa" target="_blank">Alexa</a-->
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="open">
+                    <!--a href="https://developer.amazon.com/alexa" target="_blank">Alexa</a-->
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="open">
+                    <!--a href="https://developer.amazon.com/alexa" target="_blank">Alexa</a-->
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="open">
+                    <!--a href="https://developer.amazon.com/alexa" target="_blank">Alexa</a-->
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="open">
+                    <!--a href="https://developer.amazon.com/alexa" target="_blank">Alexa</a-->
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="open">
+                    <!--a href="https://developer.amazon.com/alexa" target="_blank">Alexa</a-->
+                  </div>
+                </div>
+                 <div class="f1">
+                  <div class="open">
+                    <!--a href="https://developer.amazon.com/alexa" target="_blank">Alexa</a-->
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="open">
+                    <!--a href="https://developer.amazon.com/alexa" target="_blank">Alexa</a-->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="cmnty">
+              <div class="flex-it">
+                <div class="fhf">
+                  <div class="head"><span>Community</span></div>
+                </div>
+                <div class="f1">
+                  <div class="open">
+                    <!--a href="https://developer.amazon.com/alexa" target="_blank">Alexa</a-->
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="open">
+                    <!--a href="https://developer.amazon.com/alexa" target="_blank">Alexa</a-->
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="open">
+                    <!--a href="https://developer.amazon.com/alexa" target="_blank">Alexa</a-->
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="open">
+                    <!--a href="https://developer.amazon.com/alexa" target="_blank">Alexa</a-->
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="open">
+                    <!--a href="https://developer.amazon.com/alexa" target="_blank">Alexa</a-->
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="open">
+                    <!--a href="https://developer.amazon.com/alexa" target="_blank">Alexa</a-->
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="open">
+                    <!--a href="https://developer.amazon.com/alexa" target="_blank">Alexa</a-->
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="open">
+                    <!--a href="https://developer.amazon.com/alexa" target="_blank">Alexa</a-->
+                  </div>
+                </div>
+                 <div class="f1">
+                  <div class="open">
+                    <!--a href="https://developer.amazon.com/alexa" target="_blank">Alexa</a-->
+                  </div>
+                </div>
+                <div class="f1">
+                  <div class="open">
+                    <!--a href="https://developer.amazon.com/alexa" target="_blank">Alexa</a-->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+      <div class="section-8" id="speakers">
+        <div class="container">
+            <div class="speakers">
+              <h4 class="main-heading-ttl text-center">Speakers</h4>
+              <div class="spk_lst flex-it ">
+                <div class="spk_itm_col">
+
+                  
+
+                 
+
+
+
+
+                  <div class="spk_itm flex-it">
+                    <div class="prod_im"><img src="images/speakers/raphael_quisumbing.jpg" alt=""></div>
+                    <div class="namenid">
+                      <p>
+                        <b>Raphael Quisumbing</b>
+                        <br>
+                        <small>Head of Product, MediaTrack.org</small>
+                        <br>
+                        <small>AWS Community Hero</small>
+                      </p>
+                    </div>
+                  </div>
+
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-6 inv" id="volunteers">
+      <div class="container">
+        <div class="volunteers">
+          <h4 class="main-heading-ttl text-center">Volunteers</h4>
+          <div class="vl-row-list">
+            <div class="vl-i  flex-it hcenter">
+
+
+              <div class="person" data-fname="Raphael" data-lname="Quisumbing">
+                <div class="img">
+                  
+
+                  <img src="images/vols/rafi.jpg" />
+                  <a target="_blank" href="https://www.youtube.com/c/YoungCTO">
+                    <i class="icon large ion-logo-youtube"></i></a>
+               
+
+                  
+                  
+                </div>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      <div class="section section-7" id="subscribe">
+        <div class="container">
+          <div class="sponsors">
+            <div class="foot-fk">
+              <h4 class="main-heading-ttl">SHARE YOUR INTEREST</h4>
+              <div class="row flex-it vcenter">
+                <div class="col-md-12">
+                  <!-- sharing buttons -->
+                  <div class="sharethis-inline-share-buttons"></div>
+                </div>
+              </div>
+              <p class="text-center hide">
+                <small>Please do read the Code of Conduct for this event.</small>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+  </div>
+  
+  <div id="myModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+            ×
+          </button>
+        </div>
+        <div class="modal-body">
+          <iframe src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen="allowfullscreen" mozallowfullscreen="mozallowfullscreen"
+            msallowfullscreen="msallowfullscreen" oallowfullscreen="oallowfullscreen"
+            webkitallowfullscreen="webkitallowfullscreen"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+     <!-- getting utm parameter and passing to konfhub start -->
+  
 </body>
 
 </html>
