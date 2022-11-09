@@ -1949,6 +1949,11 @@ ul.circle li {
   background-image: url(../images/spons/open.jpg);
 }
 
+
+#page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).wordpress {
+  background-image: url(../images/spons/wordpressph.jpg);
+}
+
 /* line 706, ../sass/shared/_home.scss */
 #page .section-5 .sponsors .cats .flex-it .f1 > div:not(.head).jfrog {
   background-image: url(../images/spons/jfrog.jpg);
