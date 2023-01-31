@@ -853,6 +853,44 @@ ul.circle li {
 .table .tbody .tr .th[colspan="4"] > div {
   padding: 5px;
 }
+
+
+/* line 482, ../sass/shared/_site.scss */
+.table .thead .tr .td[colspan="3"],
+.table .thead .tr .th[colspan="3"],
+.table .tbody .tr .td[colspan="3"],
+.table .tbody .tr .th[colspan="3"] {
+  flex: 1 0 0;
+  text-align: center;
+  font-size: 18px;
+}
+/* line 486, ../sass/shared/_site.scss */
+.table .thead .tr .td[colspan="3"] > div,
+.table .thead .tr .th[colspan="3"] > div,
+.table .tbody .tr .td[colspan="3"] > div,
+.table .tbody .tr .th[colspan="3"] > div {
+  padding: 5px;
+}
+
+
+/* line 482, ../sass/shared/_site.scss */
+.table .thead .tr .td[colspan="2"],
+.table .thead .tr .th[colspan="2"],
+.table .tbody .tr .td[colspan="2"],
+.table .tbody .tr .th[colspan="2"] {
+  flex: 1 0 0;
+  text-align: center;
+  font-size: 18px;
+}
+/* line 486, ../sass/shared/_site.scss */
+.table .thead .tr .td[colspan="2"] > div,
+.table .thead .tr .th[colspan="2"] > div,
+.table .tbody .tr .td[colspan="2"] > div,
+.table .tbody .tr .th[colspan="2"] > div {
+  padding: 5px;
+}
+
+
 @media only screen and (max-width: 991px) {
   /* line 490, ../sass/shared/_site.scss */
   .table .thead .tr .td p,
@@ -1003,6 +1041,7 @@ ul.circle li {
   .table .tbody > .tr .td:nth-child(5) > div:before {
     content: "Room 4";
   }
+  
   /* line 609, ../sass/shared/_site.scss */
   .table .tbody > .tr .td[colspan="4"] > div {
     padding: 5px 0 0;
@@ -1017,6 +1056,39 @@ ul.circle li {
     margin-bottom: 20px;
     margin-top: -10px;
   }
+
+
+  /* line 609, ../sass/shared/_site.scss */
+  .table .tbody > .tr .td[colspan="3"] > div {
+    padding: 5px 0 0;
+    position: relative;
+  }
+  /* line 612, ../sass/shared/_site.scss */
+  .table .tbody > .tr .td[colspan="3"] > div:before {
+    content: none;
+  }
+  /* line 615, ../sass/shared/_site.scss */
+  .table .tbody > .tr .td[colspan="3"] > div p {
+    margin-bottom: 20px;
+    margin-top: -10px;
+  }
+
+  /* line 609, ../sass/shared/_site.scss */
+  .table .tbody > .tr .td[colspan="2"] > div {
+    padding: 5px 0 0;
+    position: relative;
+  }
+  /* line 612, ../sass/shared/_site.scss */
+  .table .tbody > .tr .td[colspan="2"] > div:before {
+    content: none;
+  }
+  /* line 615, ../sass/shared/_site.scss */
+  .table .tbody > .tr .td[colspan="2"] > div p {
+    margin-bottom: 20px;
+    margin-top: -10px;
+  }
+
+
 }
 
 @media only screen and (max-width: 991px) {
