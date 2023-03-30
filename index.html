@@ -58,7 +58,9 @@
   rel="manifest"
   href="/manifest.json"
   />
-  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+
+
+  <!-- script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
   <script>
     var OneSignal = window.OneSignal || [];
     OneSignal.push(function() {
@@ -66,7 +68,9 @@
         appId: "b3f01cfa-1a70-4f46-9dd1-202a1ae14385",
       });
     });
-  </script>
+  </script-->
+
+
   <!-- Facebook Pixel Code -->
   <script>
     !function(f,b,e,v,n,t,s)
@@ -273,35 +277,37 @@
         <div class="row flex-it">
           <div class="col-md-3">
             <div class="card tick_conf with_icon border" notclass="sold">
-              <h4 class="heading-ttl">Conference</h4>
+              <h4 class="heading-ttl">Free</h4>
               <div class="bg_img"></div>
-              <p>Gives you access to the conference on Day 1 2023 Morning</p>
+              <p>General Conference & Expo: Gives you access to the conference, overflow and expo on Day1</p><br />
+              <p>Sticker Pack, Raffle Entry</p>
             </div>
           </div>
           <div class="col-md-3">
             <div class="card tick_work_3 with_icon border dark" notclass="sold">
-              <h4 class="heading-ttl">Technical Foundation </h4>
+              <h4 class="heading-ttl">Professional </h4>
               <div class="bg_img"></div>
-              <p>Gets you access to Business & Technical Foundation and Solutions Architect Associate Track on Day 1 2023 Afternoon</p>
+              <p>General Conference, Expo, Networking & Workshops on Day 1 & Day 2</p><br />
+              <p>Served with 5-Star Buffet Meal, Sticker Pack & Swag Kit, Raffle Entry</p>
 
             </div>
           </div>
-          <div class="col-md-3 ">
+          <div class="col-md-6 ">
             <div class="card tick_work_2 with_icon border" notclass="sold">
-              <h4 class="heading-ttl">ML, Data, Gaming & VR </h4>
+              <h4 class="heading-ttl">Management and Executive </h4>
               <div class="bg_img"></div>
-              <p>Gets you access to Machine Learning, Big Data, Analytics, Gaming and VR on Day 1 2023 Afternoon</p>
-
-
-            </div>
+              <p>General Conference, Expo, Networking & Workshops on Day 1 & Day 2 and Invite to Kick-Off Dinner w/ Speakers & Sponsors</p><br />
+              <p>Served with 5-Star Buffet Meal, Sticker Pack & Swag Kit, Raffle Entry</p>
+              
           </div>
-          <div class="col-md-3 ">
+          </div>
+          <!--div class="col-md-3 ">
             <div class="card tick_work_1 with_icon border dark " notclass="sold">
-              <h4 class="heading-ttl">Serverless & Container</h4>
+              <h4 class="heading-ttl">Online Pass</h4>
               <div class="bg_img"></div>
-              <p>Gets you access to Serverless Architecture, Kubernetes and ECS Track on Day 1 2023 Afternoon</p>
+              <p></p>
             </div>
-          </div>
+          </div-->
         </div>
         <div class="buy-wrapper row flex-it">
           <div class="f1">
@@ -679,7 +685,10 @@
             Venues
           </h4>
           <div class="left_in f1">
-            <div id="map"></div>
+            <div id="map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6985.18622473681!2d121.04979564083408!3d14.54959425553231!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c8f361334217%3A0x3019809702d84636!2sMarquis%20Events%20Place!5e0!3m2!1sen!2sph!4v1680175353411!5m2!1sen!2sph" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1722.2371312129267!2d121.0471920450505!3d14.55188143049644!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c92aff89feb9%3A0x95294b632b7e770e!2sArthaland%20Century%20Pacific%20Tower!5e0!3m2!1sen!2sph!4v1680175497764!5m2!1sen!2sph" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
           </div>
         </div>
         <div class="right f1">
@@ -690,7 +699,7 @@
                 <h4 class="headin-ttl">Conference</h4>
               </div>
               <ul>
-                <li><b>Marquis Building</b></li>
+                <li><b>Marquis Events Place</b></li>
                 <li>Rizal Dr, Bonifacio Global City,</li>
                 <li>Taguig, Metro Manila</li>
                 <li>Philippines 1634</li>
@@ -702,7 +711,8 @@
                 <h4 class="headin-ttl">Overflow & Workshop</h4>
               </div>
               <ul>
-                <li><b>Arthaland Century Pacific Tower</b></li>
+                <li><b>AWS Philippines Office</b></li>
+                <li>Arthaland Century Pacific Tower</li>
                 <li>4th Ave, 30th St,</li>
                 <li>Taguig, Metro Manila</li>
                 <li>Philippines 1634</li>
